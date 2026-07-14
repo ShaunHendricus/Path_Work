@@ -62,6 +62,7 @@ RUN source /opt/ros/humble/setup.bash && \
     cd /ros2_ws && \
     colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 
+# ── 11. Build ros1_bridge with custom messages ────────────────────────────────
 RUN --mount=type=ssh \
     source /opt/ros/humble/setup.bash && \
     source /catkin_ws/install/setup.bash && \
