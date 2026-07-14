@@ -1,0 +1,25 @@
+topics:
+  - topic: /iiwa/joint_states
+    type: sensor_msgs/msg/JointState
+    queue_size: 10
+
+  - topic: /iiwa/command/JointPosition
+    type: iiwa_msgs/msg/JointPosition
+    queue_size: 10
+
+  - topic: /iiwa/state/CartesianPose
+    type: iiwa_msgs/msg/CartesianPose
+    queue_size: 10
+
+  - topic: /tf
+    type: tf2_msgs/msg/TFMessage
+    queue_size: 100
+
+  - topic: /tf_static
+    type: tf2_msgs/msg/TFMessage
+    queue_size: 100
+    qos:
+      history: keep_all
+      durability: transient_local
+
+# rosparam load bridge.yaml

@@ -1,0 +1,4249 @@
+﻿using ETherSoftwareComponentStore;
+
+namespace ETherRealTime
+{
+    partial class ETherRealtime
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ETherRealtime));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.serialPortUSB = new System.IO.Ports.SerialPort(this.components);
+            this.lbComPort = new System.Windows.Forms.Label();
+            this.btConnectUSB = new System.Windows.Forms.Button();
+            this.timer1s_reconnect_pointcount = new System.Windows.Forms.Timer(this.components);
+            this.cbComPortsUSB = new System.Windows.Forms.ComboBox();
+            this.btRefreshPorts = new System.Windows.Forms.Button();
+            this.tbInvalidPacket = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tpConnection = new System.Windows.Forms.TabPage();
+            this.btHelp = new System.Windows.Forms.Button();
+            this.gbUSB = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.cbUseDLL = new System.Windows.Forms.CheckBox();
+            this.cbAutoConnect = new System.Windows.Forms.CheckBox();
+            this.cbInstrumentRealtime = new System.Windows.Forms.CheckBox();
+            this.tbConsole = new System.Windows.Forms.TextBox();
+            this.btClear = new System.Windows.Forms.Button();
+            this.lbBytes = new System.Windows.Forms.Label();
+            this.tbBytes = new System.Windows.Forms.TextBox();
+            this.tpDataFormat = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tbRadius = new System.Windows.Forms.TextBox();
+            this.tbTheta = new System.Windows.Forms.TextBox();
+            this.rbNonRealtime = new System.Windows.Forms.RadioButton();
+            this.cbRealTimeDisplay = new System.Windows.Forms.CheckBox();
+            this.rbSingleChan = new System.Windows.Forms.RadioButton();
+            this.rbNone = new System.Windows.Forms.RadioButton();
+            this.rbRaw = new System.Windows.Forms.RadioButton();
+            this.rbPostProcess = new System.Windows.Forms.RadioButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbPointsCount = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbStatusByte = new System.Windows.Forms.TextBox();
+            this.lbPacketsPerSecond = new System.Windows.Forms.Label();
+            this.lbMix = new System.Windows.Forms.Label();
+            this.tbCmixX = new System.Windows.Forms.TextBox();
+            this.tbCmixY = new System.Windows.Forms.TextBox();
+            this.tbC1X = new System.Windows.Forms.TextBox();
+            this.lbCh2 = new System.Windows.Forms.Label();
+            this.tbC2Y = new System.Windows.Forms.TextBox();
+            this.lbCh1 = new System.Windows.Forms.Label();
+            this.tbC2X = new System.Windows.Forms.TextBox();
+            this.lbY = new System.Windows.Forms.Label();
+            this.tbC1Y = new System.Windows.Forms.TextBox();
+            this.lbX = new System.Windows.Forms.Label();
+            this.tbConsoleFileScan = new System.Windows.Forms.TextBox();
+            this.tpPhaseplane = new System.Windows.Forms.TabPage();
+            this.cbFitSC1onAxis = new System.Windows.Forms.CheckBox();
+            this.cbFitSC2onAxis = new System.Windows.Forms.CheckBox();
+            this.cbLockAxis = new System.Windows.Forms.CheckBox();
+            this.cbRemoveReverse = new System.Windows.Forms.CheckBox();
+            this.nudPersistenceEncoder = new System.Windows.Forms.NumericUpDown();
+            this.cbSource2 = new System.Windows.Forms.ComboBox();
+            this.cbAlarmDraw = new System.Windows.Forms.CheckBox();
+            this.btPause = new System.Windows.Forms.Button();
+            this.cbInterpolate = new System.Windows.Forms.CheckBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.nudSpotSize = new System.Windows.Forms.NumericUpDown();
+            this.cbSource = new System.Windows.Forms.ComboBox();
+            this.lbSource = new System.Windows.Forms.Label();
+            this.nudSweepTime = new System.Windows.Forms.NumericUpDown();
+            this.lbSweep = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.nudZoom = new System.Windows.Forms.NumericUpDown();
+            this.ctPhase = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.ctTimebase = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label6 = new System.Windows.Forms.Label();
+            this.nudPersistence = new System.Windows.Forms.NumericUpDown();
+            this.btClearPhasePlane = new System.Windows.Forms.Button();
+            this.tpXMLDisplay = new System.Windows.Forms.TabPage();
+            this.rbETI300 = new System.Windows.Forms.RadioButton();
+            this.btRotaryStop = new System.Windows.Forms.Button();
+            this.btRotaryStart = new System.Windows.Forms.Button();
+            this.rbRailCheck = new System.Windows.Forms.RadioButton();
+            this.btSaveXMLFile = new System.Windows.Forms.Button();
+            this.rbAeroCheck2 = new System.Windows.Forms.RadioButton();
+            this.rbEmbedEC = new System.Windows.Forms.RadioButton();
+            this.btReloadSettings = new System.Windows.Forms.Button();
+            this.lbXMLFileName = new System.Windows.Forms.Label();
+            this.btLoadXMLFile = new System.Windows.Forms.Button();
+            this.lbChannelMix = new System.Windows.Forms.Label();
+            this.lbHighPassFilter = new System.Windows.Forms.Label();
+            this.lbLowPassFilter = new System.Windows.Forms.Label();
+            this.rbVictor22D = new System.Windows.Forms.RadioButton();
+            this.rbAeroCheckPlus = new System.Windows.Forms.RadioButton();
+            this.lbRPM = new System.Windows.Forms.Label();
+            this.lbProbeType = new System.Windows.Forms.Label();
+            this.lbFreqUnitsCh2 = new System.Windows.Forms.Label();
+            this.lbFreqUnitsCh1 = new System.Windows.Forms.Label();
+            this.lbPhase = new System.Windows.Forms.Label();
+            this.lbFrequency = new System.Windows.Forms.Label();
+            this.lbChannel2 = new System.Windows.Forms.Label();
+            this.lbChannel1 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lbInputGain = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btUpdateInstrument = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.rtbXMLSettings = new System.Windows.Forms.RichTextBox();
+            this.gbAlarms = new System.Windows.Forms.GroupBox();
+            this.nudAlarmStretch = new ETherRealTime.nudWithXML();
+            this.lbStretch = new System.Windows.Forms.Label();
+            this.cbAlarmAction = new ETherRealTime.comboWithXML();
+            this.lbAction = new System.Windows.Forms.Label();
+            this.lbAlarmSource = new System.Windows.Forms.Label();
+            this.cbAlarmSource = new ETherRealTime.comboWithXML();
+            this.nudAlarmStart = new ETherRealTime.nudWithXML();
+            this.nudAlarmStop = new ETherRealTime.nudWithXML();
+            this.nudAlarmOuter = new ETherRealTime.nudWithXML();
+            this.nudAlarmInner = new ETherRealTime.nudWithXML();
+            this.nudAlarmRight = new ETherRealTime.nudWithXML();
+            this.nudAlarmLeft = new ETherRealTime.nudWithXML();
+            this.nudAlarmBottom = new ETherRealTime.nudWithXML();
+            this.nudAlarmTop = new ETherRealTime.nudWithXML();
+            this.rbAlarmSector = new ETherRealTime.radbutWithXML();
+            this.rbAlarmBox = new ETherRealTime.radbutWithXML();
+            this.rbAlarmOff = new ETherRealTime.radbutWithXML();
+            this.cbRotaryType = new ETherRealTime.comboWithXML();
+            this.nudPhaseChMix = new ETherRealTime.nudWithXML();
+            this.nudGainYchMix = new ETherRealTime.nudWithXML();
+            this.nudGainXchMix = new ETherRealTime.nudWithXML();
+            this.nudHighPassFilterCh2 = new ETherRealTime.nudWithXML();
+            this.nudHighPassFilterCh1 = new ETherRealTime.nudWithXML();
+            this.nudLowPassFilterCh2 = new ETherRealTime.nudWithXML();
+            this.nudLowPassFilterCh1 = new ETherRealTime.nudWithXML();
+            this.nudRPM = new ETherRealTime.nudWithXML();
+            this.cbProbeTypeCh2 = new ETherRealTime.comboWithXML();
+            this.cbProbeTypeCh1 = new ETherRealTime.comboWithXML();
+            this.nudPhaseCh2 = new ETherRealTime.nudWithXML();
+            this.nudPhaseCh1 = new ETherRealTime.nudWithXML();
+            this.nudFrequencyCh2 = new ETherRealTime.nudWithXML();
+            this.nudFrequencyCh1 = new ETherRealTime.nudWithXML();
+            this.nudInputGainCh2 = new ETherRealTime.nudWithXML();
+            this.nudGainYch2 = new ETherRealTime.nudWithXML();
+            this.nudGainXch2 = new ETherRealTime.nudWithXML();
+            this.nudDriveGain = new ETherRealTime.nudWithXML();
+            this.nudInputGainCh1 = new ETherRealTime.nudWithXML();
+            this.nudGainYch1 = new ETherRealTime.nudWithXML();
+            this.nudGainXch1 = new ETherRealTime.nudWithXML();
+            this.tdDataFiles = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.btLogging = new System.Windows.Forms.Button();
+            this.tbLoggingToFile = new System.Windows.Forms.TextBox();
+            this.btLogToFile = new System.Windows.Forms.Button();
+            this.rbLoggingClickToSave = new System.Windows.Forms.RadioButton();
+            this.rbLoggingRealtime = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.tbCurrentFile = new System.Windows.Forms.TextBox();
+            this.btScanLogFile = new System.Windows.Forms.Button();
+            this.btConvertETDtoCSV = new System.Windows.Forms.Button();
+            this.button1 = new ETherRealTime.ButtonMessager();
+            this.tpIO = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbByteRate = new System.Windows.Forms.Label();
+            this.nudBytesPerSecond = new System.Windows.Forms.NumericUpDown();
+            this.cbLoop = new System.Windows.Forms.CheckBox();
+            this.lbByteSequence = new System.Windows.Forms.Label();
+            this.tbByteSequence = new System.Windows.Forms.TextBox();
+            this.btTxIO = new System.Windows.Forms.Button();
+            this.nudSPI_DIO = new System.Windows.Forms.NumericUpDown();
+            this.rbDigIO = new ETherRealTime.radbutWithXML();
+            this.rbEnc1DigIO = new ETherRealTime.radbutWithXML();
+            this.rbEnc1SPI = new ETherRealTime.radbutWithXML();
+            this.rbEnc1Enc2 = new ETherRealTime.radbutWithXML();
+            this.rbEnc2 = new ETherRealTime.radbutWithXML();
+            this.rbEnc1 = new ETherRealTime.radbutWithXML();
+            this.rbIOOff = new ETherRealTime.radbutWithXML();
+            this.btAlarm = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.timerLongKeyPress = new System.Windows.Forms.Timer(this.components);
+            this.tbTx = new System.Windows.Forms.TextBox();
+            this.lbTx = new System.Windows.Forms.Label();
+            this.timerPhasePlane = new System.Windows.Forms.Timer(this.components);
+            this.serialPortRS232 = new System.IO.Ports.SerialPort(this.components);
+            this.rbUSBTransmit = new System.Windows.Forms.RadioButton();
+            this.rbRS232Transmit = new System.Windows.Forms.RadioButton();
+            this.btReloadMasterSettings = new System.Windows.Forms.Button();
+            this.btReprocessmasterSettings = new System.Windows.Forms.Button();
+            this.btSaveMasterSettings = new System.Windows.Forms.Button();
+            this.lbMasterSettings = new System.Windows.Forms.Label();
+            this.timerRefreshPorts = new System.Windows.Forms.Timer(this.components);
+            this.timerWriteToInstrument = new System.Windows.Forms.Timer(this.components);
+            this.tbTxString = new System.Windows.Forms.TextBox();
+            this.btBeadSeat = new System.Windows.Forms.Button();
+            this.btLoadVeeScanSettings = new System.Windows.Forms.Button();
+            this.timerRequestXML = new System.Windows.Forms.Timer(this.components);
+            this.lbGainXEmbedEC = new System.Windows.Forms.Label();
+            this.lbGainYEmbedEC = new System.Windows.Forms.Label();
+            this.lbPhaseEmbedEC = new System.Windows.Forms.Label();
+            this.btLeft = new System.Windows.Forms.Button();
+            this.btUp = new System.Windows.Forms.Button();
+            this.btDown = new System.Windows.Forms.Button();
+            this.btBlank1 = new System.Windows.Forms.Button();
+            this.btBalance2 = new System.Windows.Forms.Button();
+            this.btRight = new System.Windows.Forms.Button();
+            this.btFreeze = new System.Windows.Forms.Button();
+            this.btBlank2 = new System.Windows.Forms.Button();
+            this.btBack = new System.Windows.Forms.Button();
+            this.btOK = new System.Windows.Forms.Button();
+            this.btBalance1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbFiltLPEmbedEC = new System.Windows.Forms.Label();
+            this.lbFiltHPEmbedEC = new System.Windows.Forms.Label();
+            this.lbFreqUnitsEmbedECOnly = new System.Windows.Forms.Label();
+            this.lbFrequencyEmbedECOnly = new System.Windows.Forms.Label();
+            this.panelEmbedEC = new System.Windows.Forms.Panel();
+            this.plVictorChannel = new System.Windows.Forms.Panel();
+            this.rbVictorCh2 = new System.Windows.Forms.RadioButton();
+            this.rbVictorCh3 = new System.Windows.Forms.RadioButton();
+            this.rbVictorCh1 = new System.Windows.Forms.RadioButton();
+            this.tbFWVersion = new System.Windows.Forms.TextBox();
+            this.lbFirmwareEmbedEC = new System.Windows.Forms.Label();
+            this.lbClickToRequest = new System.Windows.Forms.Label();
+            this.tbY = new System.Windows.Forms.TextBox();
+            this.tbX = new System.Windows.Forms.TextBox();
+            this.lbXY = new System.Windows.Forms.Label();
+            this.lbPhaseUnits = new System.Windows.Forms.Label();
+            this.lbGainXUnits = new System.Windows.Forms.Label();
+            this.lbGainYUnits = new System.Windows.Forms.Label();
+            this.lbHPUnits = new System.Windows.Forms.Label();
+            this.lbLPUnits = new System.Windows.Forms.Label();
+            this.lbBIGNudFreq = new System.Windows.Forms.Label();
+            this.tbNudNameText = new System.Windows.Forms.TextBox();
+            this.tbNudValue = new System.Windows.Forms.TextBox();
+            this.btNudDown = new ETherRealTime.ButtonMessager();
+            this.btNudUp = new ETherRealTime.ButtonMessager();
+            this.rbGainLockFixed = new System.Windows.Forms.RadioButton();
+            this.rbGainLockXequalY = new System.Windows.Forms.RadioButton();
+            this.rbGainLockOff = new System.Windows.Forms.RadioButton();
+            this.nudPhaseEmbedECOnly = new ETherRealTime.nudWithXML();
+            this.btBalanceEmbedECOnly = new System.Windows.Forms.Button();
+            this.nudFrequencyEmbedECOnly = new ETherRealTime.nudWithXML();
+            this.nudGainXEmbedECOnly = new ETherRealTime.nudWithXML();
+            this.nudGainYEmbedECOnly = new ETherRealTime.nudWithXML();
+            this.nudFiltHPEmbedECOnly = new ETherRealTime.nudWithXML();
+            this.nudFiltLPEmbedECOnly = new ETherRealTime.nudWithXML();
+            this.timerKeyRepeat = new System.Windows.Forms.Timer(this.components);
+            this.btAlarm2 = new System.Windows.Forms.Button();
+            this.btLOG = new System.Windows.Forms.Button();
+            this.dataGeneral = new System.Data.DataSet();
+            this.General = new System.Data.DataTable();
+            this.dataColumn1 = new System.Data.DataColumn();
+            this.dataColumn2 = new System.Data.DataColumn();
+            this.timerDigitalIOSequence = new System.Windows.Forms.Timer(this.components);
+            this.panelKeypad = new System.Windows.Forms.Panel();
+            this.timerReconnect = new System.Windows.Forms.Timer(this.components);
+            this.tabControl1.SuspendLayout();
+            this.tpConnection.SuspendLayout();
+            this.gbUSB.SuspendLayout();
+            this.tpDataFormat.SuspendLayout();
+            this.tpPhaseplane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPersistenceEncoder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSpotSize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSweepTime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudZoom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctPhase)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctTimebase)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPersistence)).BeginInit();
+            this.tpXMLDisplay.SuspendLayout();
+            this.gbAlarms.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlarmStretch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlarmStart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlarmStop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlarmOuter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlarmInner)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlarmRight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlarmLeft)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlarmBottom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlarmTop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPhaseChMix)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGainYchMix)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGainXchMix)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHighPassFilterCh2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHighPassFilterCh1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLowPassFilterCh2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLowPassFilterCh1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRPM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPhaseCh2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPhaseCh1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFrequencyCh2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFrequencyCh1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudInputGainCh2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGainYch2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGainXch2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDriveGain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudInputGainCh1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGainYch1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGainXch1)).BeginInit();
+            this.tdDataFiles.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tpIO.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBytesPerSecond)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSPI_DIO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelEmbedEC.SuspendLayout();
+            this.plVictorChannel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPhaseEmbedECOnly)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFrequencyEmbedECOnly)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGainXEmbedECOnly)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGainYEmbedECOnly)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFiltHPEmbedECOnly)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFiltLPEmbedECOnly)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGeneral)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.General)).BeginInit();
+            this.panelKeypad.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // serialPortUSB
+            // 
+            this.serialPortUSB.BaudRate = 115200;
+            this.serialPortUSB.ReadBufferSize = 8192;
+            this.serialPortUSB.ReadTimeout = 500;
+            this.serialPortUSB.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPortUSB_DataReceived);
+            // 
+            // lbComPort
+            // 
+            this.lbComPort.AutoSize = true;
+            this.lbComPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbComPort.Location = new System.Drawing.Point(45, 25);
+            this.lbComPort.Name = "lbComPort";
+            this.lbComPort.Size = new System.Drawing.Size(88, 20);
+            this.lbComPort.TabIndex = 1;
+            this.lbComPort.Text = "Com Port:";
+            // 
+            // btConnectUSB
+            // 
+            this.btConnectUSB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btConnectUSB.Location = new System.Drawing.Point(49, 87);
+            this.btConnectUSB.Name = "btConnectUSB";
+            this.btConnectUSB.Size = new System.Drawing.Size(152, 40);
+            this.btConnectUSB.TabIndex = 2;
+            this.btConnectUSB.Text = "Connect";
+            this.btConnectUSB.UseVisualStyleBackColor = true;
+            this.btConnectUSB.Click += new System.EventHandler(this.btConnectUSB_Click);
+            // 
+            // timer1s_reconnect_pointcount
+            // 
+            this.timer1s_reconnect_pointcount.Enabled = true;
+            this.timer1s_reconnect_pointcount.Interval = 1000;
+            this.timer1s_reconnect_pointcount.Tick += new System.EventHandler(this.timer1s_reconnect_pointcount_Tick);
+            // 
+            // cbComPortsUSB
+            // 
+            this.cbComPortsUSB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbComPortsUSB.FormattingEnabled = true;
+            this.cbComPortsUSB.Location = new System.Drawing.Point(50, 49);
+            this.cbComPortsUSB.Name = "cbComPortsUSB";
+            this.cbComPortsUSB.Size = new System.Drawing.Size(150, 32);
+            this.cbComPortsUSB.TabIndex = 7;
+            // 
+            // btRefreshPorts
+            // 
+            this.btRefreshPorts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btRefreshPorts.Location = new System.Drawing.Point(10, 20);
+            this.btRefreshPorts.Name = "btRefreshPorts";
+            this.btRefreshPorts.Size = new System.Drawing.Size(123, 44);
+            this.btRefreshPorts.TabIndex = 21;
+            this.btRefreshPorts.Text = "Refresh Ports";
+            this.btRefreshPorts.UseVisualStyleBackColor = true;
+            this.btRefreshPorts.Click += new System.EventHandler(this.btRefreshPorts_Click);
+            // 
+            // tbInvalidPacket
+            // 
+            this.tbInvalidPacket.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbInvalidPacket.Location = new System.Drawing.Point(88, 579);
+            this.tbInvalidPacket.Name = "tbInvalidPacket";
+            this.tbInvalidPacket.Size = new System.Drawing.Size(100, 26);
+            this.tbInvalidPacket.TabIndex = 22;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 581);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 24);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Errors";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.AllowDrop = true;
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tabControl1.Controls.Add(this.tpConnection);
+            this.tabControl1.Controls.Add(this.tpDataFormat);
+            this.tabControl1.Controls.Add(this.tpPhaseplane);
+            this.tabControl1.Controls.Add(this.tpXMLDisplay);
+            this.tabControl1.Controls.Add(this.tdDataFiles);
+            this.tabControl1.Controls.Add(this.tpIO);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(845, 774);
+            this.tabControl1.TabIndex = 35;
+            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
+            // 
+            // tpConnection
+            // 
+            this.tpConnection.Controls.Add(this.btHelp);
+            this.tpConnection.Controls.Add(this.gbUSB);
+            this.tpConnection.Controls.Add(this.cbInstrumentRealtime);
+            this.tpConnection.Controls.Add(this.tbConsole);
+            this.tpConnection.Controls.Add(this.btClear);
+            this.tpConnection.Controls.Add(this.lbBytes);
+            this.tpConnection.Controls.Add(this.tbBytes);
+            this.tpConnection.Controls.Add(this.label4);
+            this.tpConnection.Controls.Add(this.tbInvalidPacket);
+            this.tpConnection.Controls.Add(this.btRefreshPorts);
+            this.tpConnection.Location = new System.Drawing.Point(4, 33);
+            this.tpConnection.Name = "tpConnection";
+            this.tpConnection.Padding = new System.Windows.Forms.Padding(3);
+            this.tpConnection.Size = new System.Drawing.Size(837, 737);
+            this.tpConnection.TabIndex = 0;
+            this.tpConnection.Text = "Connection";
+            this.tpConnection.UseVisualStyleBackColor = true;
+            // 
+            // btHelp
+            // 
+            this.btHelp.Location = new System.Drawing.Point(227, 20);
+            this.btHelp.Name = "btHelp";
+            this.btHelp.Size = new System.Drawing.Size(126, 44);
+            this.btHelp.TabIndex = 41;
+            this.btHelp.Text = "Help!";
+            this.btHelp.UseVisualStyleBackColor = true;
+            this.btHelp.Click += new System.EventHandler(this.btHelp_Click);
+            // 
+            // gbUSB
+            // 
+            this.gbUSB.Controls.Add(this.button3);
+            this.gbUSB.Controls.Add(this.cbUseDLL);
+            this.gbUSB.Controls.Add(this.cbComPortsUSB);
+            this.gbUSB.Controls.Add(this.lbComPort);
+            this.gbUSB.Controls.Add(this.btConnectUSB);
+            this.gbUSB.Controls.Add(this.cbAutoConnect);
+            this.gbUSB.Location = new System.Drawing.Point(10, 70);
+            this.gbUSB.Name = "gbUSB";
+            this.gbUSB.Size = new System.Drawing.Size(344, 168);
+            this.gbUSB.TabIndex = 40;
+            this.gbUSB.TabStop = false;
+            this.gbUSB.Text = "USB";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(217, 50);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(118, 23);
+            this.button3.TabIndex = 29;
+            this.button3.Text = "Turn ON Logging";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // cbUseDLL
+            // 
+            this.cbUseDLL.AutoSize = true;
+            this.cbUseDLL.Checked = true;
+            this.cbUseDLL.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbUseDLL.Location = new System.Drawing.Point(217, 101);
+            this.cbUseDLL.Name = "cbUseDLL";
+            this.cbUseDLL.Size = new System.Drawing.Size(118, 28);
+            this.cbUseDLL.TabIndex = 28;
+            this.cbUseDLL.Text = "Use DLL?";
+            this.cbUseDLL.UseVisualStyleBackColor = true;
+            this.cbUseDLL.Visible = false;
+            // 
+            // cbAutoConnect
+            // 
+            this.cbAutoConnect.AutoSize = true;
+            this.cbAutoConnect.Location = new System.Drawing.Point(82, 133);
+            this.cbAutoConnect.Name = "cbAutoConnect";
+            this.cbAutoConnect.Size = new System.Drawing.Size(157, 28);
+            this.cbAutoConnect.TabIndex = 27;
+            this.cbAutoConnect.Text = "Auto-Connect";
+            this.cbAutoConnect.UseVisualStyleBackColor = true;
+            this.cbAutoConnect.CheckedChanged += new System.EventHandler(this.cbAutoConnect_CheckedChanged);
+            // 
+            // cbInstrumentRealtime
+            // 
+            this.cbInstrumentRealtime.AutoSize = true;
+            this.cbInstrumentRealtime.Checked = true;
+            this.cbInstrumentRealtime.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbInstrumentRealtime.Location = new System.Drawing.Point(36, 550);
+            this.cbInstrumentRealtime.Name = "cbInstrumentRealtime";
+            this.cbInstrumentRealtime.Size = new System.Drawing.Size(213, 28);
+            this.cbInstrumentRealtime.TabIndex = 37;
+            this.cbInstrumentRealtime.Text = "Instrument Realtime";
+            this.cbInstrumentRealtime.UseVisualStyleBackColor = true;
+            this.cbInstrumentRealtime.CheckedChanged += new System.EventHandler(this.cbDebugData_CheckedChanged);
+            // 
+            // tbConsole
+            // 
+            this.tbConsole.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbConsole.Location = new System.Drawing.Point(373, 20);
+            this.tbConsole.Multiline = true;
+            this.tbConsole.Name = "tbConsole";
+            this.tbConsole.ReadOnly = true;
+            this.tbConsole.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbConsole.Size = new System.Drawing.Size(432, 630);
+            this.tbConsole.TabIndex = 28;
+            // 
+            // btClear
+            // 
+            this.btClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btClear.Location = new System.Drawing.Point(298, 613);
+            this.btClear.Name = "btClear";
+            this.btClear.Size = new System.Drawing.Size(69, 37);
+            this.btClear.TabIndex = 26;
+            this.btClear.Text = "Clear";
+            this.btClear.UseVisualStyleBackColor = true;
+            this.btClear.Click += new System.EventHandler(this.btClear_Click);
+            // 
+            // lbBytes
+            // 
+            this.lbBytes.AutoSize = true;
+            this.lbBytes.Location = new System.Drawing.Point(15, 613);
+            this.lbBytes.Name = "lbBytes";
+            this.lbBytes.Size = new System.Drawing.Size(60, 24);
+            this.lbBytes.TabIndex = 25;
+            this.lbBytes.Text = "Bytes";
+            // 
+            // tbBytes
+            // 
+            this.tbBytes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbBytes.Location = new System.Drawing.Point(88, 611);
+            this.tbBytes.Name = "tbBytes";
+            this.tbBytes.Size = new System.Drawing.Size(100, 26);
+            this.tbBytes.TabIndex = 24;
+            // 
+            // tpDataFormat
+            // 
+            this.tpDataFormat.Controls.Add(this.label12);
+            this.tpDataFormat.Controls.Add(this.tbRadius);
+            this.tpDataFormat.Controls.Add(this.tbTheta);
+            this.tpDataFormat.Controls.Add(this.rbNonRealtime);
+            this.tpDataFormat.Controls.Add(this.cbRealTimeDisplay);
+            this.tpDataFormat.Controls.Add(this.rbSingleChan);
+            this.tpDataFormat.Controls.Add(this.rbNone);
+            this.tpDataFormat.Controls.Add(this.rbRaw);
+            this.tpDataFormat.Controls.Add(this.rbPostProcess);
+            this.tpDataFormat.Controls.Add(this.label8);
+            this.tpDataFormat.Controls.Add(this.tbPointsCount);
+            this.tpDataFormat.Controls.Add(this.label3);
+            this.tpDataFormat.Controls.Add(this.tbStatusByte);
+            this.tpDataFormat.Controls.Add(this.lbPacketsPerSecond);
+            this.tpDataFormat.Controls.Add(this.lbMix);
+            this.tpDataFormat.Controls.Add(this.tbCmixX);
+            this.tpDataFormat.Controls.Add(this.tbCmixY);
+            this.tpDataFormat.Controls.Add(this.tbC1X);
+            this.tpDataFormat.Controls.Add(this.lbCh2);
+            this.tpDataFormat.Controls.Add(this.tbC2Y);
+            this.tpDataFormat.Controls.Add(this.lbCh1);
+            this.tpDataFormat.Controls.Add(this.tbC2X);
+            this.tpDataFormat.Controls.Add(this.lbY);
+            this.tpDataFormat.Controls.Add(this.tbC1Y);
+            this.tpDataFormat.Controls.Add(this.lbX);
+            this.tpDataFormat.Controls.Add(this.tbConsoleFileScan);
+            this.tpDataFormat.Location = new System.Drawing.Point(4, 33);
+            this.tpDataFormat.Name = "tpDataFormat";
+            this.tpDataFormat.Padding = new System.Windows.Forms.Padding(3);
+            this.tpDataFormat.Size = new System.Drawing.Size(837, 737);
+            this.tpDataFormat.TabIndex = 2;
+            this.tpDataFormat.Text = "Data Format";
+            this.tpDataFormat.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(3, 217);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(67, 20);
+            this.label12.TabIndex = 55;
+            this.label12.Text = "r-Theta";
+            // 
+            // tbRadius
+            // 
+            this.tbRadius.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRadius.Location = new System.Drawing.Point(102, 217);
+            this.tbRadius.Name = "tbRadius";
+            this.tbRadius.Size = new System.Drawing.Size(100, 26);
+            this.tbRadius.TabIndex = 54;
+            this.tbRadius.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbTheta
+            // 
+            this.tbTheta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTheta.Location = new System.Drawing.Point(208, 217);
+            this.tbTheta.Name = "tbTheta";
+            this.tbTheta.Size = new System.Drawing.Size(100, 26);
+            this.tbTheta.TabIndex = 53;
+            this.tbTheta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // rbNonRealtime
+            // 
+            this.rbNonRealtime.AutoSize = true;
+            this.rbNonRealtime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbNonRealtime.Location = new System.Drawing.Point(77, 329);
+            this.rbNonRealtime.Name = "rbNonRealtime";
+            this.rbNonRealtime.Size = new System.Drawing.Size(155, 28);
+            this.rbNonRealtime.TabIndex = 52;
+            this.rbNonRealtime.TabStop = true;
+            this.rbNonRealtime.Text = "Non-Realtime";
+            this.rbNonRealtime.UseVisualStyleBackColor = true;
+            this.rbNonRealtime.Click += new System.EventHandler(this.rbDataFormat_Click);
+            // 
+            // cbRealTimeDisplay
+            // 
+            this.cbRealTimeDisplay.AutoSize = true;
+            this.cbRealTimeDisplay.Checked = true;
+            this.cbRealTimeDisplay.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbRealTimeDisplay.Location = new System.Drawing.Point(211, 13);
+            this.cbRealTimeDisplay.Name = "cbRealTimeDisplay";
+            this.cbRealTimeDisplay.Size = new System.Drawing.Size(183, 28);
+            this.cbRealTimeDisplay.TabIndex = 51;
+            this.cbRealTimeDisplay.Text = "Realtime Display";
+            this.cbRealTimeDisplay.UseVisualStyleBackColor = true;
+            // 
+            // rbSingleChan
+            // 
+            this.rbSingleChan.AutoSize = true;
+            this.rbSingleChan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSingleChan.Location = new System.Drawing.Point(77, 366);
+            this.rbSingleChan.Name = "rbSingleChan";
+            this.rbSingleChan.Size = new System.Drawing.Size(217, 28);
+            this.rbSingleChan.TabIndex = 50;
+            this.rbSingleChan.Text = "Single Channel Post";
+            this.rbSingleChan.UseVisualStyleBackColor = true;
+            this.rbSingleChan.Click += new System.EventHandler(this.rbDataFormat_Click);
+            // 
+            // rbNone
+            // 
+            this.rbNone.AutoSize = true;
+            this.rbNone.Checked = true;
+            this.rbNone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbNone.Location = new System.Drawing.Point(77, 474);
+            this.rbNone.Name = "rbNone";
+            this.rbNone.Size = new System.Drawing.Size(79, 28);
+            this.rbNone.TabIndex = 48;
+            this.rbNone.TabStop = true;
+            this.rbNone.Text = "None";
+            this.rbNone.UseVisualStyleBackColor = true;
+            this.rbNone.Click += new System.EventHandler(this.rbDataFormat_Click);
+            // 
+            // rbRaw
+            // 
+            this.rbRaw.AutoSize = true;
+            this.rbRaw.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbRaw.Location = new System.Drawing.Point(77, 440);
+            this.rbRaw.Name = "rbRaw";
+            this.rbRaw.Size = new System.Drawing.Size(68, 28);
+            this.rbRaw.TabIndex = 47;
+            this.rbRaw.Text = "Raw";
+            this.rbRaw.UseVisualStyleBackColor = true;
+            this.rbRaw.Click += new System.EventHandler(this.rbDataFormat_Click);
+            // 
+            // rbPostProcess
+            // 
+            this.rbPostProcess.AutoSize = true;
+            this.rbPostProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbPostProcess.Location = new System.Drawing.Point(77, 403);
+            this.rbPostProcess.Name = "rbPostProcess";
+            this.rbPostProcess.Size = new System.Drawing.Size(149, 28);
+            this.rbPostProcess.TabIndex = 46;
+            this.rbPostProcess.Text = "Post Process";
+            this.rbPostProcess.UseVisualStyleBackColor = true;
+            this.rbPostProcess.Click += new System.EventHandler(this.rbDataFormat_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(13, 12);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(150, 16);
+            this.label8.TabIndex = 45;
+            this.label8.Text = "Live Real-Time Data";
+            // 
+            // tbPointsCount
+            // 
+            this.tbPointsCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPointsCount.Location = new System.Drawing.Point(102, 50);
+            this.tbPointsCount.Name = "tbPointsCount";
+            this.tbPointsCount.ReadOnly = true;
+            this.tbPointsCount.Size = new System.Drawing.Size(100, 26);
+            this.tbPointsCount.TabIndex = 30;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 249);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 24);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "Status";
+            // 
+            // tbStatusByte
+            // 
+            this.tbStatusByte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStatusByte.Location = new System.Drawing.Point(102, 249);
+            this.tbStatusByte.Name = "tbStatusByte";
+            this.tbStatusByte.Size = new System.Drawing.Size(100, 26);
+            this.tbStatusByte.TabIndex = 43;
+            this.tbStatusByte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lbPacketsPerSecond
+            // 
+            this.lbPacketsPerSecond.AutoSize = true;
+            this.lbPacketsPerSecond.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPacketsPerSecond.Location = new System.Drawing.Point(51, 50);
+            this.lbPacketsPerSecond.Name = "lbPacketsPerSecond";
+            this.lbPacketsPerSecond.Size = new System.Drawing.Size(45, 24);
+            this.lbPacketsPerSecond.TabIndex = 31;
+            this.lbPacketsPerSecond.Text = "P/s:";
+            // 
+            // lbMix
+            // 
+            this.lbMix.AutoSize = true;
+            this.lbMix.Location = new System.Drawing.Point(3, 168);
+            this.lbMix.Name = "lbMix";
+            this.lbMix.Size = new System.Drawing.Size(43, 24);
+            this.lbMix.TabIndex = 42;
+            this.lbMix.Text = "Mix";
+            // 
+            // tbCmixX
+            // 
+            this.tbCmixX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCmixX.Location = new System.Drawing.Point(102, 168);
+            this.tbCmixX.Name = "tbCmixX";
+            this.tbCmixX.Size = new System.Drawing.Size(100, 26);
+            this.tbCmixX.TabIndex = 41;
+            this.tbCmixX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbCmixY
+            // 
+            this.tbCmixY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCmixY.Location = new System.Drawing.Point(208, 168);
+            this.tbCmixY.Name = "tbCmixY";
+            this.tbCmixY.Size = new System.Drawing.Size(100, 26);
+            this.tbCmixY.TabIndex = 40;
+            this.tbCmixY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbC1X
+            // 
+            this.tbC1X.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbC1X.Location = new System.Drawing.Point(102, 118);
+            this.tbC1X.Name = "tbC1X";
+            this.tbC1X.Size = new System.Drawing.Size(100, 26);
+            this.tbC1X.TabIndex = 32;
+            this.tbC1X.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lbCh2
+            // 
+            this.lbCh2.AutoSize = true;
+            this.lbCh2.Location = new System.Drawing.Point(3, 142);
+            this.lbCh2.Name = "lbCh2";
+            this.lbCh2.Size = new System.Drawing.Size(47, 24);
+            this.lbCh2.TabIndex = 39;
+            this.lbCh2.Text = "Ch2";
+            // 
+            // tbC2Y
+            // 
+            this.tbC2Y.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbC2Y.Location = new System.Drawing.Point(208, 142);
+            this.tbC2Y.Name = "tbC2Y";
+            this.tbC2Y.Size = new System.Drawing.Size(100, 26);
+            this.tbC2Y.TabIndex = 33;
+            this.tbC2Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lbCh1
+            // 
+            this.lbCh1.AutoSize = true;
+            this.lbCh1.Location = new System.Drawing.Point(3, 118);
+            this.lbCh1.Name = "lbCh1";
+            this.lbCh1.Size = new System.Drawing.Size(47, 24);
+            this.lbCh1.TabIndex = 38;
+            this.lbCh1.Text = "Ch1";
+            // 
+            // tbC2X
+            // 
+            this.tbC2X.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbC2X.Location = new System.Drawing.Point(102, 142);
+            this.tbC2X.Name = "tbC2X";
+            this.tbC2X.Size = new System.Drawing.Size(100, 26);
+            this.tbC2X.TabIndex = 34;
+            this.tbC2X.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lbY
+            // 
+            this.lbY.Location = new System.Drawing.Point(205, 84);
+            this.lbY.Name = "lbY";
+            this.lbY.Size = new System.Drawing.Size(103, 26);
+            this.lbY.TabIndex = 37;
+            this.lbY.Text = "Y";
+            this.lbY.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tbC1Y
+            // 
+            this.tbC1Y.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbC1Y.Location = new System.Drawing.Point(208, 118);
+            this.tbC1Y.Name = "tbC1Y";
+            this.tbC1Y.Size = new System.Drawing.Size(100, 26);
+            this.tbC1Y.TabIndex = 35;
+            this.tbC1Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lbX
+            // 
+            this.lbX.Location = new System.Drawing.Point(102, 84);
+            this.lbX.Name = "lbX";
+            this.lbX.Size = new System.Drawing.Size(100, 26);
+            this.lbX.TabIndex = 36;
+            this.lbX.Text = "X";
+            this.lbX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tbConsoleFileScan
+            // 
+            this.tbConsoleFileScan.Location = new System.Drawing.Point(423, 19);
+            this.tbConsoleFileScan.Multiline = true;
+            this.tbConsoleFileScan.Name = "tbConsoleFileScan";
+            this.tbConsoleFileScan.ReadOnly = true;
+            this.tbConsoleFileScan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbConsoleFileScan.Size = new System.Drawing.Size(314, 496);
+            this.tbConsoleFileScan.TabIndex = 29;
+            // 
+            // tpPhaseplane
+            // 
+            this.tpPhaseplane.Controls.Add(this.cbFitSC1onAxis);
+            this.tpPhaseplane.Controls.Add(this.cbFitSC2onAxis);
+            this.tpPhaseplane.Controls.Add(this.cbLockAxis);
+            this.tpPhaseplane.Controls.Add(this.cbRemoveReverse);
+            this.tpPhaseplane.Controls.Add(this.nudPersistenceEncoder);
+            this.tpPhaseplane.Controls.Add(this.cbSource2);
+            this.tpPhaseplane.Controls.Add(this.cbAlarmDraw);
+            this.tpPhaseplane.Controls.Add(this.btPause);
+            this.tpPhaseplane.Controls.Add(this.cbInterpolate);
+            this.tpPhaseplane.Controls.Add(this.label13);
+            this.tpPhaseplane.Controls.Add(this.nudSpotSize);
+            this.tpPhaseplane.Controls.Add(this.cbSource);
+            this.tpPhaseplane.Controls.Add(this.lbSource);
+            this.tpPhaseplane.Controls.Add(this.nudSweepTime);
+            this.tpPhaseplane.Controls.Add(this.lbSweep);
+            this.tpPhaseplane.Controls.Add(this.label15);
+            this.tpPhaseplane.Controls.Add(this.nudZoom);
+            this.tpPhaseplane.Controls.Add(this.ctPhase);
+            this.tpPhaseplane.Controls.Add(this.ctTimebase);
+            this.tpPhaseplane.Controls.Add(this.label6);
+            this.tpPhaseplane.Controls.Add(this.nudPersistence);
+            this.tpPhaseplane.Controls.Add(this.btClearPhasePlane);
+            this.tpPhaseplane.Location = new System.Drawing.Point(4, 33);
+            this.tpPhaseplane.Name = "tpPhaseplane";
+            this.tpPhaseplane.Size = new System.Drawing.Size(837, 737);
+            this.tpPhaseplane.TabIndex = 4;
+            this.tpPhaseplane.Text = "PhasePlane";
+            this.tpPhaseplane.UseVisualStyleBackColor = true;
+            this.tpPhaseplane.Resize += new System.EventHandler(this.tpPhaseplane_Resize);
+            // 
+            // cbFitSC1onAxis
+            // 
+            this.cbFitSC1onAxis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbFitSC1onAxis.AutoSize = true;
+            this.cbFitSC1onAxis.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFitSC1onAxis.Location = new System.Drawing.Point(736, 52);
+            this.cbFitSC1onAxis.Name = "cbFitSC1onAxis";
+            this.cbFitSC1onAxis.Size = new System.Drawing.Size(101, 17);
+            this.cbFitSC1onAxis.TabIndex = 26;
+            this.cbFitSC1onAxis.Text = "Fit on Timebase";
+            this.cbFitSC1onAxis.UseVisualStyleBackColor = true;
+            this.cbFitSC1onAxis.CheckedChanged += new System.EventHandler(this.cbFitSC1onAxis_CheckedChanged);
+            // 
+            // cbFitSC2onAxis
+            // 
+            this.cbFitSC2onAxis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbFitSC2onAxis.AutoSize = true;
+            this.cbFitSC2onAxis.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFitSC2onAxis.Location = new System.Drawing.Point(736, 76);
+            this.cbFitSC2onAxis.Name = "cbFitSC2onAxis";
+            this.cbFitSC2onAxis.Size = new System.Drawing.Size(101, 17);
+            this.cbFitSC2onAxis.TabIndex = 25;
+            this.cbFitSC2onAxis.Text = "Fit on Timebase";
+            this.cbFitSC2onAxis.UseVisualStyleBackColor = true;
+            this.cbFitSC2onAxis.CheckedChanged += new System.EventHandler(this.cbFitSC2onAxis_CheckedChanged);
+            // 
+            // cbLockAxis
+            // 
+            this.cbLockAxis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbLockAxis.AutoSize = true;
+            this.cbLockAxis.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLockAxis.Location = new System.Drawing.Point(743, 204);
+            this.cbLockAxis.Name = "cbLockAxis";
+            this.cbLockAxis.Size = new System.Drawing.Size(96, 17);
+            this.cbLockAxis.TabIndex = 23;
+            this.cbLockAxis.Text = "Tie Phase Axis";
+            this.cbLockAxis.UseVisualStyleBackColor = true;
+            this.cbLockAxis.CheckedChanged += new System.EventHandler(this.cbLockAxis_CheckedChanged);
+            // 
+            // cbRemoveReverse
+            // 
+            this.cbRemoveReverse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbRemoveReverse.AutoSize = true;
+            this.cbRemoveReverse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbRemoveReverse.Location = new System.Drawing.Point(743, 183);
+            this.cbRemoveReverse.Name = "cbRemoveReverse";
+            this.cbRemoveReverse.Size = new System.Drawing.Size(109, 17);
+            this.cbRemoveReverse.TabIndex = 22;
+            this.cbRemoveReverse.Text = "Remove Reverse";
+            this.cbRemoveReverse.UseVisualStyleBackColor = true;
+            this.cbRemoveReverse.CheckedChanged += new System.EventHandler(this.cbRemoveReverse_CheckedChanged);
+            // 
+            // nudPersistenceEncoder
+            // 
+            this.nudPersistenceEncoder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudPersistenceEncoder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudPersistenceEncoder.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudPersistenceEncoder.Location = new System.Drawing.Point(661, 126);
+            this.nudPersistenceEncoder.Maximum = new decimal(new int[] {
+            4000,
+            0,
+            0,
+            0});
+            this.nudPersistenceEncoder.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudPersistenceEncoder.Name = "nudPersistenceEncoder";
+            this.nudPersistenceEncoder.Size = new System.Drawing.Size(88, 22);
+            this.nudPersistenceEncoder.TabIndex = 21;
+            this.nudPersistenceEncoder.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudPersistenceEncoder.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            // 
+            // cbSource2
+            // 
+            this.cbSource2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbSource2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSource2.ForeColor = System.Drawing.Color.Blue;
+            this.cbSource2.FormattingEnabled = true;
+            this.cbSource2.Location = new System.Drawing.Point(650, 72);
+            this.cbSource2.Name = "cbSource2";
+            this.cbSource2.Size = new System.Drawing.Size(86, 23);
+            this.cbSource2.TabIndex = 20;
+            this.cbSource2.SelectedIndexChanged += new System.EventHandler(this.cbSource2_SelectedIndexChanged);
+            // 
+            // cbAlarmDraw
+            // 
+            this.cbAlarmDraw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbAlarmDraw.AutoSize = true;
+            this.cbAlarmDraw.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAlarmDraw.Location = new System.Drawing.Point(743, 249);
+            this.cbAlarmDraw.Name = "cbAlarmDraw";
+            this.cbAlarmDraw.Size = new System.Drawing.Size(77, 17);
+            this.cbAlarmDraw.TabIndex = 19;
+            this.cbAlarmDraw.Text = "AlarmDraw";
+            this.cbAlarmDraw.UseVisualStyleBackColor = true;
+            this.cbAlarmDraw.Visible = false;
+            // 
+            // btPause
+            // 
+            this.btPause.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btPause.BackColor = System.Drawing.Color.LightCoral;
+            this.btPause.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btPause.BackgroundImage")));
+            this.btPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btPause.Location = new System.Drawing.Point(770, 11);
+            this.btPause.Name = "btPause";
+            this.btPause.Size = new System.Drawing.Size(37, 33);
+            this.btPause.TabIndex = 18;
+            this.btPause.UseVisualStyleBackColor = false;
+            this.btPause.Click += new System.EventHandler(this.btPause_Click);
+            // 
+            // cbInterpolate
+            // 
+            this.cbInterpolate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbInterpolate.AutoSize = true;
+            this.cbInterpolate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbInterpolate.Location = new System.Drawing.Point(743, 161);
+            this.cbInterpolate.Name = "cbInterpolate";
+            this.cbInterpolate.Size = new System.Drawing.Size(84, 19);
+            this.cbInterpolate.TabIndex = 17;
+            this.cbInterpolate.Text = "Interpolate";
+            this.cbInterpolate.UseVisualStyleBackColor = true;
+            this.cbInterpolate.CheckedChanged += new System.EventHandler(this.cbInterpolate_CheckedChanged);
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(650, 191);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(73, 16);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "Spot Size";
+            // 
+            // nudSpotSize
+            // 
+            this.nudSpotSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudSpotSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudSpotSize.Location = new System.Drawing.Point(649, 210);
+            this.nudSpotSize.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudSpotSize.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudSpotSize.Name = "nudSpotSize";
+            this.nudSpotSize.Size = new System.Drawing.Size(88, 22);
+            this.nudSpotSize.TabIndex = 15;
+            this.nudSpotSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudSpotSize.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudSpotSize.TextChanged += new System.EventHandler(this.nudEmbedECOnly_TextChanged);
+            this.nudSpotSize.ValueChanged += new System.EventHandler(this.nudSpotSize_ValueChanged);
+            this.nudSpotSize.Click += new System.EventHandler(this.SpotSize_Click);
+            // 
+            // cbSource
+            // 
+            this.cbSource.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbSource.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSource.ForeColor = System.Drawing.Color.Red;
+            this.cbSource.FormattingEnabled = true;
+            this.cbSource.Location = new System.Drawing.Point(650, 48);
+            this.cbSource.Name = "cbSource";
+            this.cbSource.Size = new System.Drawing.Size(86, 23);
+            this.cbSource.TabIndex = 14;
+            this.cbSource.SelectedIndexChanged += new System.EventHandler(this.cbSource_SelectedIndexChanged);
+            // 
+            // lbSource
+            // 
+            this.lbSource.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbSource.AutoSize = true;
+            this.lbSource.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSource.Location = new System.Drawing.Point(651, 28);
+            this.lbSource.Name = "lbSource";
+            this.lbSource.Size = new System.Drawing.Size(56, 16);
+            this.lbSource.TabIndex = 13;
+            this.lbSource.Text = "Source";
+            // 
+            // nudSweepTime
+            // 
+            this.nudSweepTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudSweepTime.DecimalPlaces = 3;
+            this.nudSweepTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudSweepTime.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.nudSweepTime.Location = new System.Drawing.Point(649, 254);
+            this.nudSweepTime.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.nudSweepTime.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.nudSweepTime.Name = "nudSweepTime";
+            this.nudSweepTime.Size = new System.Drawing.Size(88, 22);
+            this.nudSweepTime.TabIndex = 11;
+            this.nudSweepTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudSweepTime.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.nudSweepTime.TextChanged += new System.EventHandler(this.nudEmbedECOnly_TextChanged);
+            this.nudSweepTime.ValueChanged += new System.EventHandler(this.nudSweepTime_ValueChanged);
+            this.nudSweepTime.Click += new System.EventHandler(this.nudSweepTime_Click);
+            // 
+            // lbSweep
+            // 
+            this.lbSweep.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbSweep.AutoSize = true;
+            this.lbSweep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSweep.Location = new System.Drawing.Point(650, 235);
+            this.lbSweep.Name = "lbSweep";
+            this.lbSweep.Size = new System.Drawing.Size(93, 16);
+            this.lbSweep.TabIndex = 10;
+            this.lbSweep.Text = "Sweep Time";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(650, 142);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(73, 16);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Zoom Out";
+            this.label15.Click += new System.EventHandler(this.Zoom_Click);
+            // 
+            // nudZoom
+            // 
+            this.nudZoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudZoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudZoom.Location = new System.Drawing.Point(649, 161);
+            this.nudZoom.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.nudZoom.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudZoom.Name = "nudZoom";
+            this.nudZoom.Size = new System.Drawing.Size(88, 22);
+            this.nudZoom.TabIndex = 8;
+            this.nudZoom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudZoom.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudZoom.TextChanged += new System.EventHandler(this.nudEmbedECOnly_TextChanged);
+            this.nudZoom.ValueChanged += new System.EventHandler(this.nudZoom_ValueChanged);
+            this.nudZoom.Click += new System.EventHandler(this.Zoom_Click);
+            // 
+            // ctPhase
+            // 
+            this.ctPhase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ctPhase.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.TopRight;
+            chartArea1.Name = "ChartArea1";
+            this.ctPhase.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.ctPhase.Legends.Add(legend1);
+            this.ctPhase.Location = new System.Drawing.Point(3, 3);
+            this.ctPhase.Name = "ctPhase";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.ctPhase.Series.Add(series1);
+            this.ctPhase.Size = new System.Drawing.Size(407, 306);
+            this.ctPhase.TabIndex = 7;
+            this.ctPhase.Text = "chart2";
+            this.ctPhase.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ctPhase_MouseClick);
+            // 
+            // ctTimebase
+            // 
+            this.ctTimebase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea2.Name = "ChartArea1";
+            this.ctTimebase.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.ctTimebase.Legends.Add(legend2);
+            this.ctTimebase.Location = new System.Drawing.Point(5, 337);
+            this.ctTimebase.Name = "ctTimebase";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.ctTimebase.Series.Add(series2);
+            this.ctTimebase.Size = new System.Drawing.Size(802, 217);
+            this.ctTimebase.TabIndex = 6;
+            this.ctTimebase.Text = "chart1";
+            this.ctTimebase.AxisViewChanged += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.ViewEventArgs>(this.ctTimebase_AxisViewChanged);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(650, 98);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 16);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Persistence";
+            this.label6.Click += new System.EventHandler(this.Persistence_Click);
+            // 
+            // nudPersistence
+            // 
+            this.nudPersistence.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudPersistence.DecimalPlaces = 1;
+            this.nudPersistence.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudPersistence.Increment = new decimal(new int[] {
+            2,
+            0,
+            0,
+            65536});
+            this.nudPersistence.Location = new System.Drawing.Point(649, 117);
+            this.nudPersistence.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudPersistence.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            65536});
+            this.nudPersistence.Name = "nudPersistence";
+            this.nudPersistence.Size = new System.Drawing.Size(88, 22);
+            this.nudPersistence.TabIndex = 2;
+            this.nudPersistence.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudPersistence.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            65536});
+            this.nudPersistence.TextChanged += new System.EventHandler(this.nudEmbedECOnly_TextChanged);
+            this.nudPersistence.ValueChanged += new System.EventHandler(this.nudPersistence_ValueChanged);
+            this.nudPersistence.Click += new System.EventHandler(this.Persistence_Click);
+            // 
+            // btClearPhasePlane
+            // 
+            this.btClearPhasePlane.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btClearPhasePlane.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btClearPhasePlane.Location = new System.Drawing.Point(650, 3);
+            this.btClearPhasePlane.Name = "btClearPhasePlane";
+            this.btClearPhasePlane.Size = new System.Drawing.Size(90, 21);
+            this.btClearPhasePlane.TabIndex = 1;
+            this.btClearPhasePlane.Text = "Clear";
+            this.btClearPhasePlane.UseVisualStyleBackColor = true;
+            this.btClearPhasePlane.Click += new System.EventHandler(this.btClearPhasePlane_Click);
+            // 
+            // tpXMLDisplay
+            // 
+            this.tpXMLDisplay.Controls.Add(this.rbETI300);
+            this.tpXMLDisplay.Controls.Add(this.btRotaryStop);
+            this.tpXMLDisplay.Controls.Add(this.btRotaryStart);
+            this.tpXMLDisplay.Controls.Add(this.rbRailCheck);
+            this.tpXMLDisplay.Controls.Add(this.btSaveXMLFile);
+            this.tpXMLDisplay.Controls.Add(this.rbAeroCheck2);
+            this.tpXMLDisplay.Controls.Add(this.rbEmbedEC);
+            this.tpXMLDisplay.Controls.Add(this.btReloadSettings);
+            this.tpXMLDisplay.Controls.Add(this.lbXMLFileName);
+            this.tpXMLDisplay.Controls.Add(this.btLoadXMLFile);
+            this.tpXMLDisplay.Controls.Add(this.lbChannelMix);
+            this.tpXMLDisplay.Controls.Add(this.lbHighPassFilter);
+            this.tpXMLDisplay.Controls.Add(this.lbLowPassFilter);
+            this.tpXMLDisplay.Controls.Add(this.rbVictor22D);
+            this.tpXMLDisplay.Controls.Add(this.rbAeroCheckPlus);
+            this.tpXMLDisplay.Controls.Add(this.lbRPM);
+            this.tpXMLDisplay.Controls.Add(this.lbProbeType);
+            this.tpXMLDisplay.Controls.Add(this.lbFreqUnitsCh2);
+            this.tpXMLDisplay.Controls.Add(this.lbFreqUnitsCh1);
+            this.tpXMLDisplay.Controls.Add(this.lbPhase);
+            this.tpXMLDisplay.Controls.Add(this.lbFrequency);
+            this.tpXMLDisplay.Controls.Add(this.lbChannel2);
+            this.tpXMLDisplay.Controls.Add(this.lbChannel1);
+            this.tpXMLDisplay.Controls.Add(this.label14);
+            this.tpXMLDisplay.Controls.Add(this.lbInputGain);
+            this.tpXMLDisplay.Controls.Add(this.label5);
+            this.tpXMLDisplay.Controls.Add(this.label2);
+            this.tpXMLDisplay.Controls.Add(this.btUpdateInstrument);
+            this.tpXMLDisplay.Controls.Add(this.label7);
+            this.tpXMLDisplay.Controls.Add(this.rtbXMLSettings);
+            this.tpXMLDisplay.Controls.Add(this.gbAlarms);
+            this.tpXMLDisplay.Controls.Add(this.cbRotaryType);
+            this.tpXMLDisplay.Controls.Add(this.nudPhaseChMix);
+            this.tpXMLDisplay.Controls.Add(this.nudGainYchMix);
+            this.tpXMLDisplay.Controls.Add(this.nudGainXchMix);
+            this.tpXMLDisplay.Controls.Add(this.nudHighPassFilterCh2);
+            this.tpXMLDisplay.Controls.Add(this.nudHighPassFilterCh1);
+            this.tpXMLDisplay.Controls.Add(this.nudLowPassFilterCh2);
+            this.tpXMLDisplay.Controls.Add(this.nudLowPassFilterCh1);
+            this.tpXMLDisplay.Controls.Add(this.nudRPM);
+            this.tpXMLDisplay.Controls.Add(this.cbProbeTypeCh2);
+            this.tpXMLDisplay.Controls.Add(this.cbProbeTypeCh1);
+            this.tpXMLDisplay.Controls.Add(this.nudPhaseCh2);
+            this.tpXMLDisplay.Controls.Add(this.nudPhaseCh1);
+            this.tpXMLDisplay.Controls.Add(this.nudFrequencyCh2);
+            this.tpXMLDisplay.Controls.Add(this.nudFrequencyCh1);
+            this.tpXMLDisplay.Controls.Add(this.nudInputGainCh2);
+            this.tpXMLDisplay.Controls.Add(this.nudGainYch2);
+            this.tpXMLDisplay.Controls.Add(this.nudGainXch2);
+            this.tpXMLDisplay.Controls.Add(this.nudDriveGain);
+            this.tpXMLDisplay.Controls.Add(this.nudInputGainCh1);
+            this.tpXMLDisplay.Controls.Add(this.nudGainYch1);
+            this.tpXMLDisplay.Controls.Add(this.nudGainXch1);
+            this.tpXMLDisplay.Location = new System.Drawing.Point(4, 33);
+            this.tpXMLDisplay.Name = "tpXMLDisplay";
+            this.tpXMLDisplay.Size = new System.Drawing.Size(837, 737);
+            this.tpXMLDisplay.TabIndex = 5;
+            this.tpXMLDisplay.Text = "Settings";
+            this.tpXMLDisplay.UseVisualStyleBackColor = true;
+            // 
+            // rbETI300
+            // 
+            this.rbETI300.AutoSize = true;
+            this.rbETI300.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbETI300.Location = new System.Drawing.Point(773, 8);
+            this.rbETI300.Name = "rbETI300";
+            this.rbETI300.Size = new System.Drawing.Size(67, 20);
+            this.rbETI300.TabIndex = 99;
+            this.rbETI300.TabStop = true;
+            this.rbETI300.Text = "ETI300";
+            this.rbETI300.UseVisualStyleBackColor = true;
+            // 
+            // btRotaryStop
+            // 
+            this.btRotaryStop.BackColor = System.Drawing.Color.Red;
+            this.btRotaryStop.Location = new System.Drawing.Point(501, 291);
+            this.btRotaryStop.Name = "btRotaryStop";
+            this.btRotaryStop.Size = new System.Drawing.Size(39, 39);
+            this.btRotaryStop.TabIndex = 98;
+            this.btRotaryStop.Text = "?";
+            this.btRotaryStop.UseVisualStyleBackColor = false;
+            this.btRotaryStop.Click += new System.EventHandler(this.btRotaryStop_Click);
+            // 
+            // btRotaryStart
+            // 
+            this.btRotaryStart.BackColor = System.Drawing.Color.Green;
+            this.btRotaryStart.Location = new System.Drawing.Point(501, 251);
+            this.btRotaryStart.Name = "btRotaryStart";
+            this.btRotaryStart.Size = new System.Drawing.Size(39, 39);
+            this.btRotaryStart.TabIndex = 97;
+            this.btRotaryStart.Text = "?";
+            this.btRotaryStart.UseVisualStyleBackColor = false;
+            this.btRotaryStart.Click += new System.EventHandler(this.btRotaryStart_Click);
+            // 
+            // rbRailCheck
+            // 
+            this.rbRailCheck.AutoSize = true;
+            this.rbRailCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbRailCheck.Location = new System.Drawing.Point(679, 8);
+            this.rbRailCheck.Name = "rbRailCheck";
+            this.rbRailCheck.Size = new System.Drawing.Size(87, 20);
+            this.rbRailCheck.TabIndex = 95;
+            this.rbRailCheck.TabStop = true;
+            this.rbRailCheck.Text = "RailCheck";
+            this.rbRailCheck.UseVisualStyleBackColor = true;
+            // 
+            // btSaveXMLFile
+            // 
+            this.btSaveXMLFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btSaveXMLFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSaveXMLFile.Location = new System.Drawing.Point(615, 557);
+            this.btSaveXMLFile.Name = "btSaveXMLFile";
+            this.btSaveXMLFile.Size = new System.Drawing.Size(192, 35);
+            this.btSaveXMLFile.TabIndex = 88;
+            this.btSaveXMLFile.Text = "Save XML File";
+            this.btSaveXMLFile.UseVisualStyleBackColor = true;
+            this.btSaveXMLFile.Click += new System.EventHandler(this.btSaveXMLFile_Click);
+            // 
+            // rbAeroCheck2
+            // 
+            this.rbAeroCheck2.AutoSize = true;
+            this.rbAeroCheck2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbAeroCheck2.Location = new System.Drawing.Point(310, 8);
+            this.rbAeroCheck2.Name = "rbAeroCheck2";
+            this.rbAeroCheck2.Size = new System.Drawing.Size(138, 20);
+            this.rbAeroCheck2.TabIndex = 87;
+            this.rbAeroCheck2.TabStop = true;
+            this.rbAeroCheck2.Text = "Aero/Weld Check2";
+            this.rbAeroCheck2.UseVisualStyleBackColor = true;
+            this.rbAeroCheck2.CheckedChanged += new System.EventHandler(this.rbAeroCheck2_CheckedChanged);
+            // 
+            // rbEmbedEC
+            // 
+            this.rbEmbedEC.AutoSize = true;
+            this.rbEmbedEC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEmbedEC.Location = new System.Drawing.Point(577, 8);
+            this.rbEmbedEC.Name = "rbEmbedEC";
+            this.rbEmbedEC.Size = new System.Drawing.Size(87, 20);
+            this.rbEmbedEC.TabIndex = 86;
+            this.rbEmbedEC.TabStop = true;
+            this.rbEmbedEC.Text = "EmbedEC";
+            this.rbEmbedEC.UseVisualStyleBackColor = true;
+            this.rbEmbedEC.CheckedChanged += new System.EventHandler(this.rbEmbedEC_CheckedChanged);
+            // 
+            // btReloadSettings
+            // 
+            this.btReloadSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btReloadSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btReloadSettings.Location = new System.Drawing.Point(615, 483);
+            this.btReloadSettings.Name = "btReloadSettings";
+            this.btReloadSettings.Size = new System.Drawing.Size(192, 22);
+            this.btReloadSettings.TabIndex = 85;
+            this.btReloadSettings.Text = "Reload Settings from Instrument";
+            this.btReloadSettings.UseVisualStyleBackColor = true;
+            this.btReloadSettings.Click += new System.EventHandler(this.btReloadSettings_Click);
+            // 
+            // lbXMLFileName
+            // 
+            this.lbXMLFileName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbXMLFileName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbXMLFileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbXMLFileName.Location = new System.Drawing.Point(546, 46);
+            this.lbXMLFileName.Name = "lbXMLFileName";
+            this.lbXMLFileName.Size = new System.Drawing.Size(261, 23);
+            this.lbXMLFileName.TabIndex = 84;
+            this.lbXMLFileName.Text = "Live Data";
+            this.lbXMLFileName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btLoadXMLFile
+            // 
+            this.btLoadXMLFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btLoadXMLFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLoadXMLFile.Location = new System.Drawing.Point(615, 514);
+            this.btLoadXMLFile.Name = "btLoadXMLFile";
+            this.btLoadXMLFile.Size = new System.Drawing.Size(192, 35);
+            this.btLoadXMLFile.TabIndex = 82;
+            this.btLoadXMLFile.Text = "Load XML File";
+            this.btLoadXMLFile.UseVisualStyleBackColor = true;
+            this.btLoadXMLFile.Click += new System.EventHandler(this.btLoadXMLFile_Click);
+            // 
+            // lbChannelMix
+            // 
+            this.lbChannelMix.AutoSize = true;
+            this.lbChannelMix.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChannelMix.Location = new System.Drawing.Point(398, 44);
+            this.lbChannelMix.Name = "lbChannelMix";
+            this.lbChannelMix.Size = new System.Drawing.Size(30, 16);
+            this.lbChannelMix.TabIndex = 79;
+            this.lbChannelMix.Text = "Mix";
+            // 
+            // lbHighPassFilter
+            // 
+            this.lbHighPassFilter.AutoSize = true;
+            this.lbHighPassFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHighPassFilter.Location = new System.Drawing.Point(10, 332);
+            this.lbHighPassFilter.Name = "lbHighPassFilter";
+            this.lbHighPassFilter.Size = new System.Drawing.Size(78, 16);
+            this.lbHighPassFilter.TabIndex = 71;
+            this.lbHighPassFilter.Text = "High Pass";
+            // 
+            // lbLowPassFilter
+            // 
+            this.lbLowPassFilter.AutoSize = true;
+            this.lbLowPassFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLowPassFilter.Location = new System.Drawing.Point(10, 304);
+            this.lbLowPassFilter.Name = "lbLowPassFilter";
+            this.lbLowPassFilter.Size = new System.Drawing.Size(73, 16);
+            this.lbLowPassFilter.TabIndex = 70;
+            this.lbLowPassFilter.Text = "Low Pass";
+            // 
+            // rbVictor22D
+            // 
+            this.rbVictor22D.AutoSize = true;
+            this.rbVictor22D.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbVictor22D.Location = new System.Drawing.Point(466, 8);
+            this.rbVictor22D.Name = "rbVictor22D";
+            this.rbVictor22D.Size = new System.Drawing.Size(94, 20);
+            this.rbVictor22D.TabIndex = 69;
+            this.rbVictor22D.TabStop = true;
+            this.rbVictor22D.Text = "ViCTor2.2D";
+            this.rbVictor22D.UseVisualStyleBackColor = true;
+            this.rbVictor22D.CheckedChanged += new System.EventHandler(this.rbComponentCheck_CheckedChanged);
+            // 
+            // rbAeroCheckPlus
+            // 
+            this.rbAeroCheckPlus.AutoSize = true;
+            this.rbAeroCheckPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbAeroCheckPlus.Location = new System.Drawing.Point(155, 8);
+            this.rbAeroCheckPlus.Name = "rbAeroCheckPlus";
+            this.rbAeroCheckPlus.Size = new System.Drawing.Size(138, 20);
+            this.rbAeroCheckPlus.TabIndex = 68;
+            this.rbAeroCheckPlus.TabStop = true;
+            this.rbAeroCheckPlus.Text = "Aero/Weld Check+";
+            this.rbAeroCheckPlus.UseVisualStyleBackColor = true;
+            this.rbAeroCheckPlus.CheckedChanged += new System.EventHandler(this.rbCAeroCheckPlus_CheckedChanged);
+            // 
+            // lbRPM
+            // 
+            this.lbRPM.AutoSize = true;
+            this.lbRPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRPM.Location = new System.Drawing.Point(340, 263);
+            this.lbRPM.Name = "lbRPM";
+            this.lbRPM.Size = new System.Drawing.Size(40, 16);
+            this.lbRPM.TabIndex = 66;
+            this.lbRPM.Text = "RPM";
+            this.lbRPM.Visible = false;
+            // 
+            // lbProbeType
+            // 
+            this.lbProbeType.AutoSize = true;
+            this.lbProbeType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbProbeType.Location = new System.Drawing.Point(10, 261);
+            this.lbProbeType.Name = "lbProbeType";
+            this.lbProbeType.Size = new System.Drawing.Size(89, 16);
+            this.lbProbeType.TabIndex = 64;
+            this.lbProbeType.Text = "Probe Type";
+            // 
+            // lbFreqUnitsCh2
+            // 
+            this.lbFreqUnitsCh2.AutoSize = true;
+            this.lbFreqUnitsCh2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFreqUnitsCh2.Location = new System.Drawing.Point(336, 205);
+            this.lbFreqUnitsCh2.Name = "lbFreqUnitsCh2";
+            this.lbFreqUnitsCh2.Size = new System.Drawing.Size(25, 16);
+            this.lbFreqUnitsCh2.TabIndex = 62;
+            this.lbFreqUnitsCh2.Text = "Hz";
+            // 
+            // lbFreqUnitsCh1
+            // 
+            this.lbFreqUnitsCh1.AutoSize = true;
+            this.lbFreqUnitsCh1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFreqUnitsCh1.Location = new System.Drawing.Point(187, 205);
+            this.lbFreqUnitsCh1.Name = "lbFreqUnitsCh1";
+            this.lbFreqUnitsCh1.Size = new System.Drawing.Size(25, 16);
+            this.lbFreqUnitsCh1.TabIndex = 61;
+            this.lbFreqUnitsCh1.Text = "Hz";
+            // 
+            // lbPhase
+            // 
+            this.lbPhase.AutoSize = true;
+            this.lbPhase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPhase.Location = new System.Drawing.Point(10, 233);
+            this.lbPhase.Name = "lbPhase";
+            this.lbPhase.Size = new System.Drawing.Size(51, 16);
+            this.lbPhase.TabIndex = 58;
+            this.lbPhase.Text = "Phase";
+            // 
+            // lbFrequency
+            // 
+            this.lbFrequency.AutoSize = true;
+            this.lbFrequency.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFrequency.Location = new System.Drawing.Point(10, 205);
+            this.lbFrequency.Name = "lbFrequency";
+            this.lbFrequency.Size = new System.Drawing.Size(80, 16);
+            this.lbFrequency.TabIndex = 55;
+            this.lbFrequency.Text = "Frequency";
+            // 
+            // lbChannel2
+            // 
+            this.lbChannel2.AutoSize = true;
+            this.lbChannel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChannel2.Location = new System.Drawing.Point(254, 43);
+            this.lbChannel2.Name = "lbChannel2";
+            this.lbChannel2.Size = new System.Drawing.Size(75, 16);
+            this.lbChannel2.TabIndex = 54;
+            this.lbChannel2.Text = "Channel 2";
+            // 
+            // lbChannel1
+            // 
+            this.lbChannel1.AutoSize = true;
+            this.lbChannel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChannel1.Location = new System.Drawing.Point(104, 43);
+            this.lbChannel1.Name = "lbChannel1";
+            this.lbChannel1.Size = new System.Drawing.Size(75, 16);
+            this.lbChannel1.TabIndex = 53;
+            this.lbChannel1.Text = "Channel 1";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(10, 100);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(53, 16);
+            this.label14.TabIndex = 45;
+            this.label14.Text = "Gain Y";
+            // 
+            // lbInputGain
+            // 
+            this.lbInputGain.AutoSize = true;
+            this.lbInputGain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInputGain.Location = new System.Drawing.Point(10, 128);
+            this.lbInputGain.Name = "lbInputGain";
+            this.lbInputGain.Size = new System.Drawing.Size(76, 16);
+            this.lbInputGain.TabIndex = 44;
+            this.lbInputGain.Text = "Input Gain";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(10, 156);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 16);
+            this.label5.TabIndex = 43;
+            this.label5.Text = "Drive Gain";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(10, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 16);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Gain X";
+            // 
+            // btUpdateInstrument
+            // 
+            this.btUpdateInstrument.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btUpdateInstrument.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUpdateInstrument.Location = new System.Drawing.Point(417, 535);
+            this.btUpdateInstrument.Name = "btUpdateInstrument";
+            this.btUpdateInstrument.Size = new System.Drawing.Size(192, 35);
+            this.btUpdateInstrument.TabIndex = 41;
+            this.btUpdateInstrument.Text = "Update Instrument";
+            this.btUpdateInstrument.UseVisualStyleBackColor = true;
+            this.btUpdateInstrument.Click += new System.EventHandler(this.btUpdateInstrument_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(10, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(138, 16);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "The latest settings:";
+            // 
+            // rtbXMLSettings
+            // 
+            this.rtbXMLSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rtbXMLSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbXMLSettings.Location = new System.Drawing.Point(546, 70);
+            this.rtbXMLSettings.Name = "rtbXMLSettings";
+            this.rtbXMLSettings.Size = new System.Drawing.Size(261, 407);
+            this.rtbXMLSettings.TabIndex = 39;
+            this.rtbXMLSettings.Text = "";
+            this.rtbXMLSettings.WordWrap = false;
+            // 
+            // gbAlarms
+            // 
+            this.gbAlarms.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gbAlarms.BackgroundImage")));
+            this.gbAlarms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.gbAlarms.Controls.Add(this.nudAlarmStretch);
+            this.gbAlarms.Controls.Add(this.lbStretch);
+            this.gbAlarms.Controls.Add(this.cbAlarmAction);
+            this.gbAlarms.Controls.Add(this.lbAction);
+            this.gbAlarms.Controls.Add(this.lbAlarmSource);
+            this.gbAlarms.Controls.Add(this.cbAlarmSource);
+            this.gbAlarms.Controls.Add(this.nudAlarmStart);
+            this.gbAlarms.Controls.Add(this.nudAlarmStop);
+            this.gbAlarms.Controls.Add(this.nudAlarmOuter);
+            this.gbAlarms.Controls.Add(this.nudAlarmInner);
+            this.gbAlarms.Controls.Add(this.nudAlarmRight);
+            this.gbAlarms.Controls.Add(this.nudAlarmLeft);
+            this.gbAlarms.Controls.Add(this.nudAlarmBottom);
+            this.gbAlarms.Controls.Add(this.nudAlarmTop);
+            this.gbAlarms.Controls.Add(this.rbAlarmSector);
+            this.gbAlarms.Controls.Add(this.rbAlarmBox);
+            this.gbAlarms.Controls.Add(this.rbAlarmOff);
+            this.gbAlarms.Location = new System.Drawing.Point(17, 358);
+            this.gbAlarms.Name = "gbAlarms";
+            this.gbAlarms.Size = new System.Drawing.Size(494, 156);
+            this.gbAlarms.TabIndex = 81;
+            this.gbAlarms.TabStop = false;
+            this.gbAlarms.Text = "Alarms";
+            // 
+            // nudAlarmStretch
+            // 
+            this.nudAlarmStretch.DecimalPlaces = 1;
+            this.nudAlarmStretch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudAlarmStretch.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.nudAlarmStretch.Location = new System.Drawing.Point(85, 116);
+            this.nudAlarmStretch.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudAlarmStretch.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.nudAlarmStretch.Name = "nudAlarmStretch";
+            this.nudAlarmStretch.Size = new System.Drawing.Size(73, 22);
+            this.nudAlarmStretch.TabIndex = 95;
+            this.nudAlarmStretch.Tag = "INSTRUMENT/SETTINGS/STRETCH";
+            this.nudAlarmStretch.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.nudAlarmStretch.ValueChanged += new System.EventHandler(this.nudAlarmStretch_ValueChanged);
+            // 
+            // lbStretch
+            // 
+            this.lbStretch.AutoSize = true;
+            this.lbStretch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStretch.Location = new System.Drawing.Point(5, 118);
+            this.lbStretch.Name = "lbStretch";
+            this.lbStretch.Size = new System.Drawing.Size(55, 16);
+            this.lbStretch.TabIndex = 94;
+            this.lbStretch.Text = "Stretch";
+            // 
+            // cbAlarmAction
+            // 
+            this.cbAlarmAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAlarmAction.FormattingEnabled = true;
+            this.cbAlarmAction.Items.AddRange(new object[] {
+            "Freeze",
+            "Tone",
+            "Freeze & Tone",
+            "None"});
+            this.cbAlarmAction.Location = new System.Drawing.Point(67, 86);
+            this.cbAlarmAction.Name = "cbAlarmAction";
+            this.cbAlarmAction.Size = new System.Drawing.Size(97, 24);
+            this.cbAlarmAction.TabIndex = 93;
+            this.cbAlarmAction.Tag = "INSTRUMENT/ALARMS/ALARM/ACTION";
+            this.cbAlarmAction.SelectedIndexChanged += new System.EventHandler(this.cbAlarmAction_SelectedIndexChanged);
+            // 
+            // lbAction
+            // 
+            this.lbAction.AutoSize = true;
+            this.lbAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAction.Location = new System.Drawing.Point(4, 89);
+            this.lbAction.Name = "lbAction";
+            this.lbAction.Size = new System.Drawing.Size(50, 16);
+            this.lbAction.TabIndex = 92;
+            this.lbAction.Text = "Action";
+            // 
+            // lbAlarmSource
+            // 
+            this.lbAlarmSource.AutoSize = true;
+            this.lbAlarmSource.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAlarmSource.Location = new System.Drawing.Point(4, 59);
+            this.lbAlarmSource.Name = "lbAlarmSource";
+            this.lbAlarmSource.Size = new System.Drawing.Size(56, 16);
+            this.lbAlarmSource.TabIndex = 91;
+            this.lbAlarmSource.Text = "Source";
+            // 
+            // cbAlarmSource
+            // 
+            this.cbAlarmSource.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAlarmSource.FormattingEnabled = true;
+            this.cbAlarmSource.Items.AddRange(new object[] {
+            "Ch 1",
+            "Ch 2",
+            "Both"});
+            this.cbAlarmSource.Location = new System.Drawing.Point(67, 56);
+            this.cbAlarmSource.Name = "cbAlarmSource";
+            this.cbAlarmSource.Size = new System.Drawing.Size(97, 24);
+            this.cbAlarmSource.TabIndex = 90;
+            this.cbAlarmSource.Tag = "INSTRUMENT/ALARMS/ALARM/SOURCE";
+            this.cbAlarmSource.SelectedIndexChanged += new System.EventHandler(this.cbAlarmSource_SelectedIndexChanged);
+            // 
+            // nudAlarmStart
+            // 
+            this.nudAlarmStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudAlarmStart.Location = new System.Drawing.Point(348, 62);
+            this.nudAlarmStart.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.nudAlarmStart.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.nudAlarmStart.Name = "nudAlarmStart";
+            this.nudAlarmStart.Size = new System.Drawing.Size(55, 22);
+            this.nudAlarmStart.TabIndex = 89;
+            this.nudAlarmStart.Tag = "INSTRUMENT/ALARMS/ALARM/START";
+            this.nudAlarmStart.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudAlarmStart.ValueChanged += new System.EventHandler(this.nudAlarmStartStop_ValueChanged);
+            // 
+            // nudAlarmStop
+            // 
+            this.nudAlarmStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudAlarmStop.Location = new System.Drawing.Point(433, 97);
+            this.nudAlarmStop.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.nudAlarmStop.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.nudAlarmStop.Name = "nudAlarmStop";
+            this.nudAlarmStop.Size = new System.Drawing.Size(55, 22);
+            this.nudAlarmStop.TabIndex = 88;
+            this.nudAlarmStop.Tag = "INSTRUMENT/ALARMS/ALARM/END";
+            this.nudAlarmStop.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudAlarmStop.ValueChanged += new System.EventHandler(this.nudAlarmStartStop_ValueChanged);
+            // 
+            // nudAlarmOuter
+            // 
+            this.nudAlarmOuter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudAlarmOuter.Location = new System.Drawing.Point(418, 35);
+            this.nudAlarmOuter.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudAlarmOuter.Name = "nudAlarmOuter";
+            this.nudAlarmOuter.Size = new System.Drawing.Size(55, 22);
+            this.nudAlarmOuter.TabIndex = 87;
+            this.nudAlarmOuter.Tag = "INSTRUMENT/ALARMS/ALARM/OUTER";
+            this.nudAlarmOuter.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudAlarmOuter.ValueChanged += new System.EventHandler(this.nudAlarmOuter_ValueChanged);
+            // 
+            // nudAlarmInner
+            // 
+            this.nudAlarmInner.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudAlarmInner.Location = new System.Drawing.Point(357, 110);
+            this.nudAlarmInner.Maximum = new decimal(new int[] {
+            95,
+            0,
+            0,
+            0});
+            this.nudAlarmInner.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudAlarmInner.Name = "nudAlarmInner";
+            this.nudAlarmInner.Size = new System.Drawing.Size(55, 22);
+            this.nudAlarmInner.TabIndex = 86;
+            this.nudAlarmInner.Tag = "INSTRUMENT/ALARMS/ALARM/INNER";
+            this.nudAlarmInner.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudAlarmInner.ValueChanged += new System.EventHandler(this.nudAlarmInner_ValueChanged);
+            // 
+            // nudAlarmRight
+            // 
+            this.nudAlarmRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudAlarmRight.Location = new System.Drawing.Point(273, 65);
+            this.nudAlarmRight.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.nudAlarmRight.Name = "nudAlarmRight";
+            this.nudAlarmRight.Size = new System.Drawing.Size(55, 22);
+            this.nudAlarmRight.TabIndex = 85;
+            this.nudAlarmRight.Tag = "INSTRUMENT/ALARMS/ALARM/RIGHT";
+            this.nudAlarmRight.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudAlarmRight.ValueChanged += new System.EventHandler(this.nudAlarmRight_ValueChanged);
+            // 
+            // nudAlarmLeft
+            // 
+            this.nudAlarmLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudAlarmLeft.Location = new System.Drawing.Point(194, 65);
+            this.nudAlarmLeft.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.nudAlarmLeft.Name = "nudAlarmLeft";
+            this.nudAlarmLeft.Size = new System.Drawing.Size(55, 22);
+            this.nudAlarmLeft.TabIndex = 84;
+            this.nudAlarmLeft.Tag = "INSTRUMENT/ALARMS/ALARM/LEFT";
+            this.nudAlarmLeft.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudAlarmLeft.ValueChanged += new System.EventHandler(this.nudAlarmLeft_ValueChanged);
+            // 
+            // nudAlarmBottom
+            // 
+            this.nudAlarmBottom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudAlarmBottom.Location = new System.Drawing.Point(240, 110);
+            this.nudAlarmBottom.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.nudAlarmBottom.Name = "nudAlarmBottom";
+            this.nudAlarmBottom.Size = new System.Drawing.Size(55, 22);
+            this.nudAlarmBottom.TabIndex = 83;
+            this.nudAlarmBottom.Tag = "INSTRUMENT/ALARMS/ALARM/BOTTOM";
+            this.nudAlarmBottom.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudAlarmBottom.ValueChanged += new System.EventHandler(this.nudAlarmBottom_ValueChanged);
+            // 
+            // nudAlarmTop
+            // 
+            this.nudAlarmTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudAlarmTop.Location = new System.Drawing.Point(239, 20);
+            this.nudAlarmTop.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.nudAlarmTop.Name = "nudAlarmTop";
+            this.nudAlarmTop.Size = new System.Drawing.Size(55, 22);
+            this.nudAlarmTop.TabIndex = 82;
+            this.nudAlarmTop.Tag = "INSTRUMENT/ALARMS/ALARM/TOP";
+            this.nudAlarmTop.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudAlarmTop.ValueChanged += new System.EventHandler(this.nudAlarmTop_ValueChanged);
+            // 
+            // rbAlarmSector
+            // 
+            this.rbAlarmSector.AutoSize = true;
+            this.rbAlarmSector.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbAlarmSector.Location = new System.Drawing.Point(102, 19);
+            this.rbAlarmSector.Name = "rbAlarmSector";
+            this.rbAlarmSector.Size = new System.Drawing.Size(64, 20);
+            this.rbAlarmSector.TabIndex = 2;
+            this.rbAlarmSector.Tag = "INSTRUMENT/ALARMS/ALARM/TYPE";
+            this.rbAlarmSector.Text = "Sector";
+            this.rbAlarmSector.UseVisualStyleBackColor = true;
+            this.rbAlarmSector.CheckedChanged += new System.EventHandler(this.rbAlarm_CheckedChanged);
+            // 
+            // rbAlarmBox
+            // 
+            this.rbAlarmBox.AutoSize = true;
+            this.rbAlarmBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbAlarmBox.Location = new System.Drawing.Point(53, 20);
+            this.rbAlarmBox.Name = "rbAlarmBox";
+            this.rbAlarmBox.Size = new System.Drawing.Size(48, 20);
+            this.rbAlarmBox.TabIndex = 1;
+            this.rbAlarmBox.Tag = "INSTRUMENT/ALARMS/ALARM/TYPE";
+            this.rbAlarmBox.Text = "Box";
+            this.rbAlarmBox.UseVisualStyleBackColor = true;
+            this.rbAlarmBox.CheckedChanged += new System.EventHandler(this.rbAlarm_CheckedChanged);
+            // 
+            // rbAlarmOff
+            // 
+            this.rbAlarmOff.AutoSize = true;
+            this.rbAlarmOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbAlarmOff.Location = new System.Drawing.Point(8, 20);
+            this.rbAlarmOff.Name = "rbAlarmOff";
+            this.rbAlarmOff.Size = new System.Drawing.Size(41, 20);
+            this.rbAlarmOff.TabIndex = 0;
+            this.rbAlarmOff.Tag = "INSTRUMENT/ALARMS/ALARM/ENABLED";
+            this.rbAlarmOff.Text = "Off";
+            this.rbAlarmOff.UseVisualStyleBackColor = true;
+            this.rbAlarmOff.CheckedChanged += new System.EventHandler(this.rbAlarm_CheckedChanged);
+            // 
+            // cbRotaryType
+            // 
+            this.cbRotaryType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbRotaryType.FormattingEnabled = true;
+            this.cbRotaryType.Items.AddRange(new object[] {
+            "ETher",
+            "Zetec",
+            "Rohmann"});
+            this.cbRotaryType.Location = new System.Drawing.Point(343, 287);
+            this.cbRotaryType.Name = "cbRotaryType";
+            this.cbRotaryType.Size = new System.Drawing.Size(106, 24);
+            this.cbRotaryType.TabIndex = 83;
+            this.cbRotaryType.Tag = "INSTRUMENT/SETTINGS/ROTARY_PROBE_TYPE";
+            this.cbRotaryType.SelectedIndexChanged += new System.EventHandler(this.cbRotaryType_SelectedIndexChanged);
+            // 
+            // nudPhaseChMix
+            // 
+            this.nudPhaseChMix.DecimalPlaces = 1;
+            this.nudPhaseChMix.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudPhaseChMix.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nudPhaseChMix.Location = new System.Drawing.Point(400, 232);
+            this.nudPhaseChMix.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.nudPhaseChMix.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147418112});
+            this.nudPhaseChMix.Name = "nudPhaseChMix";
+            this.nudPhaseChMix.Size = new System.Drawing.Size(74, 22);
+            this.nudPhaseChMix.TabIndex = 80;
+            this.nudPhaseChMix.Tag = "INSTRUMENT/SETTINGS/MIX/PHASE";
+            this.nudPhaseChMix.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudPhaseChMix.ValueChanged += new System.EventHandler(this.nudPhase_ValueChanged);
+            // 
+            // nudGainYchMix
+            // 
+            this.nudGainYchMix.DecimalPlaces = 1;
+            this.nudGainYchMix.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudGainYchMix.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nudGainYchMix.Location = new System.Drawing.Point(400, 99);
+            this.nudGainYchMix.Maximum = new decimal(new int[] {
+            82,
+            0,
+            0,
+            0});
+            this.nudGainYchMix.Minimum = new decimal(new int[] {
+            18,
+            0,
+            0,
+            -2147483648});
+            this.nudGainYchMix.Name = "nudGainYchMix";
+            this.nudGainYchMix.Size = new System.Drawing.Size(74, 22);
+            this.nudGainYchMix.TabIndex = 77;
+            this.nudGainYchMix.Tag = "INSTRUMENT/SETTINGS/MIX/GAIN_Y";
+            this.nudGainYchMix.ValueChanged += new System.EventHandler(this.nudGain_ValueChanged);
+            // 
+            // nudGainXchMix
+            // 
+            this.nudGainXchMix.DecimalPlaces = 1;
+            this.nudGainXchMix.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudGainXchMix.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nudGainXchMix.Location = new System.Drawing.Point(400, 71);
+            this.nudGainXchMix.Maximum = new decimal(new int[] {
+            82,
+            0,
+            0,
+            0});
+            this.nudGainXchMix.Minimum = new decimal(new int[] {
+            18,
+            0,
+            0,
+            -2147483648});
+            this.nudGainXchMix.Name = "nudGainXchMix";
+            this.nudGainXchMix.Size = new System.Drawing.Size(74, 22);
+            this.nudGainXchMix.TabIndex = 76;
+            this.nudGainXchMix.Tag = "INSTRUMENT/SETTINGS/MIX/GAIN_X";
+            this.nudGainXchMix.ValueChanged += new System.EventHandler(this.nudGain_ValueChanged);
+            // 
+            // nudHighPassFilterCh2
+            // 
+            this.nudHighPassFilterCh2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudHighPassFilterCh2.Location = new System.Drawing.Point(256, 330);
+            this.nudHighPassFilterCh2.Maximum = new decimal(new int[] {
+            1999,
+            0,
+            0,
+            0});
+            this.nudHighPassFilterCh2.Name = "nudHighPassFilterCh2";
+            this.nudHighPassFilterCh2.Size = new System.Drawing.Size(74, 22);
+            this.nudHighPassFilterCh2.TabIndex = 75;
+            this.nudHighPassFilterCh2.Tag = "INSTRUMENT/SETTINGS/DUAL_FREQUENCY/FILTER_HP";
+            this.nudHighPassFilterCh2.ValueChanged += new System.EventHandler(this.nudHighPassFilter_ValueChanged);
+            // 
+            // nudHighPassFilterCh1
+            // 
+            this.nudHighPassFilterCh1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudHighPassFilterCh1.Location = new System.Drawing.Point(106, 330);
+            this.nudHighPassFilterCh1.Maximum = new decimal(new int[] {
+            1999,
+            0,
+            0,
+            0});
+            this.nudHighPassFilterCh1.Name = "nudHighPassFilterCh1";
+            this.nudHighPassFilterCh1.Size = new System.Drawing.Size(74, 22);
+            this.nudHighPassFilterCh1.TabIndex = 74;
+            this.nudHighPassFilterCh1.Tag = "INSTRUMENT/SETTINGS/FILTER_HP";
+            this.nudHighPassFilterCh1.ValueChanged += new System.EventHandler(this.nudHighPassFilter_ValueChanged);
+            // 
+            // nudLowPassFilterCh2
+            // 
+            this.nudLowPassFilterCh2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudLowPassFilterCh2.Location = new System.Drawing.Point(256, 302);
+            this.nudLowPassFilterCh2.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.nudLowPassFilterCh2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudLowPassFilterCh2.Name = "nudLowPassFilterCh2";
+            this.nudLowPassFilterCh2.Size = new System.Drawing.Size(74, 22);
+            this.nudLowPassFilterCh2.TabIndex = 73;
+            this.nudLowPassFilterCh2.Tag = "INSTRUMENT/SETTINGS/DUAL_FREQUENCY/FILTER_LP";
+            this.nudLowPassFilterCh2.Value = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.nudLowPassFilterCh2.ValueChanged += new System.EventHandler(this.nudLowPassFilter_ValueChanged);
+            // 
+            // nudLowPassFilterCh1
+            // 
+            this.nudLowPassFilterCh1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudLowPassFilterCh1.Location = new System.Drawing.Point(106, 302);
+            this.nudLowPassFilterCh1.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.nudLowPassFilterCh1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudLowPassFilterCh1.Name = "nudLowPassFilterCh1";
+            this.nudLowPassFilterCh1.Size = new System.Drawing.Size(74, 22);
+            this.nudLowPassFilterCh1.TabIndex = 72;
+            this.nudLowPassFilterCh1.Tag = "INSTRUMENT/SETTINGS/FILTER_LP";
+            this.nudLowPassFilterCh1.Value = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.nudLowPassFilterCh1.ValueChanged += new System.EventHandler(this.nudLowPassFilter_ValueChanged);
+            // 
+            // nudRPM
+            // 
+            this.nudRPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudRPM.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudRPM.Location = new System.Drawing.Point(321, 238);
+            this.nudRPM.Maximum = new decimal(new int[] {
+            3000,
+            0,
+            0,
+            0});
+            this.nudRPM.Name = "nudRPM";
+            this.nudRPM.Size = new System.Drawing.Size(74, 22);
+            this.nudRPM.TabIndex = 67;
+            this.nudRPM.Tag = "INSTRUMENT/SETTINGS/RPM";
+            this.nudRPM.Value = new decimal(new int[] {
+            600,
+            0,
+            0,
+            0});
+            this.nudRPM.Visible = false;
+            this.nudRPM.ValueChanged += new System.EventHandler(this.nudRPM_ValueChanged);
+            // 
+            // cbProbeTypeCh2
+            // 
+            this.cbProbeTypeCh2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbProbeTypeCh2.FormattingEnabled = true;
+            this.cbProbeTypeCh2.Items.AddRange(new object[] {
+            "Abs-12",
+            "Abs-00",
+            "Bridge",
+            "Reflection",
+            "Abs1/Diff2",
+            "Abs1/Refl2",
+            "Abs&Diff IntL",
+            "Abs&Diff ExtL"});
+            this.cbProbeTypeCh2.Location = new System.Drawing.Point(224, 261);
+            this.cbProbeTypeCh2.Name = "cbProbeTypeCh2";
+            this.cbProbeTypeCh2.Size = new System.Drawing.Size(106, 24);
+            this.cbProbeTypeCh2.TabIndex = 65;
+            this.cbProbeTypeCh2.Tag = "INSTRUMENT/SETTINGS/DUAL_FREQUENCY/PROBE_TYPE";
+            this.cbProbeTypeCh2.SelectedIndexChanged += new System.EventHandler(this.cbProbeTypeCh2_SelectedIndexChanged);
+            // 
+            // cbProbeTypeCh1
+            // 
+            this.cbProbeTypeCh1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbProbeTypeCh1.FormattingEnabled = true;
+            this.cbProbeTypeCh1.Items.AddRange(new object[] {
+            "Abs-12",
+            "Abs-00",
+            "Bridge",
+            "Reflection",
+            "Rotary",
+            "Abs1/Diff2",
+            "Abs1/Refl2",
+            "Abs&Diff IntL",
+            "Abs&Diff ExtL",
+            "No Probe"});
+            this.cbProbeTypeCh1.Location = new System.Drawing.Point(107, 260);
+            this.cbProbeTypeCh1.Name = "cbProbeTypeCh1";
+            this.cbProbeTypeCh1.Size = new System.Drawing.Size(106, 24);
+            this.cbProbeTypeCh1.TabIndex = 63;
+            this.cbProbeTypeCh1.Tag = "INSTRUMENT/SETTINGS/PROBE_TYPE";
+            this.cbProbeTypeCh1.SelectedIndexChanged += new System.EventHandler(this.cbProbeTypeCh1_SelectedIndexChanged);
+            // 
+            // nudPhaseCh2
+            // 
+            this.nudPhaseCh2.DecimalPlaces = 1;
+            this.nudPhaseCh2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudPhaseCh2.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nudPhaseCh2.Location = new System.Drawing.Point(256, 231);
+            this.nudPhaseCh2.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.nudPhaseCh2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147418112});
+            this.nudPhaseCh2.Name = "nudPhaseCh2";
+            this.nudPhaseCh2.Size = new System.Drawing.Size(74, 22);
+            this.nudPhaseCh2.TabIndex = 60;
+            this.nudPhaseCh2.Tag = "INSTRUMENT/SETTINGS/DUAL_FREQUENCY/PHASE";
+            this.nudPhaseCh2.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudPhaseCh2.ValueChanged += new System.EventHandler(this.nudPhase_ValueChanged);
+            // 
+            // nudPhaseCh1
+            // 
+            this.nudPhaseCh1.DecimalPlaces = 1;
+            this.nudPhaseCh1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudPhaseCh1.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nudPhaseCh1.Location = new System.Drawing.Point(107, 231);
+            this.nudPhaseCh1.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.nudPhaseCh1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147418112});
+            this.nudPhaseCh1.Name = "nudPhaseCh1";
+            this.nudPhaseCh1.Size = new System.Drawing.Size(74, 22);
+            this.nudPhaseCh1.TabIndex = 59;
+            this.nudPhaseCh1.Tag = "INSTRUMENT/SETTINGS/PHASE";
+            this.nudPhaseCh1.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudPhaseCh1.ValueChanged += new System.EventHandler(this.nudPhase_ValueChanged);
+            // 
+            // nudFrequencyCh2
+            // 
+            this.nudFrequencyCh2.DecimalPlaces = 1;
+            this.nudFrequencyCh2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudFrequencyCh2.Location = new System.Drawing.Point(256, 203);
+            this.nudFrequencyCh2.Maximum = new decimal(new int[] {
+            1001,
+            0,
+            0,
+            0});
+            this.nudFrequencyCh2.Name = "nudFrequencyCh2";
+            this.nudFrequencyCh2.Size = new System.Drawing.Size(74, 22);
+            this.nudFrequencyCh2.TabIndex = 57;
+            this.nudFrequencyCh2.Tag = "INSTRUMENT/SETTINGS/DUAL_FREQUENCY/FREQUENCY";
+            this.nudFrequencyCh2.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudFrequencyCh2.ValueChanged += new System.EventHandler(this.nudFrequency_ValueChanged);
+            // 
+            // nudFrequencyCh1
+            // 
+            this.nudFrequencyCh1.DecimalPlaces = 1;
+            this.nudFrequencyCh1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudFrequencyCh1.Location = new System.Drawing.Point(107, 203);
+            this.nudFrequencyCh1.Maximum = new decimal(new int[] {
+            1001,
+            0,
+            0,
+            0});
+            this.nudFrequencyCh1.Name = "nudFrequencyCh1";
+            this.nudFrequencyCh1.Size = new System.Drawing.Size(74, 22);
+            this.nudFrequencyCh1.TabIndex = 56;
+            this.nudFrequencyCh1.Tag = "INSTRUMENT/SETTINGS/FREQUENCY";
+            this.nudFrequencyCh1.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudFrequencyCh1.ValueChanged += new System.EventHandler(this.nudFrequency_ValueChanged);
+            // 
+            // nudInputGainCh2
+            // 
+            this.nudInputGainCh2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudInputGainCh2.Increment = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.nudInputGainCh2.Location = new System.Drawing.Point(256, 126);
+            this.nudInputGainCh2.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.nudInputGainCh2.Name = "nudInputGainCh2";
+            this.nudInputGainCh2.Size = new System.Drawing.Size(74, 22);
+            this.nudInputGainCh2.TabIndex = 52;
+            this.nudInputGainCh2.Tag = "INSTRUMENT/SETTINGS/DUAL_FREQUENCY/INPUT_GAIN";
+            this.nudInputGainCh2.ValueChanged += new System.EventHandler(this.nudGain_ValueChanged);
+            // 
+            // nudGainYch2
+            // 
+            this.nudGainYch2.DecimalPlaces = 1;
+            this.nudGainYch2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudGainYch2.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nudGainYch2.Location = new System.Drawing.Point(256, 98);
+            this.nudGainYch2.Maximum = new decimal(new int[] {
+            82,
+            0,
+            0,
+            0});
+            this.nudGainYch2.Minimum = new decimal(new int[] {
+            18,
+            0,
+            0,
+            -2147483648});
+            this.nudGainYch2.Name = "nudGainYch2";
+            this.nudGainYch2.Size = new System.Drawing.Size(74, 22);
+            this.nudGainYch2.TabIndex = 51;
+            this.nudGainYch2.Tag = "INSTRUMENT/SETTINGS/DUAL_FREQUENCY/GAIN_Y";
+            this.nudGainYch2.ValueChanged += new System.EventHandler(this.nudGain_ValueChanged);
+            // 
+            // nudGainXch2
+            // 
+            this.nudGainXch2.DecimalPlaces = 1;
+            this.nudGainXch2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudGainXch2.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nudGainXch2.Location = new System.Drawing.Point(256, 70);
+            this.nudGainXch2.Maximum = new decimal(new int[] {
+            82,
+            0,
+            0,
+            0});
+            this.nudGainXch2.Minimum = new decimal(new int[] {
+            18,
+            0,
+            0,
+            -2147483648});
+            this.nudGainXch2.Name = "nudGainXch2";
+            this.nudGainXch2.Size = new System.Drawing.Size(74, 22);
+            this.nudGainXch2.TabIndex = 50;
+            this.nudGainXch2.Tag = "INSTRUMENT/SETTINGS/DUAL_FREQUENCY/GAIN_X";
+            this.nudGainXch2.ValueChanged += new System.EventHandler(this.nudGain_ValueChanged);
+            // 
+            // nudDriveGain
+            // 
+            this.nudDriveGain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudDriveGain.Increment = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            this.nudDriveGain.Location = new System.Drawing.Point(181, 156);
+            this.nudDriveGain.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudDriveGain.Name = "nudDriveGain";
+            this.nudDriveGain.Size = new System.Drawing.Size(74, 22);
+            this.nudDriveGain.TabIndex = 49;
+            this.nudDriveGain.Tag = "INSTRUMENT/SETTINGS/DRIVE";
+            this.nudDriveGain.ValueChanged += new System.EventHandler(this.nudDriveGain_ValueChanged);
+            // 
+            // nudInputGainCh1
+            // 
+            this.nudInputGainCh1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudInputGainCh1.Increment = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.nudInputGainCh1.Location = new System.Drawing.Point(106, 126);
+            this.nudInputGainCh1.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.nudInputGainCh1.Name = "nudInputGainCh1";
+            this.nudInputGainCh1.Size = new System.Drawing.Size(74, 22);
+            this.nudInputGainCh1.TabIndex = 48;
+            this.nudInputGainCh1.Tag = "INSTRUMENT/SETTINGS/INPUT_GAIN";
+            this.nudInputGainCh1.ValueChanged += new System.EventHandler(this.nudGain_ValueChanged);
+            // 
+            // nudGainYch1
+            // 
+            this.nudGainYch1.DecimalPlaces = 1;
+            this.nudGainYch1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudGainYch1.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nudGainYch1.Location = new System.Drawing.Point(106, 98);
+            this.nudGainYch1.Maximum = new decimal(new int[] {
+            82,
+            0,
+            0,
+            0});
+            this.nudGainYch1.Minimum = new decimal(new int[] {
+            18,
+            0,
+            0,
+            -2147483648});
+            this.nudGainYch1.Name = "nudGainYch1";
+            this.nudGainYch1.Size = new System.Drawing.Size(74, 22);
+            this.nudGainYch1.TabIndex = 47;
+            this.nudGainYch1.Tag = "INSTRUMENT/SETTINGS/GAIN_Y";
+            this.nudGainYch1.ValueChanged += new System.EventHandler(this.nudGain_ValueChanged);
+            // 
+            // nudGainXch1
+            // 
+            this.nudGainXch1.DecimalPlaces = 1;
+            this.nudGainXch1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudGainXch1.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nudGainXch1.Location = new System.Drawing.Point(106, 70);
+            this.nudGainXch1.Maximum = new decimal(new int[] {
+            82,
+            0,
+            0,
+            0});
+            this.nudGainXch1.Minimum = new decimal(new int[] {
+            18,
+            0,
+            0,
+            -2147483648});
+            this.nudGainXch1.Name = "nudGainXch1";
+            this.nudGainXch1.Size = new System.Drawing.Size(74, 22);
+            this.nudGainXch1.TabIndex = 46;
+            this.nudGainXch1.Tag = "INSTRUMENT/SETTINGS/GAIN_X";
+            this.nudGainXch1.ValueChanged += new System.EventHandler(this.nudGain_ValueChanged);
+            // 
+            // tdDataFiles
+            // 
+            this.tdDataFiles.Controls.Add(this.groupBox3);
+            this.tdDataFiles.Controls.Add(this.groupBox2);
+            this.tdDataFiles.Controls.Add(this.button1);
+            this.tdDataFiles.Location = new System.Drawing.Point(4, 33);
+            this.tdDataFiles.Name = "tdDataFiles";
+            this.tdDataFiles.Size = new System.Drawing.Size(837, 737);
+            this.tdDataFiles.TabIndex = 6;
+            this.tdDataFiles.Text = "Data Files";
+            this.tdDataFiles.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label28);
+            this.groupBox3.Controls.Add(this.btLogging);
+            this.groupBox3.Controls.Add(this.tbLoggingToFile);
+            this.groupBox3.Controls.Add(this.btLogToFile);
+            this.groupBox3.Controls.Add(this.rbLoggingClickToSave);
+            this.groupBox3.Controls.Add(this.rbLoggingRealtime);
+            this.groupBox3.Location = new System.Drawing.Point(13, 7);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(323, 191);
+            this.groupBox3.TabIndex = 70;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Logging";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(5, 72);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(81, 13);
+            this.label28.TabIndex = 71;
+            this.label28.Text = "Current Log file:";
+            // 
+            // btLogging
+            // 
+            this.btLogging.BackColor = System.Drawing.Color.Red;
+            this.btLogging.Location = new System.Drawing.Point(8, 28);
+            this.btLogging.Name = "btLogging";
+            this.btLogging.Size = new System.Drawing.Size(123, 37);
+            this.btLogging.TabIndex = 61;
+            this.btLogging.Text = "LOGGING";
+            this.btLogging.UseVisualStyleBackColor = false;
+            this.btLogging.Click += new System.EventHandler(this.btLogging_Click);
+            // 
+            // tbLoggingToFile
+            // 
+            this.tbLoggingToFile.Location = new System.Drawing.Point(8, 88);
+            this.tbLoggingToFile.Name = "tbLoggingToFile";
+            this.tbLoggingToFile.ReadOnly = true;
+            this.tbLoggingToFile.Size = new System.Drawing.Size(265, 29);
+            this.tbLoggingToFile.TabIndex = 59;
+            // 
+            // btLogToFile
+            // 
+            this.btLogToFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLogToFile.Location = new System.Drawing.Point(166, 30);
+            this.btLogToFile.Name = "btLogToFile";
+            this.btLogToFile.Size = new System.Drawing.Size(140, 37);
+            this.btLogToFile.TabIndex = 58;
+            this.btLogToFile.Text = "Select Log File";
+            this.btLogToFile.UseVisualStyleBackColor = true;
+            this.btLogToFile.Click += new System.EventHandler(this.btLogToFile_Click);
+            // 
+            // rbLoggingClickToSave
+            // 
+            this.rbLoggingClickToSave.AutoSize = true;
+            this.rbLoggingClickToSave.Location = new System.Drawing.Point(8, 151);
+            this.rbLoggingClickToSave.Name = "rbLoggingClickToSave";
+            this.rbLoggingClickToSave.Size = new System.Drawing.Size(298, 28);
+            this.rbLoggingClickToSave.TabIndex = 64;
+            this.rbLoggingClickToSave.Text = "Click LOGGING to log a point";
+            this.rbLoggingClickToSave.UseVisualStyleBackColor = true;
+            // 
+            // rbLoggingRealtime
+            // 
+            this.rbLoggingRealtime.AutoSize = true;
+            this.rbLoggingRealtime.Checked = true;
+            this.rbLoggingRealtime.Location = new System.Drawing.Point(8, 125);
+            this.rbLoggingRealtime.Name = "rbLoggingRealtime";
+            this.rbLoggingRealtime.Size = new System.Drawing.Size(239, 28);
+            this.rbLoggingRealtime.TabIndex = 63;
+            this.rbLoggingRealtime.TabStop = true;
+            this.rbLoggingRealtime.Text = "Real-time (continuous)";
+            this.rbLoggingRealtime.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label27);
+            this.groupBox2.Controls.Add(this.tbCurrentFile);
+            this.groupBox2.Controls.Add(this.btScanLogFile);
+            this.groupBox2.Controls.Add(this.btConvertETDtoCSV);
+            this.groupBox2.Location = new System.Drawing.Point(13, 207);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(323, 322);
+            this.groupBox2.TabIndex = 69;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "View Files";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(6, 111);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(103, 20);
+            this.label27.TabIndex = 70;
+            this.label27.Text = "Current file:";
+            // 
+            // tbCurrentFile
+            // 
+            this.tbCurrentFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCurrentFile.Location = new System.Drawing.Point(6, 134);
+            this.tbCurrentFile.Name = "tbCurrentFile";
+            this.tbCurrentFile.Size = new System.Drawing.Size(310, 20);
+            this.tbCurrentFile.TabIndex = 69;
+            // 
+            // btScanLogFile
+            // 
+            this.btScanLogFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btScanLogFile.Location = new System.Drawing.Point(6, 27);
+            this.btScanLogFile.Name = "btScanLogFile";
+            this.btScanLogFile.Size = new System.Drawing.Size(163, 64);
+            this.btScanLogFile.TabIndex = 62;
+            this.btScanLogFile.Text = "View an ETher Data File (*.etd)";
+            this.btScanLogFile.UseVisualStyleBackColor = true;
+            this.btScanLogFile.Click += new System.EventHandler(this.btScanLogFile_Click);
+            // 
+            // btConvertETDtoCSV
+            // 
+            this.btConvertETDtoCSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btConvertETDtoCSV.Location = new System.Drawing.Point(176, 27);
+            this.btConvertETDtoCSV.Name = "btConvertETDtoCSV";
+            this.btConvertETDtoCSV.Size = new System.Drawing.Size(118, 64);
+            this.btConvertETDtoCSV.TabIndex = 68;
+            this.btConvertETDtoCSV.Text = "Convert ETD to CSV (open ETD first)";
+            this.btConvertETDtoCSV.UseVisualStyleBackColor = true;
+            this.btConvertETDtoCSV.Click += new System.EventHandler(this.btConvertETDtoCSV_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(499, 380);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(144, 93);
+            this.button1.TabIndex = 57;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Enter += new System.EventHandler(this.button1_Enter);
+            this.button1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button1_KeyDown);
+            this.button1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.button1_KeyPress);
+            this.button1.Leave += new System.EventHandler(this.button1_Leave);
+            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
+            this.button1.MouseCaptureChanged += new System.EventHandler(this.button1_MouseCaptureChanged);
+            this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button1_MouseDown);
+            this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
+            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
+            this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button1_MouseUp);
+            // 
+            // tpIO
+            // 
+            this.tpIO.Controls.Add(this.label1);
+            this.tpIO.Controls.Add(this.lbByteRate);
+            this.tpIO.Controls.Add(this.nudBytesPerSecond);
+            this.tpIO.Controls.Add(this.cbLoop);
+            this.tpIO.Controls.Add(this.lbByteSequence);
+            this.tpIO.Controls.Add(this.tbByteSequence);
+            this.tpIO.Controls.Add(this.btTxIO);
+            this.tpIO.Controls.Add(this.nudSPI_DIO);
+            this.tpIO.Controls.Add(this.rbDigIO);
+            this.tpIO.Controls.Add(this.rbEnc1DigIO);
+            this.tpIO.Controls.Add(this.rbEnc1SPI);
+            this.tpIO.Controls.Add(this.rbEnc1Enc2);
+            this.tpIO.Controls.Add(this.rbEnc2);
+            this.tpIO.Controls.Add(this.rbEnc1);
+            this.tpIO.Controls.Add(this.rbIOOff);
+            this.tpIO.Location = new System.Drawing.Point(4, 33);
+            this.tpIO.Name = "tpIO";
+            this.tpIO.Size = new System.Drawing.Size(837, 737);
+            this.tpIO.TabIndex = 7;
+            this.tpIO.Text = "I/O";
+            this.tpIO.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 421);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(158, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Or, leave blank to send 1 value:";
+            // 
+            // lbByteRate
+            // 
+            this.lbByteRate.AutoSize = true;
+            this.lbByteRate.Location = new System.Drawing.Point(150, 501);
+            this.lbByteRate.Name = "lbByteRate";
+            this.lbByteRate.Size = new System.Drawing.Size(175, 24);
+            this.lbByteRate.TabIndex = 13;
+            this.lbByteRate.Text = "Bytes per Second";
+            // 
+            // nudBytesPerSecond
+            // 
+            this.nudBytesPerSecond.Location = new System.Drawing.Point(24, 499);
+            this.nudBytesPerSecond.Maximum = new decimal(new int[] {
+            65000,
+            0,
+            0,
+            0});
+            this.nudBytesPerSecond.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudBytesPerSecond.Name = "nudBytesPerSecond";
+            this.nudBytesPerSecond.Size = new System.Drawing.Size(120, 29);
+            this.nudBytesPerSecond.TabIndex = 12;
+            this.nudBytesPerSecond.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudBytesPerSecond.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // cbLoop
+            // 
+            this.cbLoop.AutoSize = true;
+            this.cbLoop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLoop.Location = new System.Drawing.Point(24, 472);
+            this.cbLoop.Name = "cbLoop";
+            this.cbLoop.Size = new System.Drawing.Size(151, 24);
+            this.cbLoop.TabIndex = 11;
+            this.cbLoop.Text = "Loop sequence";
+            this.cbLoop.UseVisualStyleBackColor = true;
+            // 
+            // lbByteSequence
+            // 
+            this.lbByteSequence.AutoSize = true;
+            this.lbByteSequence.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbByteSequence.Location = new System.Drawing.Point(24, 373);
+            this.lbByteSequence.Name = "lbByteSequence";
+            this.lbByteSequence.Size = new System.Drawing.Size(266, 13);
+            this.lbByteSequence.TabIndex = 10;
+            this.lbByteSequence.Text = "Comma seperated list of HEX in range 0-1F, ie 4,F,1E,7";
+            // 
+            // tbByteSequence
+            // 
+            this.tbByteSequence.Location = new System.Drawing.Point(24, 389);
+            this.tbByteSequence.Name = "tbByteSequence";
+            this.tbByteSequence.Size = new System.Drawing.Size(304, 29);
+            this.tbByteSequence.TabIndex = 9;
+            this.tbByteSequence.TextChanged += new System.EventHandler(this.tbByteSequence_TextChanged);
+            // 
+            // btTxIO
+            // 
+            this.btTxIO.Location = new System.Drawing.Point(24, 331);
+            this.btTxIO.Name = "btTxIO";
+            this.btTxIO.Size = new System.Drawing.Size(120, 29);
+            this.btTxIO.TabIndex = 8;
+            this.btTxIO.Text = "OFF";
+            this.btTxIO.UseVisualStyleBackColor = true;
+            this.btTxIO.Click += new System.EventHandler(this.btTxIO_Click);
+            // 
+            // nudSPI_DIO
+            // 
+            this.nudSPI_DIO.Location = new System.Drawing.Point(24, 437);
+            this.nudSPI_DIO.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nudSPI_DIO.Name = "nudSPI_DIO";
+            this.nudSPI_DIO.Size = new System.Drawing.Size(120, 29);
+            this.nudSPI_DIO.TabIndex = 7;
+            this.nudSPI_DIO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // rbDigIO
+            // 
+            this.rbDigIO.AutoSize = true;
+            this.rbDigIO.Location = new System.Drawing.Point(27, 237);
+            this.rbDigIO.Name = "rbDigIO";
+            this.rbDigIO.Size = new System.Drawing.Size(183, 28);
+            this.rbDigIO.TabIndex = 6;
+            this.rbDigIO.Tag = "INSTRUMENT/SETTINGS/IO_PORT_CONFIG";
+            this.rbDigIO.Text = "Digital Out (5 bit)";
+            this.rbDigIO.UseVisualStyleBackColor = true;
+            this.rbDigIO.CheckedChanged += new System.EventHandler(this.rbIO_Mode_CheckedChanged);
+            // 
+            // rbEnc1DigIO
+            // 
+            this.rbEnc1DigIO.AutoSize = true;
+            this.rbEnc1DigIO.Location = new System.Drawing.Point(27, 209);
+            this.rbEnc1DigIO.Name = "rbEnc1DigIO";
+            this.rbEnc1DigIO.Size = new System.Drawing.Size(284, 28);
+            this.rbEnc1DigIO.TabIndex = 5;
+            this.rbEnc1DigIO.Tag = "INSTRUMENT/SETTINGS/IO_PORT_CONFIG";
+            this.rbEnc1DigIO.Text = "Enc 1 and Digital Out (3 bit)";
+            this.rbEnc1DigIO.UseVisualStyleBackColor = true;
+            this.rbEnc1DigIO.CheckedChanged += new System.EventHandler(this.rbIO_Mode_CheckedChanged);
+            // 
+            // rbEnc1SPI
+            // 
+            this.rbEnc1SPI.AutoSize = true;
+            this.rbEnc1SPI.Location = new System.Drawing.Point(27, 181);
+            this.rbEnc1SPI.Name = "rbEnc1SPI";
+            this.rbEnc1SPI.Size = new System.Drawing.Size(160, 28);
+            this.rbEnc1SPI.TabIndex = 4;
+            this.rbEnc1SPI.Tag = "INSTRUMENT/SETTINGS/IO_PORT_CONFIG";
+            this.rbEnc1SPI.Text = "Enc 1 and SPI";
+            this.rbEnc1SPI.UseVisualStyleBackColor = true;
+            this.rbEnc1SPI.CheckedChanged += new System.EventHandler(this.rbIO_Mode_CheckedChanged);
+            // 
+            // rbEnc1Enc2
+            // 
+            this.rbEnc1Enc2.AutoSize = true;
+            this.rbEnc1Enc2.Location = new System.Drawing.Point(27, 153);
+            this.rbEnc1Enc2.Name = "rbEnc1Enc2";
+            this.rbEnc1Enc2.Size = new System.Drawing.Size(183, 28);
+            this.rbEnc1Enc2.TabIndex = 3;
+            this.rbEnc1Enc2.Tag = "INSTRUMENT/SETTINGS/IO_PORT_CONFIG";
+            this.rbEnc1Enc2.Text = "Enc 1 and Enc 2";
+            this.rbEnc1Enc2.UseVisualStyleBackColor = true;
+            this.rbEnc1Enc2.CheckedChanged += new System.EventHandler(this.rbIO_Mode_CheckedChanged);
+            // 
+            // rbEnc2
+            // 
+            this.rbEnc2.AutoSize = true;
+            this.rbEnc2.Location = new System.Drawing.Point(27, 125);
+            this.rbEnc2.Name = "rbEnc2";
+            this.rbEnc2.Size = new System.Drawing.Size(186, 28);
+            this.rbEnc2.TabIndex = 2;
+            this.rbEnc2.Tag = "INSTRUMENT/SETTINGS/IO_PORT_CONFIG";
+            this.rbEnc2.Text = "Encoder 2 ONLY";
+            this.rbEnc2.UseVisualStyleBackColor = true;
+            this.rbEnc2.CheckedChanged += new System.EventHandler(this.rbIO_Mode_CheckedChanged);
+            // 
+            // rbEnc1
+            // 
+            this.rbEnc1.AutoSize = true;
+            this.rbEnc1.Location = new System.Drawing.Point(27, 97);
+            this.rbEnc1.Name = "rbEnc1";
+            this.rbEnc1.Size = new System.Drawing.Size(186, 28);
+            this.rbEnc1.TabIndex = 1;
+            this.rbEnc1.Tag = "INSTRUMENT/SETTINGS/IO_PORT_CONFIG";
+            this.rbEnc1.Text = "Encoder 1 ONLY";
+            this.rbEnc1.UseVisualStyleBackColor = true;
+            this.rbEnc1.CheckedChanged += new System.EventHandler(this.rbIO_Mode_CheckedChanged);
+            // 
+            // rbIOOff
+            // 
+            this.rbIOOff.AutoSize = true;
+            this.rbIOOff.Checked = true;
+            this.rbIOOff.Location = new System.Drawing.Point(27, 69);
+            this.rbIOOff.Name = "rbIOOff";
+            this.rbIOOff.Size = new System.Drawing.Size(81, 28);
+            this.rbIOOff.TabIndex = 0;
+            this.rbIOOff.TabStop = true;
+            this.rbIOOff.Tag = "INSTRUMENT/SETTINGS/IO_PORT_CONFIG";
+            this.rbIOOff.Text = "IO Off";
+            this.rbIOOff.UseVisualStyleBackColor = true;
+            this.rbIOOff.CheckedChanged += new System.EventHandler(this.rbIO_Mode_CheckedChanged);
+            // 
+            // btAlarm
+            // 
+            this.btAlarm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btAlarm.BackColor = System.Drawing.Color.LightGreen;
+            this.btAlarm.Location = new System.Drawing.Point(5, 610);
+            this.btAlarm.Name = "btAlarm";
+            this.btAlarm.Size = new System.Drawing.Size(72, 59);
+            this.btAlarm.TabIndex = 38;
+            this.btAlarm.Text = "ALARM!";
+            this.btAlarm.UseVisualStyleBackColor = false;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar1.Location = new System.Drawing.Point(12, 792);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(848, 23);
+            this.progressBar1.TabIndex = 4;
+            // 
+            // timerLongKeyPress
+            // 
+            this.timerLongKeyPress.Interval = 3000;
+            this.timerLongKeyPress.Tick += new System.EventHandler(this.timerLongKeyPress_Tick);
+            // 
+            // tbTx
+            // 
+            this.tbTx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbTx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTx.Location = new System.Drawing.Point(29, 35);
+            this.tbTx.Name = "tbTx";
+            this.tbTx.Size = new System.Drawing.Size(212, 26);
+            this.tbTx.TabIndex = 36;
+            // 
+            // lbTx
+            // 
+            this.lbTx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbTx.AutoSize = true;
+            this.lbTx.Location = new System.Drawing.Point(27, 7);
+            this.lbTx.Name = "lbTx";
+            this.lbTx.Size = new System.Drawing.Size(47, 13);
+            this.lbTx.TabIndex = 37;
+            this.lbTx.Text = "USB Tx:";
+            // 
+            // timerPhasePlane
+            // 
+            this.timerPhasePlane.Interval = 25;
+            this.timerPhasePlane.Tick += new System.EventHandler(this.timerPhasePlane_Tick);
+            // 
+            // rbUSBTransmit
+            // 
+            this.rbUSBTransmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbUSBTransmit.AutoSize = true;
+            this.rbUSBTransmit.Checked = true;
+            this.rbUSBTransmit.Enabled = false;
+            this.rbUSBTransmit.Location = new System.Drawing.Point(51, 77);
+            this.rbUSBTransmit.Name = "rbUSBTransmit";
+            this.rbUSBTransmit.Size = new System.Drawing.Size(47, 17);
+            this.rbUSBTransmit.TabIndex = 39;
+            this.rbUSBTransmit.TabStop = true;
+            this.rbUSBTransmit.Text = "USB";
+            this.rbUSBTransmit.UseVisualStyleBackColor = true;
+            // 
+            // rbRS232Transmit
+            // 
+            this.rbRS232Transmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbRS232Transmit.AutoSize = true;
+            this.rbRS232Transmit.Checked = true;
+            this.rbRS232Transmit.Enabled = false;
+            this.rbRS232Transmit.Location = new System.Drawing.Point(113, 77);
+            this.rbRS232Transmit.Name = "rbRS232Transmit";
+            this.rbRS232Transmit.Size = new System.Drawing.Size(58, 17);
+            this.rbRS232Transmit.TabIndex = 40;
+            this.rbRS232Transmit.TabStop = true;
+            this.rbRS232Transmit.Text = "RS232";
+            this.rbRS232Transmit.UseVisualStyleBackColor = true;
+            // 
+            // btReloadMasterSettings
+            // 
+            this.btReloadMasterSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btReloadMasterSettings.Location = new System.Drawing.Point(83, 450);
+            this.btReloadMasterSettings.Name = "btReloadMasterSettings";
+            this.btReloadMasterSettings.Size = new System.Drawing.Size(75, 23);
+            this.btReloadMasterSettings.TabIndex = 41;
+            this.btReloadMasterSettings.Text = "Reload";
+            this.btReloadMasterSettings.UseVisualStyleBackColor = true;
+            this.btReloadMasterSettings.Click += new System.EventHandler(this.btReloadMasterSettings_Click);
+            // 
+            // btReprocessmasterSettings
+            // 
+            this.btReprocessmasterSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btReprocessmasterSettings.Location = new System.Drawing.Point(9, 450);
+            this.btReprocessmasterSettings.Name = "btReprocessmasterSettings";
+            this.btReprocessmasterSettings.Size = new System.Drawing.Size(68, 23);
+            this.btReprocessmasterSettings.TabIndex = 42;
+            this.btReprocessmasterSettings.Text = "Reprocess";
+            this.btReprocessmasterSettings.UseVisualStyleBackColor = true;
+            this.btReprocessmasterSettings.Click += new System.EventHandler(this.btReprocessmasterSettings_Click);
+            // 
+            // btSaveMasterSettings
+            // 
+            this.btSaveMasterSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btSaveMasterSettings.Location = new System.Drawing.Point(164, 450);
+            this.btSaveMasterSettings.Name = "btSaveMasterSettings";
+            this.btSaveMasterSettings.Size = new System.Drawing.Size(75, 23);
+            this.btSaveMasterSettings.TabIndex = 43;
+            this.btSaveMasterSettings.Text = "Save";
+            this.btSaveMasterSettings.UseVisualStyleBackColor = true;
+            this.btSaveMasterSettings.Click += new System.EventHandler(this.btSaveMasterSettings_Click);
+            // 
+            // lbMasterSettings
+            // 
+            this.lbMasterSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbMasterSettings.AutoSize = true;
+            this.lbMasterSettings.Location = new System.Drawing.Point(55, 432);
+            this.lbMasterSettings.Name = "lbMasterSettings";
+            this.lbMasterSettings.Size = new System.Drawing.Size(146, 13);
+            this.lbMasterSettings.TabIndex = 44;
+            this.lbMasterSettings.Text = "Master Settings commands....";
+            // 
+            // timerRefreshPorts
+            // 
+            this.timerRefreshPorts.Interval = 1000;
+            this.timerRefreshPorts.Tick += new System.EventHandler(this.timerRefreshPorts_Tick);
+            // 
+            // timerWriteToInstrument
+            // 
+            this.timerWriteToInstrument.Enabled = true;
+            this.timerWriteToInstrument.Interval = 50;
+            this.timerWriteToInstrument.Tick += new System.EventHandler(this.timerWriteToInstrument_Tick);
+            // 
+            // tbTxString
+            // 
+            this.tbTxString.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbTxString.Location = new System.Drawing.Point(113, 702);
+            this.tbTxString.Name = "tbTxString";
+            this.tbTxString.Size = new System.Drawing.Size(100, 20);
+            this.tbTxString.TabIndex = 45;
+            this.tbTxString.Tag = "";
+            this.tbTxString.Visible = false;
+            this.tbTxString.Validated += new System.EventHandler(this.tbTxString_Validated);
+            // 
+            // btBeadSeat
+            // 
+            this.btBeadSeat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btBeadSeat.Location = new System.Drawing.Point(9, 481);
+            this.btBeadSeat.Name = "btBeadSeat";
+            this.btBeadSeat.Size = new System.Drawing.Size(115, 23);
+            this.btBeadSeat.TabIndex = 46;
+            this.btBeadSeat.Tag = "25";
+            this.btBeadSeat.Text = "Send Beadseat ON";
+            this.btBeadSeat.UseVisualStyleBackColor = true;
+            this.btBeadSeat.Click += new System.EventHandler(this.KeyWithOUTLongPressFunctionality_Click);
+            // 
+            // btLoadVeeScanSettings
+            // 
+            this.btLoadVeeScanSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btLoadVeeScanSettings.Location = new System.Drawing.Point(130, 481);
+            this.btLoadVeeScanSettings.Name = "btLoadVeeScanSettings";
+            this.btLoadVeeScanSettings.Size = new System.Drawing.Size(109, 23);
+            this.btLoadVeeScanSettings.TabIndex = 47;
+            this.btLoadVeeScanSettings.Tag = "18";
+            this.btLoadVeeScanSettings.Text = "VeeScan Settings";
+            this.btLoadVeeScanSettings.UseVisualStyleBackColor = true;
+            this.btLoadVeeScanSettings.Click += new System.EventHandler(this.KeyWithOUTLongPressFunctionality_Click);
+            // 
+            // timerRequestXML
+            // 
+            this.timerRequestXML.Interval = 500;
+            this.timerRequestXML.Tick += new System.EventHandler(this.timerRequestXML_Tick);
+            // 
+            // lbGainXEmbedEC
+            // 
+            this.lbGainXEmbedEC.AutoSize = true;
+            this.lbGainXEmbedEC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGainXEmbedEC.Location = new System.Drawing.Point(19, 132);
+            this.lbGainXEmbedEC.Name = "lbGainXEmbedEC";
+            this.lbGainXEmbedEC.Size = new System.Drawing.Size(74, 24);
+            this.lbGainXEmbedEC.TabIndex = 87;
+            this.lbGainXEmbedEC.Text = "Gain X";
+            this.lbGainXEmbedEC.Click += new System.EventHandler(this.GainXEmbedEC_Click);
+            // 
+            // lbGainYEmbedEC
+            // 
+            this.lbGainYEmbedEC.AutoSize = true;
+            this.lbGainYEmbedEC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGainYEmbedEC.Location = new System.Drawing.Point(19, 167);
+            this.lbGainYEmbedEC.Name = "lbGainYEmbedEC";
+            this.lbGainYEmbedEC.Size = new System.Drawing.Size(72, 24);
+            this.lbGainYEmbedEC.TabIndex = 87;
+            this.lbGainYEmbedEC.Text = "Gain Y";
+            this.lbGainYEmbedEC.Click += new System.EventHandler(this.GainYEmbedEC_Click);
+            // 
+            // lbPhaseEmbedEC
+            // 
+            this.lbPhaseEmbedEC.AutoSize = true;
+            this.lbPhaseEmbedEC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPhaseEmbedEC.Location = new System.Drawing.Point(19, 98);
+            this.lbPhaseEmbedEC.Name = "lbPhaseEmbedEC";
+            this.lbPhaseEmbedEC.Size = new System.Drawing.Size(68, 24);
+            this.lbPhaseEmbedEC.TabIndex = 87;
+            this.lbPhaseEmbedEC.Text = "Phase";
+            this.lbPhaseEmbedEC.Click += new System.EventHandler(this.PhaseEmbedECOnly_Click);
+            // 
+            // btLeft
+            // 
+            this.btLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btLeft.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btLeft.BackgroundImage")));
+            this.btLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btLeft.FlatAppearance.BorderSize = 0;
+            this.btLeft.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btLeft.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLeft.Location = new System.Drawing.Point(40, 237);
+            this.btLeft.Name = "btLeft";
+            this.btLeft.Size = new System.Drawing.Size(50, 51);
+            this.btLeft.TabIndex = 29;
+            this.btLeft.Tag = "5";
+            this.btLeft.UseVisualStyleBackColor = true;
+            this.btLeft.Click += new System.EventHandler(this.KeyWithOUTLongPressFunctionality_Click);
+            // 
+            // btUp
+            // 
+            this.btUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btUp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btUp.BackgroundImage")));
+            this.btUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btUp.FlatAppearance.BorderSize = 0;
+            this.btUp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btUp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btUp.Location = new System.Drawing.Point(96, 178);
+            this.btUp.Name = "btUp";
+            this.btUp.Size = new System.Drawing.Size(50, 50);
+            this.btUp.TabIndex = 27;
+            this.btUp.Tag = "3";
+            this.btUp.UseVisualStyleBackColor = true;
+            this.btUp.Click += new System.EventHandler(this.KeyWithOUTLongPressFunctionality_Click);
+            // 
+            // btDown
+            // 
+            this.btDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btDown.BackgroundImage")));
+            this.btDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btDown.FlatAppearance.BorderSize = 0;
+            this.btDown.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btDown.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDown.Location = new System.Drawing.Point(96, 294);
+            this.btDown.Name = "btDown";
+            this.btDown.Size = new System.Drawing.Size(50, 51);
+            this.btDown.TabIndex = 31;
+            this.btDown.Tag = "4";
+            this.btDown.UseVisualStyleBackColor = true;
+            this.btDown.Click += new System.EventHandler(this.KeyWithOUTLongPressFunctionality_Click);
+            // 
+            // btBlank1
+            // 
+            this.btBlank1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btBlank1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btBlank1.BackgroundImage")));
+            this.btBlank1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btBlank1.FlatAppearance.BorderSize = 0;
+            this.btBlank1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btBlank1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btBlank1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBlank1.Location = new System.Drawing.Point(97, 119);
+            this.btBlank1.Name = "btBlank1";
+            this.btBlank1.Size = new System.Drawing.Size(50, 50);
+            this.btBlank1.TabIndex = 26;
+            this.btBlank1.Tag = "9";
+            this.btBlank1.UseVisualStyleBackColor = true;
+            this.btBlank1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.KeyWithLongPressFunctionality_MouseDown);
+            this.btBlank1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.KeyWithLongPressFunctionality_MouseUp);
+            // 
+            // btBalance2
+            // 
+            this.btBalance2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btBalance2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btBalance2.BackgroundImage")));
+            this.btBalance2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btBalance2.FlatAppearance.BorderSize = 0;
+            this.btBalance2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btBalance2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btBalance2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBalance2.Location = new System.Drawing.Point(40, 353);
+            this.btBalance2.Name = "btBalance2";
+            this.btBalance2.Size = new System.Drawing.Size(48, 49);
+            this.btBalance2.TabIndex = 32;
+            this.btBalance2.Tag = "2";
+            this.btBalance2.UseVisualStyleBackColor = true;
+            this.btBalance2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.KeyWithLongPressFunctionality_MouseDown);
+            this.btBalance2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.KeyWithLongPressFunctionality_MouseUp);
+            // 
+            // btRight
+            // 
+            this.btRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btRight.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btRight.BackgroundImage")));
+            this.btRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btRight.FlatAppearance.BorderSize = 0;
+            this.btRight.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btRight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btRight.Location = new System.Drawing.Point(154, 237);
+            this.btRight.Name = "btRight";
+            this.btRight.Size = new System.Drawing.Size(50, 51);
+            this.btRight.TabIndex = 28;
+            this.btRight.Tag = "6";
+            this.btRight.UseVisualStyleBackColor = true;
+            this.btRight.Click += new System.EventHandler(this.KeyWithOUTLongPressFunctionality_Click);
+            // 
+            // btFreeze
+            // 
+            this.btFreeze.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btFreeze.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btFreeze.BackgroundImage")));
+            this.btFreeze.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btFreeze.FlatAppearance.BorderSize = 0;
+            this.btFreeze.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btFreeze.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btFreeze.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btFreeze.Location = new System.Drawing.Point(154, 120);
+            this.btFreeze.Name = "btFreeze";
+            this.btFreeze.Size = new System.Drawing.Size(50, 50);
+            this.btFreeze.TabIndex = 25;
+            this.btFreeze.Tag = "10";
+            this.btFreeze.UseVisualStyleBackColor = true;
+            this.btFreeze.MouseDown += new System.Windows.Forms.MouseEventHandler(this.KeyWithLongPressFunctionality_MouseDown);
+            this.btFreeze.MouseUp += new System.Windows.Forms.MouseEventHandler(this.KeyWithLongPressFunctionality_MouseUp);
+            // 
+            // btBlank2
+            // 
+            this.btBlank2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btBlank2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btBlank2.BackgroundImage")));
+            this.btBlank2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btBlank2.FlatAppearance.BorderSize = 0;
+            this.btBlank2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btBlank2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btBlank2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBlank2.Location = new System.Drawing.Point(96, 352);
+            this.btBlank2.Name = "btBlank2";
+            this.btBlank2.Size = new System.Drawing.Size(50, 50);
+            this.btBlank2.TabIndex = 33;
+            this.btBlank2.Tag = "7";
+            this.btBlank2.UseVisualStyleBackColor = true;
+            this.btBlank2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.KeyWithLongPressFunctionality_MouseDown);
+            this.btBlank2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.KeyWithLongPressFunctionality_MouseUp);
+            // 
+            // btBack
+            // 
+            this.btBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btBack.BackgroundImage")));
+            this.btBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btBack.FlatAppearance.BorderSize = 0;
+            this.btBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBack.Location = new System.Drawing.Point(154, 352);
+            this.btBack.Name = "btBack";
+            this.btBack.Size = new System.Drawing.Size(50, 51);
+            this.btBack.TabIndex = 34;
+            this.btBack.Tag = "1";
+            this.btBack.UseVisualStyleBackColor = true;
+            this.btBack.MouseDown += new System.Windows.Forms.MouseEventHandler(this.KeyWithLongPressFunctionality_MouseDown);
+            this.btBack.MouseUp += new System.Windows.Forms.MouseEventHandler(this.KeyWithLongPressFunctionality_MouseUp);
+            // 
+            // btOK
+            // 
+            this.btOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btOK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btOK.BackgroundImage")));
+            this.btOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btOK.FlatAppearance.BorderSize = 0;
+            this.btOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btOK.Location = new System.Drawing.Point(96, 237);
+            this.btOK.Name = "btOK";
+            this.btOK.Size = new System.Drawing.Size(50, 51);
+            this.btOK.TabIndex = 30;
+            this.btOK.Tag = "11";
+            this.btOK.UseVisualStyleBackColor = true;
+            this.btOK.MouseDown += new System.Windows.Forms.MouseEventHandler(this.KeyWithLongPressFunctionality_MouseDown);
+            this.btOK.MouseUp += new System.Windows.Forms.MouseEventHandler(this.KeyWithLongPressFunctionality_MouseUp);
+            // 
+            // btBalance1
+            // 
+            this.btBalance1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btBalance1.BackColor = System.Drawing.Color.Transparent;
+            this.btBalance1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btBalance1.BackgroundImage")));
+            this.btBalance1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btBalance1.FlatAppearance.BorderSize = 0;
+            this.btBalance1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btBalance1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btBalance1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBalance1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btBalance1.Location = new System.Drawing.Point(40, 120);
+            this.btBalance1.Name = "btBalance1";
+            this.btBalance1.Size = new System.Drawing.Size(48, 49);
+            this.btBalance1.TabIndex = 24;
+            this.btBalance1.Tag = "8";
+            this.btBalance1.UseVisualStyleBackColor = false;
+            this.btBalance1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.KeyWithLongPressFunctionality_MouseDown);
+            this.btBalance1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.KeyWithLongPressFunctionality_MouseUp);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(20, 104);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(203, 320);
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lbFiltLPEmbedEC
+            // 
+            this.lbFiltLPEmbedEC.AutoSize = true;
+            this.lbFiltLPEmbedEC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFiltLPEmbedEC.Location = new System.Drawing.Point(19, 236);
+            this.lbFiltLPEmbedEC.Name = "lbFiltLPEmbedEC";
+            this.lbFiltLPEmbedEC.Size = new System.Drawing.Size(98, 24);
+            this.lbFiltLPEmbedEC.TabIndex = 87;
+            this.lbFiltLPEmbedEC.Text = "Low Pass";
+            this.lbFiltLPEmbedEC.Click += new System.EventHandler(this.FiltLPEmbedECOnly_Click);
+            // 
+            // lbFiltHPEmbedEC
+            // 
+            this.lbFiltHPEmbedEC.AutoSize = true;
+            this.lbFiltHPEmbedEC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFiltHPEmbedEC.Location = new System.Drawing.Point(19, 273);
+            this.lbFiltHPEmbedEC.Name = "lbFiltHPEmbedEC";
+            this.lbFiltHPEmbedEC.Size = new System.Drawing.Size(104, 24);
+            this.lbFiltHPEmbedEC.TabIndex = 87;
+            this.lbFiltHPEmbedEC.Text = "High Pass";
+            this.lbFiltHPEmbedEC.Click += new System.EventHandler(this.FiltHPEmbedECOnly_Click);
+            // 
+            // lbFreqUnitsEmbedECOnly
+            // 
+            this.lbFreqUnitsEmbedECOnly.AutoSize = true;
+            this.lbFreqUnitsEmbedECOnly.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFreqUnitsEmbedECOnly.Location = new System.Drawing.Point(218, 318);
+            this.lbFreqUnitsEmbedECOnly.Name = "lbFreqUnitsEmbedECOnly";
+            this.lbFreqUnitsEmbedECOnly.Size = new System.Drawing.Size(25, 16);
+            this.lbFreqUnitsEmbedECOnly.TabIndex = 89;
+            this.lbFreqUnitsEmbedECOnly.Text = "Hz";
+            this.lbFreqUnitsEmbedECOnly.TextChanged += new System.EventHandler(this.lbFreqUnitsEmbedECOnly_TextChanged);
+            // 
+            // lbFrequencyEmbedECOnly
+            // 
+            this.lbFrequencyEmbedECOnly.AutoSize = true;
+            this.lbFrequencyEmbedECOnly.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFrequencyEmbedECOnly.Location = new System.Drawing.Point(21, 311);
+            this.lbFrequencyEmbedECOnly.Name = "lbFrequencyEmbedECOnly";
+            this.lbFrequencyEmbedECOnly.Size = new System.Drawing.Size(111, 24);
+            this.lbFrequencyEmbedECOnly.TabIndex = 87;
+            this.lbFrequencyEmbedECOnly.Text = "Frequency";
+            this.lbFrequencyEmbedECOnly.Click += new System.EventHandler(this.FrequencyEmbedECOnly_Click);
+            // 
+            // panelEmbedEC
+            // 
+            this.panelEmbedEC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelEmbedEC.Controls.Add(this.plVictorChannel);
+            this.panelEmbedEC.Controls.Add(this.tbFWVersion);
+            this.panelEmbedEC.Controls.Add(this.lbFirmwareEmbedEC);
+            this.panelEmbedEC.Controls.Add(this.lbClickToRequest);
+            this.panelEmbedEC.Controls.Add(this.tbY);
+            this.panelEmbedEC.Controls.Add(this.tbX);
+            this.panelEmbedEC.Controls.Add(this.lbXY);
+            this.panelEmbedEC.Controls.Add(this.lbPhaseUnits);
+            this.panelEmbedEC.Controls.Add(this.lbGainXUnits);
+            this.panelEmbedEC.Controls.Add(this.lbGainYUnits);
+            this.panelEmbedEC.Controls.Add(this.lbHPUnits);
+            this.panelEmbedEC.Controls.Add(this.lbLPUnits);
+            this.panelEmbedEC.Controls.Add(this.lbBIGNudFreq);
+            this.panelEmbedEC.Controls.Add(this.tbNudNameText);
+            this.panelEmbedEC.Controls.Add(this.tbNudValue);
+            this.panelEmbedEC.Controls.Add(this.btNudDown);
+            this.panelEmbedEC.Controls.Add(this.btNudUp);
+            this.panelEmbedEC.Controls.Add(this.rbGainLockFixed);
+            this.panelEmbedEC.Controls.Add(this.rbGainLockXequalY);
+            this.panelEmbedEC.Controls.Add(this.rbGainLockOff);
+            this.panelEmbedEC.Controls.Add(this.lbFreqUnitsEmbedECOnly);
+            this.panelEmbedEC.Controls.Add(this.lbPhaseEmbedEC);
+            this.panelEmbedEC.Controls.Add(this.lbFrequencyEmbedECOnly);
+            this.panelEmbedEC.Controls.Add(this.nudPhaseEmbedECOnly);
+            this.panelEmbedEC.Controls.Add(this.btBalanceEmbedECOnly);
+            this.panelEmbedEC.Controls.Add(this.nudFrequencyEmbedECOnly);
+            this.panelEmbedEC.Controls.Add(this.nudGainXEmbedECOnly);
+            this.panelEmbedEC.Controls.Add(this.lbFiltLPEmbedEC);
+            this.panelEmbedEC.Controls.Add(this.nudGainYEmbedECOnly);
+            this.panelEmbedEC.Controls.Add(this.lbFiltHPEmbedEC);
+            this.panelEmbedEC.Controls.Add(this.lbGainXEmbedEC);
+            this.panelEmbedEC.Controls.Add(this.nudFiltHPEmbedECOnly);
+            this.panelEmbedEC.Controls.Add(this.lbGainYEmbedEC);
+            this.panelEmbedEC.Controls.Add(this.nudFiltLPEmbedECOnly);
+            this.panelEmbedEC.Location = new System.Drawing.Point(863, 12);
+            this.panelEmbedEC.Name = "panelEmbedEC";
+            this.panelEmbedEC.Size = new System.Drawing.Size(252, 617);
+            this.panelEmbedEC.TabIndex = 41;
+            // 
+            // plVictorChannel
+            // 
+            this.plVictorChannel.Controls.Add(this.rbVictorCh2);
+            this.plVictorChannel.Controls.Add(this.rbVictorCh3);
+            this.plVictorChannel.Controls.Add(this.rbVictorCh1);
+            this.plVictorChannel.Location = new System.Drawing.Point(12, 11);
+            this.plVictorChannel.Name = "plVictorChannel";
+            this.plVictorChannel.Size = new System.Drawing.Size(173, 26);
+            this.plVictorChannel.TabIndex = 113;
+            // 
+            // rbVictorCh2
+            // 
+            this.rbVictorCh2.AutoSize = true;
+            this.rbVictorCh2.Location = new System.Drawing.Point(56, 6);
+            this.rbVictorCh2.Name = "rbVictorCh2";
+            this.rbVictorCh2.Size = new System.Drawing.Size(44, 17);
+            this.rbVictorCh2.TabIndex = 111;
+            this.rbVictorCh2.Text = "Ch2";
+            this.rbVictorCh2.UseVisualStyleBackColor = true;
+            // 
+            // rbVictorCh3
+            // 
+            this.rbVictorCh3.AutoSize = true;
+            this.rbVictorCh3.Location = new System.Drawing.Point(106, 6);
+            this.rbVictorCh3.Name = "rbVictorCh3";
+            this.rbVictorCh3.Size = new System.Drawing.Size(54, 17);
+            this.rbVictorCh3.TabIndex = 112;
+            this.rbVictorCh3.Text = "ChMix";
+            this.rbVictorCh3.UseVisualStyleBackColor = true;
+            // 
+            // rbVictorCh1
+            // 
+            this.rbVictorCh1.AutoSize = true;
+            this.rbVictorCh1.Checked = true;
+            this.rbVictorCh1.Location = new System.Drawing.Point(13, 6);
+            this.rbVictorCh1.Name = "rbVictorCh1";
+            this.rbVictorCh1.Size = new System.Drawing.Size(44, 17);
+            this.rbVictorCh1.TabIndex = 110;
+            this.rbVictorCh1.TabStop = true;
+            this.rbVictorCh1.Text = "Ch1";
+            this.rbVictorCh1.UseVisualStyleBackColor = true;
+            // 
+            // tbFWVersion
+            // 
+            this.tbFWVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFWVersion.Location = new System.Drawing.Point(118, 63);
+            this.tbFWVersion.Name = "tbFWVersion";
+            this.tbFWVersion.ReadOnly = true;
+            this.tbFWVersion.Size = new System.Drawing.Size(86, 29);
+            this.tbFWVersion.TabIndex = 109;
+            // 
+            // lbFirmwareEmbedEC
+            // 
+            this.lbFirmwareEmbedEC.AutoSize = true;
+            this.lbFirmwareEmbedEC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFirmwareEmbedEC.Location = new System.Drawing.Point(19, 68);
+            this.lbFirmwareEmbedEC.Name = "lbFirmwareEmbedEC";
+            this.lbFirmwareEmbedEC.Size = new System.Drawing.Size(103, 24);
+            this.lbFirmwareEmbedEC.TabIndex = 108;
+            this.lbFirmwareEmbedEC.Text = "Firmware:";
+            this.lbFirmwareEmbedEC.Click += new System.EventHandler(this.lbFirmwareEmbedEC_Click);
+            // 
+            // lbClickToRequest
+            // 
+            this.lbClickToRequest.AutoSize = true;
+            this.lbClickToRequest.Location = new System.Drawing.Point(20, 52);
+            this.lbClickToRequest.Name = "lbClickToRequest";
+            this.lbClickToRequest.Size = new System.Drawing.Size(83, 13);
+            this.lbClickToRequest.TabIndex = 107;
+            this.lbClickToRequest.Text = "Click to request:";
+            // 
+            // tbY
+            // 
+            this.tbY.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbY.Location = new System.Drawing.Point(158, 351);
+            this.tbY.Name = "tbY";
+            this.tbY.ReadOnly = true;
+            this.tbY.Size = new System.Drawing.Size(87, 29);
+            this.tbY.TabIndex = 106;
+            // 
+            // tbX
+            // 
+            this.tbX.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbX.Location = new System.Drawing.Point(66, 351);
+            this.tbX.Name = "tbX";
+            this.tbX.ReadOnly = true;
+            this.tbX.Size = new System.Drawing.Size(86, 29);
+            this.tbX.TabIndex = 105;
+            // 
+            // lbXY
+            // 
+            this.lbXY.AutoSize = true;
+            this.lbXY.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbXY.Location = new System.Drawing.Point(21, 354);
+            this.lbXY.Name = "lbXY";
+            this.lbXY.Size = new System.Drawing.Size(44, 24);
+            this.lbXY.TabIndex = 104;
+            this.lbXY.Text = "X,Y";
+            this.lbXY.Click += new System.EventHandler(this.lbXY_Click);
+            // 
+            // lbPhaseUnits
+            // 
+            this.lbPhaseUnits.AutoSize = true;
+            this.lbPhaseUnits.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPhaseUnits.Location = new System.Drawing.Point(202, 104);
+            this.lbPhaseUnits.Name = "lbPhaseUnits";
+            this.lbPhaseUnits.Size = new System.Drawing.Size(38, 16);
+            this.lbPhaseUnits.TabIndex = 103;
+            this.lbPhaseUnits.Text = "deg.";
+            // 
+            // lbGainXUnits
+            // 
+            this.lbGainXUnits.AutoSize = true;
+            this.lbGainXUnits.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGainXUnits.Location = new System.Drawing.Point(202, 138);
+            this.lbGainXUnits.Name = "lbGainXUnits";
+            this.lbGainXUnits.Size = new System.Drawing.Size(26, 16);
+            this.lbGainXUnits.TabIndex = 102;
+            this.lbGainXUnits.Text = "dB";
+            // 
+            // lbGainYUnits
+            // 
+            this.lbGainYUnits.AutoSize = true;
+            this.lbGainYUnits.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGainYUnits.Location = new System.Drawing.Point(202, 173);
+            this.lbGainYUnits.Name = "lbGainYUnits";
+            this.lbGainYUnits.Size = new System.Drawing.Size(26, 16);
+            this.lbGainYUnits.TabIndex = 101;
+            this.lbGainYUnits.Text = "dB";
+            // 
+            // lbHPUnits
+            // 
+            this.lbHPUnits.AutoSize = true;
+            this.lbHPUnits.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHPUnits.Location = new System.Drawing.Point(218, 279);
+            this.lbHPUnits.Name = "lbHPUnits";
+            this.lbHPUnits.Size = new System.Drawing.Size(25, 16);
+            this.lbHPUnits.TabIndex = 100;
+            this.lbHPUnits.Text = "Hz";
+            // 
+            // lbLPUnits
+            // 
+            this.lbLPUnits.AutoSize = true;
+            this.lbLPUnits.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLPUnits.Location = new System.Drawing.Point(218, 240);
+            this.lbLPUnits.Name = "lbLPUnits";
+            this.lbLPUnits.Size = new System.Drawing.Size(25, 16);
+            this.lbLPUnits.TabIndex = 99;
+            this.lbLPUnits.Text = "Hz";
+            // 
+            // lbBIGNudFreq
+            // 
+            this.lbBIGNudFreq.AutoSize = true;
+            this.lbBIGNudFreq.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBIGNudFreq.Location = new System.Drawing.Point(192, 517);
+            this.lbBIGNudFreq.Name = "lbBIGNudFreq";
+            this.lbBIGNudFreq.Size = new System.Drawing.Size(25, 16);
+            this.lbBIGNudFreq.TabIndex = 98;
+            this.lbBIGNudFreq.Text = "Hz";
+            // 
+            // tbNudNameText
+            // 
+            this.tbNudNameText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNudNameText.Location = new System.Drawing.Point(83, 472);
+            this.tbNudNameText.Name = "tbNudNameText";
+            this.tbNudNameText.Size = new System.Drawing.Size(100, 29);
+            this.tbNudNameText.TabIndex = 96;
+            this.tbNudNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbNudNameText.TextChanged += new System.EventHandler(this.tbNudNameText_TextChanged);
+            // 
+            // tbNudValue
+            // 
+            this.tbNudValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNudValue.Location = new System.Drawing.Point(83, 509);
+            this.tbNudValue.Name = "tbNudValue";
+            this.tbNudValue.Size = new System.Drawing.Size(100, 40);
+            this.tbNudValue.TabIndex = 95;
+            this.tbNudValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btNudDown
+            // 
+            this.btNudDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNudDown.BackgroundImage")));
+            this.btNudDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btNudDown.Location = new System.Drawing.Point(8, 529);
+            this.btNudDown.Name = "btNudDown";
+            this.btNudDown.Size = new System.Drawing.Size(70, 71);
+            this.btNudDown.TabIndex = 94;
+            this.btNudDown.UseVisualStyleBackColor = true;
+            this.btNudDown.Click += new System.EventHandler(this.btNudUpDown_Click_1);
+            this.btNudDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btNudUpDown_MouseDown);
+            this.btNudDown.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btNudUpDown_MouseUp);
+            // 
+            // btNudUp
+            // 
+            this.btNudUp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNudUp.BackgroundImage")));
+            this.btNudUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btNudUp.Location = new System.Drawing.Point(7, 452);
+            this.btNudUp.Name = "btNudUp";
+            this.btNudUp.Size = new System.Drawing.Size(70, 71);
+            this.btNudUp.TabIndex = 93;
+            this.btNudUp.UseVisualStyleBackColor = true;
+            this.btNudUp.Click += new System.EventHandler(this.btNudUpDown_Click_1);
+            this.btNudUp.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btNudUpDown_MouseDown);
+            this.btNudUp.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btNudUpDown_MouseUp);
+            // 
+            // rbGainLockFixed
+            // 
+            this.rbGainLockFixed.AutoSize = true;
+            this.rbGainLockFixed.Checked = true;
+            this.rbGainLockFixed.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbGainLockFixed.Location = new System.Drawing.Point(154, 194);
+            this.rbGainLockFixed.Name = "rbGainLockFixed";
+            this.rbGainLockFixed.Size = new System.Drawing.Size(81, 28);
+            this.rbGainLockFixed.TabIndex = 92;
+            this.rbGainLockFixed.TabStop = true;
+            this.rbGainLockFixed.Text = "Fixed";
+            this.rbGainLockFixed.UseVisualStyleBackColor = true;
+            this.rbGainLockFixed.CheckedChanged += new System.EventHandler(this.rbGainLockFixed_CheckedChanged);
+            // 
+            // rbGainLockXequalY
+            // 
+            this.rbGainLockXequalY.AutoSize = true;
+            this.rbGainLockXequalY.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbGainLockXequalY.Location = new System.Drawing.Point(76, 194);
+            this.rbGainLockXequalY.Name = "rbGainLockXequalY";
+            this.rbGainLockXequalY.Size = new System.Drawing.Size(68, 28);
+            this.rbGainLockXequalY.TabIndex = 91;
+            this.rbGainLockXequalY.Text = "Y=X";
+            this.rbGainLockXequalY.UseVisualStyleBackColor = true;
+            this.rbGainLockXequalY.CheckedChanged += new System.EventHandler(this.rbGainLockXequalY_CheckedChanged);
+            // 
+            // rbGainLockOff
+            // 
+            this.rbGainLockOff.AutoSize = true;
+            this.rbGainLockOff.Checked = true;
+            this.rbGainLockOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbGainLockOff.Location = new System.Drawing.Point(8, 194);
+            this.rbGainLockOff.Name = "rbGainLockOff";
+            this.rbGainLockOff.Size = new System.Drawing.Size(54, 28);
+            this.rbGainLockOff.TabIndex = 90;
+            this.rbGainLockOff.TabStop = true;
+            this.rbGainLockOff.Text = "Off";
+            this.rbGainLockOff.UseVisualStyleBackColor = true;
+            // 
+            // nudPhaseEmbedECOnly
+            // 
+            this.nudPhaseEmbedECOnly.DecimalPlaces = 1;
+            this.nudPhaseEmbedECOnly.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudPhaseEmbedECOnly.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nudPhaseEmbedECOnly.Location = new System.Drawing.Point(122, 96);
+            this.nudPhaseEmbedECOnly.Maximum = new decimal(new int[] {
+            360000,
+            0,
+            0,
+            0});
+            this.nudPhaseEmbedECOnly.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147418112});
+            this.nudPhaseEmbedECOnly.Name = "nudPhaseEmbedECOnly";
+            this.nudPhaseEmbedECOnly.Size = new System.Drawing.Size(74, 29);
+            this.nudPhaseEmbedECOnly.TabIndex = 87;
+            this.nudPhaseEmbedECOnly.Tag = "INSTRUMENT/SETTINGS/PHASE";
+            this.nudPhaseEmbedECOnly.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudPhaseEmbedECOnly.TextChanged += new System.EventHandler(this.nudEmbedECOnly_TextChanged);
+            this.nudPhaseEmbedECOnly.ValueChanged += new System.EventHandler(this.nudPhaseEmbedECOnly_ValueChanged);
+            // 
+            // btBalanceEmbedECOnly
+            // 
+            this.btBalanceEmbedECOnly.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btBalanceEmbedECOnly.BackColor = System.Drawing.Color.Transparent;
+            this.btBalanceEmbedECOnly.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btBalanceEmbedECOnly.BackgroundImage")));
+            this.btBalanceEmbedECOnly.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btBalanceEmbedECOnly.FlatAppearance.BorderSize = 0;
+            this.btBalanceEmbedECOnly.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btBalanceEmbedECOnly.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btBalanceEmbedECOnly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBalanceEmbedECOnly.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btBalanceEmbedECOnly.Location = new System.Drawing.Point(118, 398);
+            this.btBalanceEmbedECOnly.Name = "btBalanceEmbedECOnly";
+            this.btBalanceEmbedECOnly.Size = new System.Drawing.Size(48, 49);
+            this.btBalanceEmbedECOnly.TabIndex = 88;
+            this.btBalanceEmbedECOnly.Tag = "8";
+            this.btBalanceEmbedECOnly.UseVisualStyleBackColor = false;
+            this.btBalanceEmbedECOnly.Click += new System.EventHandler(this.KeyWithOUTLongPressFunctionality_Click);
+            // 
+            // nudFrequencyEmbedECOnly
+            // 
+            this.nudFrequencyEmbedECOnly.DecimalPlaces = 1;
+            this.nudFrequencyEmbedECOnly.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudFrequencyEmbedECOnly.Location = new System.Drawing.Point(138, 310);
+            this.nudFrequencyEmbedECOnly.Maximum = new decimal(new int[] {
+            20000000,
+            0,
+            0,
+            0});
+            this.nudFrequencyEmbedECOnly.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nudFrequencyEmbedECOnly.Name = "nudFrequencyEmbedECOnly";
+            this.nudFrequencyEmbedECOnly.Size = new System.Drawing.Size(74, 29);
+            this.nudFrequencyEmbedECOnly.TabIndex = 88;
+            this.nudFrequencyEmbedECOnly.Tag = "INSTRUMENT/SETTINGS/FREQUENCY";
+            this.nudFrequencyEmbedECOnly.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudFrequencyEmbedECOnly.TextChanged += new System.EventHandler(this.nudEmbedECOnly_TextChanged);
+            this.nudFrequencyEmbedECOnly.ValueChanged += new System.EventHandler(this.nudFrequencyEmbedECOnly_ValueChanged);
+            // 
+            // nudGainXEmbedECOnly
+            // 
+            this.nudGainXEmbedECOnly.DecimalPlaces = 1;
+            this.nudGainXEmbedECOnly.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudGainXEmbedECOnly.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nudGainXEmbedECOnly.Location = new System.Drawing.Point(122, 130);
+            this.nudGainXEmbedECOnly.Maximum = new decimal(new int[] {
+            820,
+            0,
+            0,
+            0});
+            this.nudGainXEmbedECOnly.Minimum = new decimal(new int[] {
+            18,
+            0,
+            0,
+            -2147483648});
+            this.nudGainXEmbedECOnly.Name = "nudGainXEmbedECOnly";
+            this.nudGainXEmbedECOnly.Size = new System.Drawing.Size(74, 29);
+            this.nudGainXEmbedECOnly.TabIndex = 87;
+            this.nudGainXEmbedECOnly.Tag = "INSTRUMENT/SETTINGS/GAIN_X";
+            this.nudGainXEmbedECOnly.TextChanged += new System.EventHandler(this.nudEmbedECOnly_TextChanged);
+            this.nudGainXEmbedECOnly.ValueChanged += new System.EventHandler(this.nudGainXEmbedECOnly_ValueChanged);
+            // 
+            // nudGainYEmbedECOnly
+            // 
+            this.nudGainYEmbedECOnly.DecimalPlaces = 1;
+            this.nudGainYEmbedECOnly.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudGainYEmbedECOnly.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nudGainYEmbedECOnly.Location = new System.Drawing.Point(122, 165);
+            this.nudGainYEmbedECOnly.Maximum = new decimal(new int[] {
+            820,
+            0,
+            0,
+            0});
+            this.nudGainYEmbedECOnly.Minimum = new decimal(new int[] {
+            18,
+            0,
+            0,
+            -2147483648});
+            this.nudGainYEmbedECOnly.Name = "nudGainYEmbedECOnly";
+            this.nudGainYEmbedECOnly.Size = new System.Drawing.Size(74, 29);
+            this.nudGainYEmbedECOnly.TabIndex = 87;
+            this.nudGainYEmbedECOnly.Tag = "INSTRUMENT/SETTINGS/GAIN_Y";
+            this.nudGainYEmbedECOnly.TextChanged += new System.EventHandler(this.nudEmbedECOnly_TextChanged);
+            this.nudGainYEmbedECOnly.ValueChanged += new System.EventHandler(this.nudGainYEmbedECOnly_ValueChanged);
+            // 
+            // nudFiltHPEmbedECOnly
+            // 
+            this.nudFiltHPEmbedECOnly.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudFiltHPEmbedECOnly.Location = new System.Drawing.Point(138, 271);
+            this.nudFiltHPEmbedECOnly.Maximum = new decimal(new int[] {
+            199900,
+            0,
+            0,
+            0});
+            this.nudFiltHPEmbedECOnly.Name = "nudFiltHPEmbedECOnly";
+            this.nudFiltHPEmbedECOnly.Size = new System.Drawing.Size(74, 29);
+            this.nudFiltHPEmbedECOnly.TabIndex = 88;
+            this.nudFiltHPEmbedECOnly.Tag = "INSTRUMENT/SETTINGS/FILTER_HP";
+            this.nudFiltHPEmbedECOnly.TextChanged += new System.EventHandler(this.nudEmbedECOnly_TextChanged);
+            this.nudFiltHPEmbedECOnly.ValueChanged += new System.EventHandler(this.nudFiltHPEmbedECOnly_ValueChanged);
+            // 
+            // nudFiltLPEmbedECOnly
+            // 
+            this.nudFiltLPEmbedECOnly.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudFiltLPEmbedECOnly.Location = new System.Drawing.Point(138, 234);
+            this.nudFiltLPEmbedECOnly.Maximum = new decimal(new int[] {
+            200000,
+            0,
+            0,
+            0});
+            this.nudFiltLPEmbedECOnly.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudFiltLPEmbedECOnly.Name = "nudFiltLPEmbedECOnly";
+            this.nudFiltLPEmbedECOnly.Size = new System.Drawing.Size(74, 29);
+            this.nudFiltLPEmbedECOnly.TabIndex = 88;
+            this.nudFiltLPEmbedECOnly.Tag = "INSTRUMENT/SETTINGS/FILTER_LP";
+            this.nudFiltLPEmbedECOnly.Value = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.nudFiltLPEmbedECOnly.TextChanged += new System.EventHandler(this.nudEmbedECOnly_TextChanged);
+            this.nudFiltLPEmbedECOnly.ValueChanged += new System.EventHandler(this.nudFiltLPEmbedECOnly_ValueChanged);
+            // 
+            // timerKeyRepeat
+            // 
+            this.timerKeyRepeat.Tick += new System.EventHandler(this.timerKeyRepeat_Tick);
+            // 
+            // btAlarm2
+            // 
+            this.btAlarm2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btAlarm2.BackColor = System.Drawing.Color.LightGreen;
+            this.btAlarm2.Location = new System.Drawing.Point(83, 610);
+            this.btAlarm2.Name = "btAlarm2";
+            this.btAlarm2.Size = new System.Drawing.Size(72, 59);
+            this.btAlarm2.TabIndex = 90;
+            this.btAlarm2.Text = "ALARM!";
+            this.btAlarm2.UseVisualStyleBackColor = false;
+            // 
+            // btLOG
+            // 
+            this.btLOG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btLOG.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLOG.Location = new System.Drawing.Point(177, 702);
+            this.btLOG.Name = "btLOG";
+            this.btLOG.Size = new System.Drawing.Size(75, 59);
+            this.btLOG.TabIndex = 91;
+            this.btLOG.Text = "LOG";
+            this.btLOG.UseVisualStyleBackColor = true;
+            this.btLOG.Visible = false;
+            this.btLOG.Click += new System.EventHandler(this.btLOG_Click);
+            // 
+            // dataGeneral
+            // 
+            this.dataGeneral.DataSetName = "NewDataSet";
+            this.dataGeneral.Tables.AddRange(new System.Data.DataTable[] {
+            this.General});
+            // 
+            // General
+            // 
+            this.General.Columns.AddRange(new System.Data.DataColumn[] {
+            this.dataColumn1,
+            this.dataColumn2});
+            this.General.Constraints.AddRange(new System.Data.Constraint[] {
+            new System.Data.UniqueConstraint("Constraint1", new string[] {
+                        "Key"}, true)});
+            this.General.PrimaryKey = new System.Data.DataColumn[] {
+        this.dataColumn1};
+            this.General.TableName = "General";
+            // 
+            // dataColumn1
+            // 
+            this.dataColumn1.AllowDBNull = false;
+            this.dataColumn1.ColumnName = "Key";
+            // 
+            // dataColumn2
+            // 
+            this.dataColumn2.ColumnName = "Value";
+            // 
+            // timerDigitalIOSequence
+            // 
+            this.timerDigitalIOSequence.Tick += new System.EventHandler(this.timerDigitalIOSequence_Tick);
+            // 
+            // panelKeypad
+            // 
+            this.panelKeypad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelKeypad.Controls.Add(this.tbTxString);
+            this.panelKeypad.Controls.Add(this.btLeft);
+            this.panelKeypad.Controls.Add(this.btLOG);
+            this.panelKeypad.Controls.Add(this.btUp);
+            this.panelKeypad.Controls.Add(this.lbTx);
+            this.panelKeypad.Controls.Add(this.btDown);
+            this.panelKeypad.Controls.Add(this.btAlarm2);
+            this.panelKeypad.Controls.Add(this.btBlank1);
+            this.panelKeypad.Controls.Add(this.tbTx);
+            this.panelKeypad.Controls.Add(this.btBalance2);
+            this.panelKeypad.Controls.Add(this.btLoadVeeScanSettings);
+            this.panelKeypad.Controls.Add(this.btRight);
+            this.panelKeypad.Controls.Add(this.btAlarm);
+            this.panelKeypad.Controls.Add(this.btFreeze);
+            this.panelKeypad.Controls.Add(this.btBeadSeat);
+            this.panelKeypad.Controls.Add(this.btBlank2);
+            this.panelKeypad.Controls.Add(this.rbUSBTransmit);
+            this.panelKeypad.Controls.Add(this.btBack);
+            this.panelKeypad.Controls.Add(this.btOK);
+            this.panelKeypad.Controls.Add(this.rbRS232Transmit);
+            this.panelKeypad.Controls.Add(this.btBalance1);
+            this.panelKeypad.Controls.Add(this.pictureBox1);
+            this.panelKeypad.Controls.Add(this.btReloadMasterSettings);
+            this.panelKeypad.Controls.Add(this.lbMasterSettings);
+            this.panelKeypad.Controls.Add(this.btReprocessmasterSettings);
+            this.panelKeypad.Controls.Add(this.btSaveMasterSettings);
+            this.panelKeypad.Location = new System.Drawing.Point(866, 45);
+            this.panelKeypad.Name = "panelKeypad";
+            this.panelKeypad.Size = new System.Drawing.Size(252, 675);
+            this.panelKeypad.TabIndex = 67;
+            // 
+            // timerReconnect
+            // 
+            this.timerReconnect.Tick += new System.EventHandler(this.timerReconnect_Tick);
+            // 
+            // ETherRealtime
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1124, 827);
+            this.Controls.Add(this.panelEmbedEC);
+            this.Controls.Add(this.panelKeypad);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "ETherRealtime";
+            this.Text = "ETherRealtime";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ETherRealTime_FormClosing);
+            this.Resize += new System.EventHandler(this.ETherRealtime_Resize);
+            this.tabControl1.ResumeLayout(false);
+            this.tpConnection.ResumeLayout(false);
+            this.tpConnection.PerformLayout();
+            this.gbUSB.ResumeLayout(false);
+            this.gbUSB.PerformLayout();
+            this.tpDataFormat.ResumeLayout(false);
+            this.tpDataFormat.PerformLayout();
+            this.tpPhaseplane.ResumeLayout(false);
+            this.tpPhaseplane.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPersistenceEncoder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSpotSize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSweepTime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudZoom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctPhase)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctTimebase)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPersistence)).EndInit();
+            this.tpXMLDisplay.ResumeLayout(false);
+            this.tpXMLDisplay.PerformLayout();
+            this.gbAlarms.ResumeLayout(false);
+            this.gbAlarms.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlarmStretch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlarmStart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlarmStop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlarmOuter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlarmInner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlarmRight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlarmLeft)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlarmBottom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlarmTop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPhaseChMix)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGainYchMix)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGainXchMix)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHighPassFilterCh2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHighPassFilterCh1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLowPassFilterCh2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLowPassFilterCh1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRPM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPhaseCh2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPhaseCh1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFrequencyCh2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFrequencyCh1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudInputGainCh2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGainYch2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGainXch2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDriveGain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudInputGainCh1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGainYch1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGainXch1)).EndInit();
+            this.tdDataFiles.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.tpIO.ResumeLayout(false);
+            this.tpIO.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBytesPerSecond)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSPI_DIO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelEmbedEC.ResumeLayout(false);
+            this.panelEmbedEC.PerformLayout();
+            this.plVictorChannel.ResumeLayout(false);
+            this.plVictorChannel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPhaseEmbedECOnly)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFrequencyEmbedECOnly)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGainXEmbedECOnly)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGainYEmbedECOnly)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFiltHPEmbedECOnly)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFiltLPEmbedECOnly)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGeneral)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.General)).EndInit();
+            this.panelKeypad.ResumeLayout(false);
+            this.panelKeypad.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.IO.Ports.SerialPort serialPortUSB;
+        private System.Windows.Forms.Label lbComPort;
+        private System.Windows.Forms.Button btConnectUSB;
+        private System.Windows.Forms.Timer timer1s_reconnect_pointcount;
+        private System.Windows.Forms.ComboBox cbComPortsUSB;
+        private System.Windows.Forms.Button btRefreshPorts;
+        private System.Windows.Forms.TextBox tbInvalidPacket;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btBalance1;
+        private System.Windows.Forms.Button btFreeze;
+        private System.Windows.Forms.Button btBlank1;
+        private System.Windows.Forms.Button btUp;
+        private System.Windows.Forms.Button btRight;
+        private System.Windows.Forms.Button btLeft;
+        private System.Windows.Forms.Button btOK;
+        private System.Windows.Forms.Button btDown;
+        private System.Windows.Forms.Button btBalance2;
+        private System.Windows.Forms.Button btBlank2;
+        private System.Windows.Forms.Button btBack;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tpConnection;
+        private System.Windows.Forms.TabPage tpDataFormat;
+        private System.Windows.Forms.Timer timerLongKeyPress;
+        private System.Windows.Forms.TextBox tbTx;
+        private System.Windows.Forms.Label lbTx;
+        private System.Windows.Forms.Label lbBytes;
+        private System.Windows.Forms.TextBox tbBytes;
+        private System.Windows.Forms.Button btClear;
+        private System.Windows.Forms.CheckBox cbAutoConnect;
+        private System.Windows.Forms.TextBox tbConsole;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.TextBox tbConsoleFileScan;
+        private System.Windows.Forms.CheckBox cbInstrumentRealtime;
+        private System.Windows.Forms.Button btAlarm;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TabPage tpPhaseplane;
+        private System.Windows.Forms.Timer timerPhasePlane;
+        private System.Windows.Forms.Button btClearPhasePlane;
+        private System.Windows.Forms.NumericUpDown nudPersistence;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TabPage tpXMLDisplay;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.RichTextBox rtbXMLSettings;
+        private System.Windows.Forms.CheckBox cbRealTimeDisplay;
+        private System.Windows.Forms.RadioButton rbSingleChan;
+        private System.Windows.Forms.RadioButton rbNone;
+        private System.Windows.Forms.RadioButton rbRaw;
+        private System.Windows.Forms.RadioButton rbPostProcess;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbPointsCount;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tbStatusByte;
+        private System.Windows.Forms.Label lbPacketsPerSecond;
+        private System.Windows.Forms.Label lbMix;
+        private System.Windows.Forms.TextBox tbCmixX;
+        private System.Windows.Forms.TextBox tbCmixY;
+        private System.Windows.Forms.TextBox tbC1X;
+        private System.Windows.Forms.Label lbCh2;
+        private System.Windows.Forms.TextBox tbC2Y;
+        private System.Windows.Forms.Label lbCh1;
+        private System.Windows.Forms.TextBox tbC2X;
+        private System.Windows.Forms.Label lbY;
+        private System.Windows.Forms.TextBox tbC1Y;
+        private System.Windows.Forms.Label lbX;
+        private System.Windows.Forms.GroupBox gbUSB;
+        private System.IO.Ports.SerialPort serialPortRS232;
+        private System.Windows.Forms.RadioButton rbUSBTransmit;
+        private System.Windows.Forms.RadioButton rbRS232Transmit;
+        private System.Windows.Forms.Button btReloadMasterSettings;
+        private System.Windows.Forms.Button btReprocessmasterSettings;
+        private System.Windows.Forms.Button btSaveMasterSettings;
+        private System.Windows.Forms.Label lbMasterSettings;
+        private System.Windows.Forms.RadioButton rbNonRealtime;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox tbRadius;
+        private System.Windows.Forms.TextBox tbTheta;
+        private System.Windows.Forms.Timer timerRefreshPorts;
+        private System.Windows.Forms.Label lbPhase;
+        private System.Windows.Forms.Label lbFrequency;
+        private System.Windows.Forms.Label lbChannel2;
+        private System.Windows.Forms.Label lbChannel1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lbInputGain;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btUpdateInstrument;
+        private System.Windows.Forms.Label lbFreqUnitsCh2;
+        private System.Windows.Forms.Label lbFreqUnitsCh1;
+        private System.Windows.Forms.Label lbProbeType;
+        private System.Windows.Forms.Label lbRPM;
+        private System.Windows.Forms.RadioButton rbVictor22D;
+        private System.Windows.Forms.RadioButton rbAeroCheckPlus;
+        private System.Windows.Forms.Label lbHighPassFilter;
+        private System.Windows.Forms.Label lbLowPassFilter;
+        private System.Windows.Forms.Label lbChannelMix;
+        private System.Windows.Forms.GroupBox gbAlarms;
+        private radbutWithXML rbAlarmSector;
+        private radbutWithXML rbAlarmBox;
+        private radbutWithXML rbAlarmOff;
+        private System.Windows.Forms.Label lbStretch;
+        private System.Windows.Forms.Label lbAction;
+        private System.Windows.Forms.Label lbAlarmSource;
+        private nudWithXML nudFrequencyCh1;
+        private nudWithXML nudPhaseCh2;
+        private nudWithXML nudPhaseCh1;
+        private nudWithXML nudFrequencyCh2;
+        private nudWithXML nudInputGainCh2;
+        private nudWithXML nudGainYch2;
+        private nudWithXML nudGainXch2;
+        private nudWithXML nudDriveGain;
+        private nudWithXML nudInputGainCh1;
+        private nudWithXML nudGainYch1;
+        private nudWithXML nudGainXch1;
+        private comboWithXML cbProbeTypeCh2;
+        private comboWithXML cbProbeTypeCh1;
+        private nudWithXML nudRPM;
+        private nudWithXML nudHighPassFilterCh2;
+        private nudWithXML nudHighPassFilterCh1;
+        private nudWithXML nudLowPassFilterCh2;
+        private nudWithXML nudLowPassFilterCh1;
+        private nudWithXML nudPhaseChMix;
+        private nudWithXML nudGainYchMix;
+        private nudWithXML nudGainXchMix;
+        private nudWithXML nudAlarmStart;
+        private nudWithXML nudAlarmStop;
+        private nudWithXML nudAlarmOuter;
+        private nudWithXML nudAlarmInner;
+        private nudWithXML nudAlarmRight;
+        private nudWithXML nudAlarmLeft;
+        private nudWithXML nudAlarmBottom;
+        private nudWithXML nudAlarmTop;
+        private nudWithXML nudAlarmStretch;
+        private comboWithXML cbAlarmSource;
+        private comboWithXML cbAlarmAction;
+        private System.Windows.Forms.Button btLoadXMLFile;
+        private comboWithXML cbRotaryType;
+        private System.Windows.Forms.Label lbXMLFileName;
+        private System.Windows.Forms.Button btReloadSettings;
+        private System.Windows.Forms.Timer timerWriteToInstrument;
+        private System.Windows.Forms.TextBox tbTxString;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ctPhase;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ctTimebase;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.NumericUpDown nudZoom;
+        private System.Windows.Forms.Button btBeadSeat;
+        private System.Windows.Forms.Button btLoadVeeScanSettings;
+        private System.Windows.Forms.RadioButton rbEmbedEC;
+        private System.Windows.Forms.NumericUpDown nudSweepTime;
+        private System.Windows.Forms.Label lbSweep;
+        private System.Windows.Forms.ComboBox cbSource;
+        private System.Windows.Forms.Label lbSource;
+        private System.Windows.Forms.TabPage tdDataFiles;
+        private System.Windows.Forms.Button btScanLogFile;
+        private System.Windows.Forms.Button btLogging;
+        private System.Windows.Forms.Button btLogToFile;
+        private System.Windows.Forms.TextBox tbLoggingToFile;
+        private System.Windows.Forms.Timer timerRequestXML;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.NumericUpDown nudSpotSize;
+        private System.Windows.Forms.CheckBox cbUseDLL;
+        private System.Windows.Forms.CheckBox cbInterpolate;
+        private nudWithXML nudPhaseEmbedECOnly;
+        private nudWithXML nudGainXEmbedECOnly;
+        private nudWithXML nudGainYEmbedECOnly;
+        private System.Windows.Forms.Button btBalanceEmbedECOnly;
+        private System.Windows.Forms.Label lbGainXEmbedEC;
+        private System.Windows.Forms.Label lbGainYEmbedEC;
+		private System.Windows.Forms.Label lbPhaseEmbedEC;
+        private System.Windows.Forms.Label lbFiltLPEmbedEC;
+        private nudWithXML nudFiltLPEmbedECOnly;
+        private System.Windows.Forms.Label lbFiltHPEmbedEC;
+        private nudWithXML nudFiltHPEmbedECOnly;
+        private System.Windows.Forms.Label lbFreqUnitsEmbedECOnly;
+        private System.Windows.Forms.Label lbFrequencyEmbedECOnly;
+        private nudWithXML nudFrequencyEmbedECOnly;
+        private System.Windows.Forms.Panel panelEmbedEC;
+        private System.Windows.Forms.RadioButton rbGainLockFixed;
+        private System.Windows.Forms.RadioButton rbGainLockXequalY;
+        private System.Windows.Forms.RadioButton rbGainLockOff;
+        private System.Windows.Forms.Button btPause;
+        private System.Windows.Forms.CheckBox cbAlarmDraw;
+        private System.Windows.Forms.TextBox tbNudValue;
+        private ButtonMessager btNudDown;
+        private ButtonMessager btNudUp;
+        private System.Windows.Forms.TextBox tbNudNameText;
+        private System.Windows.Forms.Timer timerKeyRepeat;
+        private System.Windows.Forms.Label lbBIGNudFreq;
+        private System.Windows.Forms.Label lbPhaseUnits;
+        private System.Windows.Forms.Label lbGainXUnits;
+        private System.Windows.Forms.Label lbGainYUnits;
+        private System.Windows.Forms.Label lbHPUnits;
+        private System.Windows.Forms.Label lbLPUnits;
+        private ButtonMessager button1;
+        private System.Windows.Forms.Button btHelp;
+        private System.Windows.Forms.Button btAlarm2;
+        private System.Windows.Forms.ComboBox cbSource2;
+        private System.Windows.Forms.RadioButton rbLoggingClickToSave;
+        private System.Windows.Forms.RadioButton rbLoggingRealtime;
+        private System.Windows.Forms.Button btLOG;
+		private System.Windows.Forms.RadioButton rbAeroCheck2;
+		private System.Windows.Forms.TabPage tpIO;
+		private System.Windows.Forms.Button btTxIO;
+		private System.Windows.Forms.NumericUpDown nudSPI_DIO;
+		private radbutWithXML rbDigIO;
+		private radbutWithXML rbEnc1DigIO;
+		private radbutWithXML rbEnc1SPI;
+		private radbutWithXML rbEnc1Enc2;
+		private radbutWithXML rbEnc2;
+		private radbutWithXML rbEnc1;
+		private radbutWithXML rbIOOff;
+		private System.Windows.Forms.NumericUpDown nudPersistenceEncoder;
+		private System.Data.DataSet dataGeneral;
+		private System.Data.DataTable General;
+		private System.Data.DataColumn dataColumn1;
+		private System.Data.DataColumn dataColumn2;
+		private System.Windows.Forms.Button btSaveXMLFile;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label lbByteRate;
+		private System.Windows.Forms.NumericUpDown nudBytesPerSecond;
+		private System.Windows.Forms.CheckBox cbLoop;
+		private System.Windows.Forms.Label lbByteSequence;
+		private System.Windows.Forms.TextBox tbByteSequence;
+		private System.Windows.Forms.Timer timerDigitalIOSequence;
+		private System.Windows.Forms.Panel panelKeypad;
+		private System.Windows.Forms.CheckBox cbRemoveReverse;
+		private System.Windows.Forms.TextBox tbY;
+		private System.Windows.Forms.TextBox tbX;
+		private System.Windows.Forms.Label lbXY;
+		private System.Windows.Forms.TextBox tbFWVersion;
+		private System.Windows.Forms.Label lbFirmwareEmbedEC;
+		private System.Windows.Forms.Label lbClickToRequest;
+		private System.Windows.Forms.Panel plVictorChannel;
+		private System.Windows.Forms.RadioButton rbVictorCh2;
+		private System.Windows.Forms.RadioButton rbVictorCh3;
+		private System.Windows.Forms.RadioButton rbVictorCh1;
+		private System.Windows.Forms.RadioButton rbRailCheck;
+		private System.Windows.Forms.CheckBox cbLockAxis;
+		private System.Windows.Forms.Button btConvertETDtoCSV;
+		private System.Windows.Forms.CheckBox cbFitSC1onAxis;
+		private System.Windows.Forms.CheckBox cbFitSC2onAxis;
+		private System.Windows.Forms.GroupBox groupBox3;
+		private System.Windows.Forms.Label label28;
+		private System.Windows.Forms.GroupBox groupBox2;
+		private System.Windows.Forms.Label label27;
+		private System.Windows.Forms.TextBox tbCurrentFile;
+		private System.Windows.Forms.Button btRotaryStart;
+		private System.Windows.Forms.Button btRotaryStop;
+		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.RadioButton rbETI300;
+        private System.Windows.Forms.Timer timerReconnect;
+    }
+}
+

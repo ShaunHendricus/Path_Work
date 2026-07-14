@@ -1,0 +1,29 @@
+services:
+  bae_system:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bae_system:latest
+    network_mode: host
+    # sysctls:
+    #   net.core.rmem_max: 2147483647
+    #   net.core.rmem_default: 8388608
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - XAUTHORITY=${XAUTHORITY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /etc/OpenCL/vendors:/etc/OpenCL/vendors:ro
+      - /usr/share/Zivid:/usr/share/Zivid:ro
+      - ${XAUTHORITY}:${XAUTHORITY}:ro
+      - /dev/dri:/dev/dri
+    devices:
+      - /dev/bus/usb:/dev/bus/usb
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu, compute, utility, display, graphics]

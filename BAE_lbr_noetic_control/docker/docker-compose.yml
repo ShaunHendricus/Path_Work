@@ -1,0 +1,26 @@
+services:
+  kuka_deployer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: kuka_deploy:latest
+    container_name: kuka_deployer
+    network_mode: host
+    stdin_open: true
+    tty: true
+    environment:
+      - DISPLAY=${DISPLAY}
+      - XAUTHORITY=${XAUTHORITY}
+      - QT_X11_NO_MITSHM=1
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ${XAUTHORITY}:${XAUTHORITY}:ro
+      - /dev/dri:/dev/dri
+      - /dev/bus/usb:/dev/bus/usb
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu, compute, utility, display, graphics]

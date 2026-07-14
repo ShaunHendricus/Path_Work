@@ -1,0 +1,24 @@
+# This service allows to set the speed limits for cartesian PTP motions.
+# Set the parameters you do not want to set to -1 to ignore them.
+
+# Maximum translational speed in m/s
+float64 max_cartesian_velocity
+
+# Maximum rotational speed in rad/s
+float64 max_orientation_velocity
+
+# Maximum translational acceleration in m/s^2
+float64 max_cartesian_acceleration
+
+# Maximum rotational acceleration in rad/s^2
+float64 max_orientation_acceleration
+
+# Maximum allowed translational jerk in m/s^3
+float64 max_cartesian_jerk
+
+# Maximum allowed rotational jerk in rad/s^3
+float64 max_orientation_jerk
+
+---
+bool success
+string error

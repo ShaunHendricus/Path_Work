@@ -1,0 +1,27 @@
+<package format="3">
+  <name>bae_system_description</name>
+  <version>0.0.0</version>
+  <description>System description for LBR + Zivid + ECT probe</description>
+  <maintainer email="vedran@todo.todo">vedran</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>xacro</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>joint_state_publisher_gui</depend>
+  <depend>rviz2</depend>
+  <depend>lbr_description</depend>
+  <depend>zivid_description</depend>
+  <exec_depend>pcl_ros</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>sensor_msgs_py</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

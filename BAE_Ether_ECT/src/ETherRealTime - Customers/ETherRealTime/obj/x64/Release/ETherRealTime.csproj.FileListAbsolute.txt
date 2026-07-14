@@ -1,0 +1,1 @@
+C:\Users\Rylan\Documents\GitHub\BEA_systems_ECT\src\ETherRealTime - Customers\ETherRealTime\obj\x64\Release\ETherRealTime.csprojAssemblyReference.cache

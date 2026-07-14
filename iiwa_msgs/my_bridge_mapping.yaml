@@ -1,0 +1,16 @@
+- ros1_package_name: 'iiwa_msgs'
+  ros1_message_name: 'CartesianPose'
+  ros2_package_name: 'iiwa_msgs'
+  ros2_message_name: 'CartesianPose'
+  fields_1_to_2:
+    poseStamped: pose_stamped
+  fields_2_to_1:
+    pose_stamped: poseStamped
+- ros1_package_name: 'iiwa_msgs'
+  ros1_message_name: 'RedundancyInformation'
+  ros2_package_name: 'iiwa_msgs'
+  ros2_message_name: 'RedundancyInformation'
+- ros1_package_name: 'iiwa_msgs'
+  ros1_message_name: 'SplineSegment'
+  ros2_package_name: 'iiwa_msgs'
+  ros2_message_name: 'SplineSegment'

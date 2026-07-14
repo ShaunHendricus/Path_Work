@@ -1,0 +1,562 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Jun 29 17:03
+
+@author: Rylan
+
+"""
+"""
+Changes made:
+    1. Added connector type control
+
+
+"""
+import serial
+import time
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+import struct
+from collections import deque
+from dataclasses import dataclass
+from typing import Optional, Dict, List, Tuple
+from enum import Enum
+
+
+class ConnectorType(Enum):  #Always stick to these connector types. Lemo 1 is essentially probe 1 connector, Lemo 2 is probe 2 connector.
+    OFF = 'off'
+    BNC = 'BNC'
+    LEMO_1_BRIDGE = 'Lemo 1-Bridge'
+    LEMO_1_ABS = 'Lemo 1-Abs'
+    LEMO_1_REFL = 'Lemo 1-Refl'
+    LEMO_2_BRIDGE = 'Lemo 2-Bridge'
+    LEMO_2_REFL = 'Lemo 2-Refl'
+    
+
+
+@dataclass
+class ChannelConfig:
+    "Configuration for a single ETi channel"
+    connector: ConnectorType
+    frequency: int  # in Hz ie 50 to 5000000 (50Hz to 5MHz).
+    phase: int  # in thousandths of a degree but in steps of 100 (0.1 degrees), ie 180.4 is 180400.
+    gain_x: int  # in 10ths of a dB from 0 to 70dB (0 to 700).
+    gain_y: int  # in 10ths of a dB from 0 to 70dB (0 to 700).
+    hp_filter: int  # in 100ths of a Hz from 0.01Hz steps to 2kHz with 0 being DC (0 to 200000).
+    lp_filter: int  # in 100ths of a Hz from In 0.01Hz steps to 4kHz with 0 being DC. (0-400000).
+
+
+class ETi300:
+    "Class for communicating with and visualizing data from ETi 300 device"
+    
+    # Configuration constants
+    DEFAULT_BAUD_RATE = 115200
+    DEFAULT_TIMEOUT = 1
+    DEFAULT_WINDOW_SIZE = 10  # seconds visible on plot
+    DEFAULT_MAX_POINTS = 1000  # Maximum points to keep in memory
+    
+    # Parameter codes for reading configuration
+    PARAM_CODES = {
+        'frequency': 0x46,
+        'gain_x': 0x58,
+        'gain_y': 0x59,
+        'phase': 0x50,
+        'hp_filter': 0x48,
+        'lp_filter': 0x4C
+    }
+    
+    def __init__(self, com_port: str = 'COM4', baud_rate: int = None, timeout: float = None):
+        """
+        Initialize ETi 300 communication
+        
+        Args:
+            com_port: Serial port name (e.g., 'COM4' on Windows, '/dev/ttyUSB0' on Linux)
+            baud_rate: Serial baud rate (default: 115200)
+            timeout: Serial timeout in seconds (default: 1)
+        """
+        self.com_port = com_port
+        self.baud_rate = baud_rate or self.DEFAULT_BAUD_RATE
+        self.timeout = timeout or self.DEFAULT_TIMEOUT
+        
+        self.serial_port: Optional[serial.Serial] = None
+        self.running = False
+        self.animation = None
+        self.start_time = None
+        
+        # Data storage
+        self.data_queues = {
+            'x1': deque(maxlen=self.DEFAULT_MAX_POINTS),
+            'y1': deque(maxlen=self.DEFAULT_MAX_POINTS),
+            'x2': deque(maxlen=self.DEFAULT_MAX_POINTS),
+            'y2': deque(maxlen=self.DEFAULT_MAX_POINTS),
+            'x3': deque(maxlen=self.DEFAULT_MAX_POINTS),
+            'y3': deque(maxlen=self.DEFAULT_MAX_POINTS),
+            'x4': deque(maxlen=self.DEFAULT_MAX_POINTS),
+            'y4': deque(maxlen=self.DEFAULT_MAX_POINTS),
+            't': deque(maxlen=self.DEFAULT_MAX_POINTS)
+        }
+        
+        # Channel configurations, refer to instructions for value range in class ChannelConfig
+        # frequency: int  # in Hz ie 50 to 5000000 (50Hz to 5MHz).
+        # phase: int  # in thousandths of a degree but in steps of 100 (0.1 degrees), ie 180.4 is 180400.
+        # gain_x: int  # in 10ths of a dB from 0 to 70dB (0 to 700).
+        # gain_y: int  # in 10ths of a dB from 0 to 70dB (0 to 700).
+        # hp_filter: int  # in 100ths of a Hz from 0.01Hz steps to 2kHz with 0 being DC (0 to 200000).
+        # lp_filter: int  # in 100ths of a Hz from In 0.01Hz steps to 4kHz with 0 being DC. (0-400000).
+        # THESE VALUES ARE ONLY PLACEHOLDERS!! PLEASE ENTER YOUR VALUES THAT ARE WITHIN THE LIMIT AS STATED ABOVE!!
+        self.channel_configs = {
+            0: ChannelConfig(ConnectorType.LEMO_1_BRIDGE,100000, 0, 690, 700, 0, 3000), #connector type,frequency, phase, gainx, gainy,hp filter,lp filter
+            1: ChannelConfig(ConnectorType.OFF,500000, 180000, 100, 690, 10000, 40000),
+            2: ChannelConfig(ConnectorType.OFF,30000, 200000, 300, 400, 5000, 4000),
+            3: ChannelConfig(ConnectorType.OFF,18000, 300000, 300, 500, 4600, 4000)
+        }
+        
+        # Plotting elements
+        self.fig = None
+        self.axes = None
+        self.lines = None
+    
+    def connect(self):
+        "Establish serial connection to ETi 300"
+        try:
+            self.serial_port = serial.Serial(self.com_port, self.baud_rate, timeout=self.timeout)
+            self.serial_port.reset_input_buffer()
+            print("Serial connection established")
+            return True
+        except Exception as e:
+            print(f"Error opening serial port: {e}")
+            return False
+    
+    def disconnect(self):
+        "Close serial connection"
+        if self.serial_port and self.serial_port.is_open:
+            self.serial_port.close()
+            print("Serial connection closed")
+    
+    def _send_xml_acquire(self, xml_command: str):
+        "Send XML command to acquire data"
+        if not isinstance(xml_command, str):
+            xml_command = str(xml_command)
+        
+        # Build packet: 0x01, 0x00, xml bytes, 0x00 terminator
+        pkt = bytes([1, 0]) + xml_command.encode('utf-8') + bytes([0])
+        self.serial_port.write(pkt)
+        
+        cmd = bytes([1, 0, 0x08])  # Predefined command (balance of probe)
+        self.serial_port.write(cmd)
+    
+    def _send_xml_config(self, xml_command: str):
+        "Send XML command to set configuration"
+        if not isinstance(xml_command, str):
+            xml_command = str(xml_command)
+        
+        # Build packet: 0x01, 0x00, xml bytes, 0x00 terminator
+        pkt = bytes([1, 0]) + xml_command.encode('utf-8') + bytes([0])
+        self.serial_port.write(pkt)
+    
+    def perform_bootloader_handshake(self):
+        "Perform bootloader handshake and restart ETi"
+        print('PERFORMING BOOTLOADER HANDSHAKE!')
+        
+        # Tell the loader to run the main firmware
+        self._send_xml_config('<USB_OUTPUT>99</USB_OUTPUT>')
+        time.sleep(1)
+        
+        # ETi will drop out and re-enumerate USB
+        self.disconnect()
+        time.sleep(5)  # give it time to reboot
+        
+        # Reconnect
+        if not self.connect():
+            raise Exception("Failed to reconnect after bootloader handshake")
+    
+    def configure_device(self, sample_rate_divisor: int = 1000):
+        """
+        Configure basic device settings
+        
+        Args:
+            sample_rate_divisor: ETi sample rate is 16kHz, so 1000 gives 16Hz output
+        """
+        print('STOPPING ANY ACTIVE STREAM OF DATA FROM ETi 300!')
+        self._send_xml_config('<USB_OUTPUT>0</USB_OUTPUT>')
+        time.sleep(1)
+        
+        self._send_xml_config(f'<USB_RATE>{sample_rate_divisor}</USB_RATE>')
+        time.sleep(1)
+    
+    def configure_channel(self, channel: int, config: Optional[ChannelConfig] = None):
+        """
+        Configure a single channel
+        
+        Args:
+            channel: Channel number (0-3)
+            config: ChannelConfig object (uses default if None)
+        """
+        if config is None:
+            config = self.channel_configs[channel]
+        else:
+            self.channel_configs[channel] = config
+        
+        print(f'Configuring channel {channel + 1}...')
+        
+        # Send each parameter
+        commands = [
+            f'<CHANNEL>{channel}</CHANNEL>',
+            f'<CONNECTOR>{config.connector.value}</CONNECTOR>',
+            f'<CHANNEL>{channel}\r<FREQUENCY>{config.frequency}</FREQUENCY>',
+            f'<CHANNEL>{channel}\r<PHASE>{config.phase}</PHASE>',
+            f'<CHANNEL>{channel}\r<GAIN_X>{config.gain_x}</GAIN_X>',
+            f'<CHANNEL>{channel}\r<GAIN_Y>{config.gain_y}</GAIN_Y>',
+            f'<CHANNEL>{channel}\r<HP>{config.hp_filter}</HP>',
+            f'<CHANNEL>{channel}\r<LP>{config.lp_filter}</LP>'
+        ]
+        
+        for cmd in commands:
+            self._send_xml_config(cmd)
+            time.sleep(0.5)
+    
+    def configure_all_channels(self):
+        "Configure all channels with their stored configurations"
+        print('SENDING ETi PROBE CONFIGURATION!')
+        for channel in range(4):
+            self.configure_channel(channel)
+    
+    def read_parameter(self, channel: int, param_name: str) -> int:
+        """
+        Read a parameter value from the ETi
+        
+        Args:
+            channel: Channel number (0-3)
+            param_name: Parameter name (frequency, gain_x, gain_y, phase, hp_filter, lp_filter)
+            
+        Returns:
+            Raw parameter value
+        """
+        param_code = self.PARAM_CODES[param_name]
+        cmd = bytes([4, 0x3F, channel, param_code])
+        self.serial_port.write(cmd)
+        
+        t0 = time.time()
+        while self.serial_port.in_waiting < 7:
+            time.sleep(0.001)
+            if time.time() - t0 > 1:
+                raise Exception(f'Timed-out waiting for {param_name} reply')
+        
+        reply = self.serial_port.read(7)
+        
+        # Convert to big-endian 32-bit value
+        raw32 = (reply[3] << 24) + (reply[4] << 16) + (reply[5] << 8) + reply[6]
+        
+        return raw32
+    
+    def verify_channel_config(self, channel: int) -> Dict[str, float]:
+        """
+        Read and verify all parameters for a channel
+        
+        Args:
+            channel: Channel number (0-3)
+            
+        Returns:
+            Dictionary of parameter values
+        """
+        print(f'\nReading channel {channel + 1} configuration:')
+        
+        values = {}
+        
+        # Read frequency
+        raw = self.read_parameter(channel, 'frequency')
+        values['frequency_khz'] = raw / 1000
+        print(f'  Frequency: {values["frequency_khz"]:.1f} kHz')
+        self.serial_port.reset_input_buffer()
+        time.sleep(0.5)
+        
+        # Read gains
+        raw = self.read_parameter(channel, 'gain_x')
+        values['gain_x_db'] = raw / 10
+        print(f'  Gain-X: {values["gain_x_db"]:.1f} dB')
+        self.serial_port.reset_input_buffer()
+        time.sleep(0.5)
+        
+        raw = self.read_parameter(channel, 'gain_y')
+        values['gain_y_db'] = raw / 10
+        print(f'  Gain-Y: {values["gain_y_db"]:.1f} dB')
+        self.serial_port.reset_input_buffer()
+        time.sleep(0.5)
+        
+        # Read phase
+        raw = self.read_parameter(channel, 'phase')
+        values['phase_deg'] = raw / 10
+        print(f'  Phase: {values["phase_deg"]:.1f} degrees')
+        self.serial_port.reset_input_buffer()
+        time.sleep(0.5)
+        
+        # Read filters
+        raw = self.read_parameter(channel, 'hp_filter')
+        values['hp_filter_hz'] = raw
+        print(f'  High-Pass Filter: {values["hp_filter_hz"]:.1f} Hz')
+        self.serial_port.reset_input_buffer()
+        time.sleep(0.5)
+        
+        raw = self.read_parameter(channel, 'lp_filter')
+        values['lp_filter_hz'] = raw
+        print(f'  Low-Pass Filter: {values["lp_filter_hz"]:.1f} Hz')
+        self.serial_port.reset_input_buffer()
+        time.sleep(0.5)
+        
+        return values
+    
+    def verify_all_channels(self) -> Dict[int, Dict[str, float]]:
+        "Verify configuration of all channels"
+        print('REQUESTING PROBE CONFIGURATION VALUES FROM ETi!')
+        results = {}
+        for channel in range(4):
+            results[channel] = self.verify_channel_config(channel)
+        return results
+    
+    def _parse_format5_packet(self, data: bytes, start_idx: int) -> Dict[str, int]:
+        "Parse a format 5 data packet"
+        i = start_idx
+        
+        # Parse X values
+        rawX1 = data[i + 3] + (data[i + 4] * 256) + (data[i + 5] * 256 * 256)
+        X1 = rawX1 - (2**24 if rawX1 >= 2**23 else 0)
+        
+        rawX2 = data[i + 11] + (data[i + 12] * 256) + (data[i + 13] * 256 * 256)
+        X2 = rawX2 - (2**24 if rawX2 >= 2**23 else 0)
+        
+        rawX3 = data[i + 19] + (data[i + 20] * 256) + (data[i + 21] * 256 * 256)
+        X3 = rawX3 - (2**24 if rawX3 >= 2**23 else 0)
+        
+        rawX4 = data[i + 27] + (data[i + 28] * 256) + (data[i + 29] * 256 * 256)
+        X4 = rawX4 - (2**24 if rawX4 >= 2**23 else 0)
+        
+        # Parse Y values
+        rawY1 = data[i + 7] + (data[i + 8] * 256) + (data[i + 9] * 256 * 256)
+        Y1 = rawY1 - (2**24 if rawY1 >= 2**23 else 0)
+        
+        rawY2 = data[i + 15] + (data[i + 16] * 256) + (data[i + 17] * 256 * 256)
+        Y2 = rawY2 - (2**24 if rawY2 >= 2**23 else 0)
+        
+        rawY3 = data[i + 23] + (data[i + 24] * 256) + (data[i + 25] * 256 * 256)
+        Y3 = rawY3 - (2**24 if rawY3 >= 2**23 else 0)
+        
+        rawY4 = data[i + 31] + (data[i + 32] * 256) + (data[i + 33] * 256 * 256)
+        Y4 = rawY4 - (2**24 if rawY4 >= 2**23 else 0)
+        
+        return {
+            'x1': X1, 'y1': Y1,
+            'x2': X2, 'y2': Y2,
+            'x3': X3, 'y3': Y3,
+            'x4': X4, 'y4': Y4
+        }
+    
+    def _setup_plots(self):
+        "Setup matplotlib figure and axes"
+        self.fig, ((ax_x1, ax_x2), (ax_y1, ax_y2)) = plt.subplots(2, 2, figsize=(12, 8))
+        self.fig.suptitle('ETi 300 Live Data')
+        
+        self.axes = {
+            'x1': ax_x1, 'y1': ax_y1,
+            'x2': ax_x2, 'y2': ax_y2
+        }
+        
+        self.lines = {}
+        
+        # Setup X1 plot
+        self.lines['x1'], = ax_x1.plot([], [], 'b-')
+        ax_x1.set_xlabel('Time (s)')
+        ax_x1.set_ylabel('X1')
+        ax_x1.set_title('X1 vs Time')
+        ax_x1.grid(True)
+        
+        # Setup Y1 plot
+        self.lines['y1'], = ax_y1.plot([], [], 'r-')
+        ax_y1.set_xlabel('Time (s)')
+        ax_y1.set_ylabel('Y1')
+        ax_y1.set_title('Y1 vs Time')
+        ax_y1.grid(True)
+        
+        # Setup X2 plot
+        self.lines['x2'], = ax_x2.plot([], [], 'b-')
+        ax_x2.set_xlabel('Time (s)')
+        ax_x2.set_ylabel('X2')
+        ax_x2.set_title('X2 vs Time')
+        ax_x2.grid(True)
+        
+        # Setup Y2 plot
+        self.lines['y2'], = ax_y2.plot([], [], 'r-')
+        ax_y2.set_xlabel('Time (s)')
+        ax_y2.set_ylabel('Y2')
+        ax_y2.set_title('Y2 vs Time')
+        ax_y2.grid(True)
+        
+        plt.tight_layout()
+    
+    def _update_plot(self, frame):
+        "Animation update function"
+        if not self.running:
+            return list(self.lines.values())
+        
+        # Read available data
+        if self.serial_port.in_waiting < 50:  # format 5
+            return list(self.lines.values())
+        
+        data = self.serial_port.read(self.serial_port.in_waiting)
+        
+        # Find packet starts
+        pkt_starts = []
+        for i in range(len(data) - 1):
+            if data[i] == 128 and data[i + 1] == 127:
+                pkt_starts.append(i)
+        
+        # Filter valid packet starts
+        pkt_starts = [start for start in pkt_starts if start + 49 < len(data)]
+        
+        # Parse packets
+        for start_idx in pkt_starts:
+            values = self._parse_format5_packet(data, start_idx)
+            
+            # Store values
+            for key, value in values.items():
+                self.data_queues[key].append(value)
+            
+            self.data_queues['t'].append(time.time() - self.start_time)
+        
+        # Update plots if we have data
+        if len(self.data_queues['t']) > 0:
+            current_time = self.data_queues['t'][-1]
+            
+            # Convert deques to lists
+            t_list = list(self.data_queues['t'])
+            
+            # Determine time window
+            if current_time > self.DEFAULT_WINDOW_SIZE:
+                start_time = current_time - self.DEFAULT_WINDOW_SIZE
+                valid_indices = [i for i, t in enumerate(t_list) if t >= start_time]
+                plot_times = [t_list[i] for i in valid_indices]
+                xlim = [current_time - self.DEFAULT_WINDOW_SIZE, current_time]
+            else:
+                plot_times = t_list
+                valid_indices = range(len(t_list))
+                xlim = [0, self.DEFAULT_WINDOW_SIZE]
+            
+            # Update each plot
+            for key in ['x1', 'y1', 'x2', 'y2']:
+                data_list = list(self.data_queues[key])
+                plot_data = [data_list[i] for i in valid_indices]
+                self.lines[key].set_data(plot_times, plot_data)
+            
+            # Update axis limits
+            for ax in self.axes.values():
+                ax.set_xlim(xlim)
+                ax.relim()
+                ax.autoscale_view(scalex=False, scaley=True)
+        
+        return list(self.lines.values())
+    
+    def start_streaming(self, duration: float = 500, output_format: int = 5):
+        """
+        Start streaming data from ETi 300
+        
+        Args:
+            duration: Streaming duration in seconds
+            output_format: ETi output format (default: 5 for X,Y pairs)
+        """
+        print(f'SENDING PROCESSED DATA COMMAND (FORMAT {output_format})!')
+        self._send_xml_acquire(f'<USB_OUTPUT>{output_format}</USB_OUTPUT>')
+        time.sleep(1)
+        
+        print('STREAMING X,Y PAIR VALUES FOR ALL 4 CHANNELS!')
+        
+        # Clear data queues
+        for queue in self.data_queues.values():
+            queue.clear()
+        
+        # Setup plots
+        self._setup_plots()
+        
+        # Start timing
+        self.start_time = time.time()
+        self.running = True
+        
+        # Create animation
+        self.animation = FuncAnimation(
+            self.fig, self._update_plot, 
+            interval=50, blit=True, cache_frame_data=False
+        )
+        
+        # Show plot
+        plt.show()
+        
+        # Keep running until duration expires
+        try:
+            while self.running and (time.time() - self.start_time) < duration:
+                plt.pause(0.1)
+        except KeyboardInterrupt:
+            print("\nStopping data stream...")
+            self.running = False
+        
+        self.running = False
+        print('Done streaming.')
+    
+    def stop_streaming(self):
+        "Stop streaming data"
+        self.running = False
+        self._send_xml_config('<USB_OUTPUT>0</USB_OUTPUT>')
+    
+    def save_data(self, filename: str):
+        "Save collected data to file"
+        import pandas as pd
+        
+        # Convert deques to lists
+        data = {key: list(queue) for key, queue in self.data_queues.items()}
+        
+        # Create DataFrame
+        df = pd.DataFrame(data)
+        
+        # Save to CSV
+        df.to_csv(filename, index=False)
+        print(f"Data saved to {filename}")
+    
+    def full_initialization(self):
+        "Perform full initialization sequence"
+        if not self.connect():
+            return False
+        
+        self.perform_bootloader_handshake()
+        self.configure_device()
+        self.configure_all_channels()
+        self.verify_all_channels()
+        
+        return True
+    
+
+
+
+if __name__ == "__main__":
+    # Create ETi instance
+    eti = ETi300(com_port='COM4')
+    
+    try:
+        # Initialize device
+        if eti.full_initialization():
+            # Start streaming for 500 seconds
+            eti.start_streaming(duration=60)
+            
+            # Save data
+            # eti.save_data('eti_data.csv')
+    finally:
+        # Ensure cleanup
+        eti.disconnect()
+
+# Example usage of this class within your own code
+
+#  from eti300 import ETi300
+
+# with ETi300(com_port='COM4') as eti:
+#     eti.perform_bootloader_handshake()
+#     eti.configure_device(sample_rate_divisor=500)  # 32 Hz output
+#     eti.configure_all_channels()
+#     eti.verify_all_channels()
+#     eti.start_streaming(duration=120)
+#     eti.save_data('measurement.csv') 
