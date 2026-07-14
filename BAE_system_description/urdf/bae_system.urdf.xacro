@@ -27,7 +27,7 @@
   <joint name="zivid_joint" type="fixed">
     <parent link="lbr_link_ee"/>
     <child link="zivid_base_link" />
-    <origin xyz="0 0 0" rpy="0 0 -1.5708" /> 
+    <origin xyz="0 0 0.006" rpy="0 0 -1.5708" /> 
   </joint>
 
   <joint name="zivid_camera_joint" type="fixed">
