@@ -21,6 +21,7 @@ setup(
         'console_scripts': [
             'task_runner = robot_tasks.task_runner:main',    
             'capture_runner = robot_tasks.capture_runner:main',
+            'path_planning = robot_tasks.path_planner:main',
         ],
     },
 )
